@@ -11,7 +11,7 @@ suppressPackageStartupMessages({
 
 source("R/pipeline/00_helpers.R")
 
-MIN_CHARS <- 300L  # soft-fail threshold (lower than Piper's 500 — diagram-heavy decks legitimately have little text)
+MIN_CHARS <- 300L  # soft-fail threshold (lower than the sibling private pipeline's 500 — diagram-heavy decks legitimately have little text)
 WORKERS   <- as.integer(Sys.getenv("OSQF_WORKERS", "4"))
 
 extract_one <- function(slug, file_ext, file_local, txt_path) {

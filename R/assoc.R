@@ -28,7 +28,7 @@ suppressPackageStartupMessages({
 )
 
 .assoc_wiki_state <- function() {
-  d <- path.expand("~/R_Files/Rich_R/_state"); if (!dir.exists(d)) dir.create(d, recursive = TRUE)
+  d <- path.expand("./_state"); if (!dir.exists(d)) dir.create(d, recursive = TRUE)
   d
 }
 

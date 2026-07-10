@@ -1,5 +1,5 @@
 """Render an arbitrary PDF corpus to 300-dpi page images (pymupdf, no GPU).
-Generalized from render_all_piper.py; unlike it, the slug is taken VERBATIM
+Generalized from a sibling private-corpus renderer; unlike it, the slug is taken VERBATIM
 from the filename stem (OSQF files are already `<slug>.pdf`) so pixel doc_ids
 join back to osqf_wiki notes.
 

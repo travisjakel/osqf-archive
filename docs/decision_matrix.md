@@ -1,6 +1,6 @@
 # OCR / VLM Conditions of Use — document text & visual extraction
 
-_Created 2026-07-08 (OSQF/R_Finance corpus re-extraction project). Owner: osqf_wiki + ticker_graph_wiki._
+_Created 2026-07-08 (OSQF/R_Finance corpus re-extraction project). Owner: osqf-archive._
 
 Which tool to reach for when getting content out of documents (PDFs, decks, scans), based on the 2026-07-08 bake-off on 15 stratified OSQF/R_Finance conference decks (`osqf_wiki/_cache/ocr_bakeoff/results.json`).
 
@@ -11,7 +11,7 @@ Which tool to reach for when getting content out of documents (PDFs, decks, scan
 | Born-digital text PDF | `pdftools::pdf_text` (osqf stage 02) | Fastest, lossless for real text layers |
 | PPTX/PPTM with real text boxes | `officer::pptx_summary` (osqf stage 02) | Native text, keeps slide structure |
 | Scanned / garbled / image-rendered text / SmartArt / legacy `.ppt` | **VLM-OCR: PaddleOCR-VL** on vLLM :8905 (soffice→PDF→300dpi PNG→`23_ocr_osqf_corpus.py`) | Bake-off winner; recovers decks text-parsing can't touch |
-| Chart/table/exhibit **retrieval** question ("what value is in that grid?") | **PixelRAG `pixel_search`** (`corpus='research'` Piper / `corpus='osqf'` conference decks) | Proven +0.50 over text on table Qs; OCR only fixes the text layer, pixels keep the layout |
+| Chart/table/exhibit **retrieval** question ("what value is in that grid?") | **PixelRAG `pixel_search`** (`corpus='osqf'` conference decks) | Proven +0.50 over text on table Qs; OCR only fixes the text layer, pixels keep the layout |
 | Chart **data** extraction (reading values off a plot) | PixelRAG (vision reader on the page image) | NEITHER OCR model reads charts well (both ~0.55 fidelity on chart pages) |
 | Very long multi-page one-shot parse (40+ pp in one context) | Unlimited-OCR Base mode | Its only distinctive strength (flat KV cache); NOT worth it per-page — see bake-off |
 
@@ -33,15 +33,15 @@ Details: `sota_upgrades_2026_07.md`, `results_paddle_vs_mineru.json`.)* Unlimite
 
 ## Runtime & serving (Mode D)
 
-- Server: `ticker_graph_wiki/wsl/start_ocr_server.sh` (`OCR_MODEL=paddle|unlimited`) → vLLM OpenAI API on **:8905**, `~/ocr_venv`, `--gpu-memory-utilization 0.55`.
+- Server: `python/pixel/start_ocr_server.sh` (`OCR_MODEL=paddle|unlimited`) → vLLM OpenAI API on **:8905**, `~/ocr_venv`, `--gpu-memory-utilization 0.55`.
 - **vLLM must be 0.24.0 (pinned)** for PaddleOCR-VL on this box. Git-main (pre-0.25) crashes on WSL2 with `RuntimeError: UVA is not available`; Unlimited-OCR needs ≥0.25 which as of 2026-07-08 exists only as the `vllm/vllm-openai:unlimited-ocr` docker tag. `VLLM_USE_FLASHINFER_SAMPLER=0` required (no CUDA toolkit in WSL for flashinfer JIT).
 - **Mode D** in the GPU table: OCR :8905 ≈ 13 GB — mutually exclusive with Mode A (vLLM-text :8000), Mode B (pixel :8903/:8904), and a *loaded* Windows Ollama model. Idle Ollama daemon is fine.
-- Driver: `ticker_graph_wiki/scripts/23_ocr_osqf_corpus.py` — per-page SHA1 cache keyed (png bytes, model, prompt) → fully resumable; transcripts land in `osqf_wiki/_cache/ocr_text/<slug>.txt`, pages joined by `--- PAGE BREAK ---`.
+- Driver: `python/pixel/23_ocr_osqf_corpus.py` — per-page SHA1 cache keyed (png bytes, model, prompt) → fully resumable; transcripts land in `osqf_wiki/_cache/ocr_text/<slug>.txt`, pages joined by `--- PAGE BREAK ---`.
 - Prompt probing tool: `wsl/test_ocr_prompt.py`. These OCR VLMs only answer trained task prompts — always probe before assuming a new prompt works.
 
 ## Cloud policy distinction
 
-Extraction is **100% local** (models on the 3090 Ti; corpus never leaves the box). The bake-off **judge** ran on cloud Claude-vision via OpenRouter — acceptable **only because OSQF/R_Finance decks are public conference material**. Do NOT reuse the cloud judge on private corpora (Piper, client data) — use the local Qwen2.5-VL reader (:8904) instead. Per [[feedback-no-auto-cloud-sensitive]].
+Extraction is **100% local** (models on the 3090 Ti; corpus never leaves the box). The bake-off **judge** ran on cloud Claude-vision via OpenRouter — acceptable **only because OSQF/R_Finance decks are public conference material**. Do NOT reuse the cloud judge on private corpora (client data) — use the local Qwen2.5-VL reader (:8904) instead.
 
 ## Provenance caveat (evidence quotes)
 

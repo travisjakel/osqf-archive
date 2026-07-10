@@ -14,7 +14,7 @@ source("R/pipeline/00_helpers.R")
 MAX_NOTES <- as.integer(Sys.getenv("MAX_NOTES", "0"))
 MODEL     <- Sys.getenv("OSQF_WIKI_MODEL", "qwen3:14b")
 
-# Reuse the Piper helper (provides ollama_tool_call + budget bookkeeping).
+# Reuse the shared helper (provides ollama_tool_call + budget bookkeeping).
 source("R/pipeline/llm_ollama.R")
 
 budget_reset(cap_usd = Inf)  # Ollama is free — no cap

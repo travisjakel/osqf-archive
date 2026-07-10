@@ -1,7 +1,7 @@
 #' 02b_ocr_apply.R — apply VLM-OCR transcripts to the text cache (full-corpus
 #' re-extraction, additive stage; 02_extract_text.R is untouched).
 #'
-#' Reads _cache/ocr_text/<slug>.txt written by ticker_graph_wiki/scripts/
+#' Reads _cache/ocr_text/<slug>.txt written by python/pixel/
 #' 23_ocr_osqf_corpus.py, applies the acceptance gate per slug, and on accept:
 #'   - rewrites _cache/text/<slug>.txt with an ocr_model provenance header
 #'   - deletes _cache/json/<slug>.json (forces the stage-03 re-run)
