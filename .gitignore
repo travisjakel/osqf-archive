@@ -1,0 +1,21 @@
+# data / release assets live in GitHub Releases, not the tree
+*.duckdb
+*.duckdb.wal
+*.fst
+_cache/
+_release_assets*/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# local env / secrets
+.env
+*.tokens.json

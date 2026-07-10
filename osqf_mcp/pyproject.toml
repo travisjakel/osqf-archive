@@ -1,0 +1,24 @@
+[project]
+name = "osqf-mcp"
+version = "0.1.0"
+description = "MCP server over the osqf-archive: 18 years of R-in-finance conference talks, searchable and chattable."
+readme = "CLIENT_SETUP.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "mcp>=1.9",
+    "duckdb>=1.1",
+]
+
+[project.optional-dependencies]
+http = ["uvicorn>=0.30", "starlette>=0.37"]
+
+[project.scripts]
+osqf-mcp = "osqf_mcp.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["osqf_mcp*"]
