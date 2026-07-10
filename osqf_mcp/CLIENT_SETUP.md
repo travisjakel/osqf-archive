@@ -27,6 +27,15 @@ claude mcp add osqf-archive --transport http https://osqf.assetflow.ai/mcp \
 }
 ```
 
+**Claude on web / iOS / Android (claude.ai custom connectors)** — the
+connector UI has no header field, so the token rides the URL instead:
+
+1. claude.ai → Settings → **Connectors** → **Add custom connector**.
+2. Name: `osqf-archive`. URL:
+   `https://osqf.assetflow.ai/t/<CONFERENCE_TOKEN>/mcp`
+3. Add (no OAuth). In any chat, enable it under the tools menu and ask away.
+   Connectors sync across web and the mobile apps.
+
 Smoke test without an MCP client:
 ```bash
 curl -s https://osqf.assetflow.ai/health

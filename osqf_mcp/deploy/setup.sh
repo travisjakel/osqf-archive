@@ -78,7 +78,20 @@ if [ -n "$DOMAIN" ]; then
       > /etc/apt/sources.list.d/caddy-stable.list
     apt-get update -y && apt-get install -y caddy
   fi
-  printf '%s {\n\treverse_proxy 127.0.0.1:8788\n}\n' "$DOMAIN" > /etc/caddy/Caddyfile
+  # /t/<token>/... route: claude.ai custom connectors (web/mobile) can't send
+  # bearer headers, so the token rides the URL and Caddy converts it.
+  cat > /etc/caddy/Caddyfile <<CADDYEOF
+$DOMAIN {
+	@tok path_regexp tok ^/t/([^/]+)(/.*)\$
+	handle @tok {
+		rewrite * {re.tok.2}
+		reverse_proxy 127.0.0.1:8788 {
+			header_up Authorization "Bearer {re.tok.1}"
+		}
+	}
+	reverse_proxy 127.0.0.1:8788
+}
+CADDYEOF
   systemctl enable caddy
   systemctl restart caddy
   echo "Caddy serving https://$DOMAIN (Let's Encrypt is automatic once DNS resolves here)"
