@@ -1,0 +1,26 @@
+[Unit]
+Description=osqf-archive MCP server (HTTP)
+After=network-online.target ollama.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=osqf
+Group=osqf
+EnvironmentFile=/etc/osqf-mcp.env
+# HOME must be writable: duckdb caches the FTS extension under ~/.duckdb
+Environment=HOME=/var/lib/osqf-mcp
+StateDirectory=osqf-mcp
+ExecStart=/opt/osqf-mcp/venv/bin/python -m osqf_mcp --http
+WorkingDirectory=/opt/osqf-mcp
+Restart=always
+RestartSec=5
+# hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/osqf-mcp
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

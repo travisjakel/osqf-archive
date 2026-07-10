@@ -1,3 +1,7 @@
+## [2026-07-10] osqf-archive repo LIVE (private) — github.com/travisjakel/osqf-archive
+
+Local parts of publish milestone done same-day: canonical `repo_meta/` (README, MIT LICENSE, NOTICE w/ provenance+takedown+model licenses, .gitignore) added to the export allow-list (GATE PASSED 1,447 files; gate scans README with the full deny-list — author line kept personal, no company name). `90_export_public.R` now **preserves `.git`** when wiping staging (the staging tree IS the pushed repo). Initial commit 1,447 files → **private** repo + **Release v0.1** (notes.duckdb 51 MB + talk_tags.fst + manifest.fst). Remaining before flip-public (target Jul 14): Travis self-review of the tree, `tailscale funnel --bg 8788`, CLIENT_SETUP test from an off-network device.
+
 ## [2026-07-10] osqf_mcp attendee server built + smoke-tested (osQF submission task 3/5)
 
 `osqf_wiki/mcp/` (canonical) → exported to `osqf_mcp/` in the public staging tree. Merges the two house templates: piper data-product sandbox (in-memory catalog, `enable_external_access=false`, SELECT/WITH-only, 500-row cap) + the daily-insight HTTP transport (sha256 bearer tokens, DNS-rebinding protection, /health) **plus a global rate limiter (60 req/min, 429)**.
