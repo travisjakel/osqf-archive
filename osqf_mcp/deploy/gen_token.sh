@@ -15,7 +15,8 @@ words = ["ledger","kernel","quantile","copula","lattice","spline","vector",
          "monad","garch","sortino","kalman","wavelet","tensor","bootstrap",
          "drawdown","duration","factor","hessian","jacobian","stochastic"]
 raw = f"osqf2026-{secrets.choice(words)}-{secrets.choice(words)}-{secrets.token_hex(2)}"
-table = json.loads(path.read_text()) if path.exists() else {}
+raw_txt = path.read_text().strip() if path.exists() else ""
+table = json.loads(raw_txt) if raw_txt else {}
 table[label] = hashlib.sha256(raw.encode()).hexdigest()
 path.write_text(json.dumps(table, indent=2) + "\n")
 path.chmod(0o600)
