@@ -1,43 +1,51 @@
-## [2026-07-10] osqf-archive repo LIVE (private) — github.com/travisjakel/osqf-archive
+## [2026-07-10] Lightsail instance PROVISIONED â€” osqf.assetflow.ai pending DNS
 
-Local parts of publish milestone done same-day: canonical `repo_meta/` (README, MIT LICENSE, NOTICE w/ provenance+takedown+model licenses, .gitignore) added to the export allow-list (GATE PASSED 1,447 files; gate scans README with the full deny-list — author line kept personal, no company name). `90_export_public.R` now **preserves `.git`** when wiping staging (the staging tree IS the pushed repo). Initial commit 1,447 files → **private** repo + **Release v0.1** (notes.duckdb 51 MB + talk_tags.fst + manifest.fst). Remaining before flip-public (target Jul 14): Travis self-review of the tree, `tailscale funnel --bg 8788`, CLIENT_SETUP test from an off-network device.
+Instance `osqf-mcp` us-west-2a, 2 GB ($12/mo), static IP **54.148.34.15**; ssh key in the local secured key store (ACL owner-only, restic-backed). `setup.sh` ran clean over ssh: osqf-mcp + ollama + caddy all ACTIVE, **semantic mode confirmed live on-box** (CPU nomic; "regime switching" â†’ ghalanos/boudt). Conference token label `conference` minted â†’ vault secret `osqf_mcp_conference_token`. Caddy configured for osqf.assetflow.ai and auto-retrying Let's Encrypt. BLOCKED on the A record (vault cloudflare_pages_token is Pages-scoped, sees no zones): **manual Cloudflare dashboard add â€” A / osqf / 54.148.34.15 / DNS-only / TTL 5min**, then external HTTPS smoke + URL into README/CLIENT_SETUP/paper v2. Gotcha: don't `tail` the setup.sh output â€” it prints the one-time token (recoverable: gen_token.sh re-mint + restart).
+
+## [2026-07-10] Lightsail deploy bundle for the hosted endpoint (decision: cloud > home funnel)
+
+Decision: keep the hosted MCP endpoint live year-round on a ~$7/mo Lightsail 2 GB VM instead of home+tailscale-funnel (uptime decoupled from the workstation; stable URL citable in the paper; $5-VPS blast radius). Bundle at `osqf_wiki/mcp/deploy/` â†’ repo `osqf_mcp/deploy/`: idempotent `setup.sh` (venv + CPU Ollama nomic + Caddy auto-TLS), hardened systemd unit (**StateDirectory + HOME override so duckdb can cache the FTS extension under ProtectSystem=strict**), `gen_token.sh` (osqf2026-word-word-hex, sha256 at rest, raw shown once â€” auth loop VERIFIED against serve_http locally), `update_data.sh` (release hot-swap), `DEPLOY.md` runbook. Line-ending hazard closed twice: `.gitattributes` pins LF in checkouts AND `90_export_public.R` now writes staging in binary mode (Windows `writeLines` was emitting CRLF â†’ scp'd bash scripts would die on `\r`). Repo at 5 commits; awaiting: instance creation + DNS (Travis), then setup.sh run, then flip-public.
+
+## [2026-07-10] osqf-archive repo LIVE (private) â€” github.com/travisjakel/osqf-archive
+
+Local parts of publish milestone done same-day: canonical `repo_meta/` (README, MIT LICENSE, NOTICE w/ provenance+takedown+model licenses, .gitignore) added to the export allow-list (GATE PASSED 1,447 files; gate scans README with the full deny-list â€” author line kept personal, no company name). `90_export_public.R` now **preserves `.git`** when wiping staging (the staging tree IS the pushed repo). Initial commit 1,447 files â†’ **private** repo + **Release v0.1** (notes.duckdb 51 MB + talk_tags.fst + manifest.fst). Remaining before flip-public (target Jul 14): Travis self-review of the tree, `tailscale funnel --bg 8788`, CLIENT_SETUP test from an off-network device.
 
 ## [2026-07-10] osqf_mcp attendee server built + smoke-tested (osQF submission task 3/5)
 
-`osqf_wiki/mcp/` (canonical) → exported to `osqf_mcp/` in the public staging tree. Merges the two house templates: piper data-product sandbox (in-memory catalog, `enable_external_access=false`, SELECT/WITH-only, 500-row cap) + the daily-insight HTTP transport (sha256 bearer tokens, DNS-rebinding protection, /health) **plus a global rate limiter (60 req/min, 429)**.
+`osqf_wiki/mcp/` (canonical) â†’ exported to `osqf_mcp/` in the public staging tree. Merges the two house templates: piper data-product sandbox (in-memory catalog, `enable_external_access=false`, SELECT/WITH-only, 500-row cap) + the daily-insight HTTP transport (sha256 bearer tokens, DNS-rebinding protection, /health) **plus a global rate limiter (60 req/min, 429)**.
 
-- **One-file data plane**: `scripts/07_mcp_precompute.R` builds the enriched release `notes.duckdb` (48.8 MB): chunks 4,111 + paper_chunks 440 (embeddings intact for server-side semantic) + talks 835 (sanitized manifest) + notes 626 (from the IP-gated staging export, NOT raw) + talk_tags/paper_links + **precomputed PPR** `related_talks` (1,187 rows / 322 talks) + `experts` (395 rows / 232 topic-tag entities, same IDF-weighted entity-graph design as assoc_wiki) + **persisted FTS index** (zero-model BM25 fallback — offline bundle needs only `pip install mcp duckdb`).
+- **One-file data plane**: `scripts/07_mcp_precompute.R` builds the enriched release `notes.duckdb` (48.8 MB): chunks 4,111 + paper_chunks 440 (embeddings intact for server-side semantic) + talks 835 (sanitized manifest) + notes 626 (from the IP-gated staging export, NOT raw) + talk_tags/paper_links + **precomputed PPR** `related_talks` (1,187 rows / 322 talks) + `experts` (395 rows / 232 topic-tag entities, same IDF-weighted entity-graph design as assoc_wiki) + **persisted FTS index** (zero-model BM25 fallback â€” offline bundle needs only `pip install mcp duckdb`).
 - Tools: about / search_talks (semantic via local Ollama nomic, auto-fallback BM25) / get_talk / browse / related_talks / find_experts / run_select (embedding columns stripped from the sandbox catalog).
-- Smokes ALL PASS: tool logic (incl. 4 sandbox negatives + row cap), semantic self-retrieval score=1.0 + filter combo, stdio JSON-RPC (initialize→tools/list→call), HTTP (health open, 401/403 auth, session tool calls, rate-limit 429s), staged post-rewrite copy.
-- Gotchas: (1) `key` is a reserved arg of `data.table()` — can't be a column name at construction; (2) multibyte chars shift `regmatches` offsets on some notes → strict `^(topics|speakers)/[a-z0-9_]+$` validation on extracted entities (one junk graph node otherwise); (3) export gate correctly caught deny-listed vocab in 06_harvest_papers.R header — reworded.
+- Smokes ALL PASS: tool logic (incl. 4 sandbox negatives + row cap), semantic self-retrieval score=1.0 + filter combo, stdio JSON-RPC (initializeâ†’tools/listâ†’call), HTTP (health open, 401/403 auth, session tool calls, rate-limit 429s), staged post-rewrite copy.
+- Gotchas: (1) `key` is a reserved arg of `data.table()` â€” can't be a column name at construction; (2) multibyte chars shift `regmatches` offsets on some notes â†’ strict `^(topics|speakers)/[a-z0-9_]+$` validation on extracted entities (one junk graph node otherwise); (3) export gate correctly caught deny-listed vocab in 06_harvest_papers.R header â€” reworded.
 - 90_export_public.R now stages the MCP package + scripts 06/07 (GATE PASSED, 1,443 files); notes.duckdb release asset OWNED by 07 (90 no longer clobbers it with the raw copy).
-- Next (Jul 14): README/LICENSE/NOTICE, git init staging → private → review → public; `tailscale funnel --bg 8788`; CLIENT_SETUP tested off-network.
+- Next (Jul 14): README/LICENSE/NOTICE, git init staging â†’ private â†’ review â†’ public; `tailscale funnel --bg 8788`; CLIENT_SETUP tested off-network.
 
 ## [2026-07-08] render | n_talks=626, n_with_file=468, n_years=15, n_speakers=380, n_topics=199, n_methods=111
 
 ## [2026-07-08] VLM-OCR full re-extraction + PixelRAG pixel_osqf
 
-Full-corpus re-extraction with **PaddleOCR-VL** (bake-off winner over baidu/Unlimited-OCR — fidelity 0.76 vs 0.48, hallucination 4/37 vs 13/37 pages, downstream evidence pass 70% vs 40%; `_cache/ocr_bakeoff/results.json`; policy: `wiki/ops/ocr_vlm_conditions_of_use.md`).
+Full-corpus re-extraction with **PaddleOCR-VL** (bake-off winner over baidu/Unlimited-OCR â€” fidelity 0.76 vs 0.48, hallucination 4/37 vs 13/37 pages, downstream evidence pass 70% vs 40%; `_cache/ocr_bakeoff/results.json`; policy: `wiki/ops/ocr_vlm_conditions_of_use.md`).
 
-- Prep: 74 ppt/pptx/pptm → PDF via LibreOffice (`convert_decks_to_pdf.R`, 0 failures — closes the legacy-`.ppt` gap); 462/487 docs rendered to 12,276 page-PNGs @300dpi (25 corrupt PDFs fail `fitz.open` — dead downloads); shared render feeds OCR + PixelRAG.
-- OCR (vLLM :8905, ~4h): 462 transcripts. `02b_ocr_apply.R` gate (≥300 chars AND ≥0.7× old): **349 accepted / 113 ocr_no_gain** (median ratio 1.09; no-gain ≈ 2009-2011 beamer PDFs where pdftools wins).
-- Stage 03 re-run (qwen3:14b): 218 fresh extractions at **71.1%** evidence pass; 51 persistent `no_tool_call` failures **reverted to pre-OCR text+json** (`02c_revert_03_failures.R` — strict best-of-both, no regressions). Fixed latent bare-string `key_findings` crash in 03+04 validators.
+- Prep: 74 ppt/pptx/pptm â†’ PDF via LibreOffice (`convert_decks_to_pdf.R`, 0 failures â€” closes the legacy-`.ppt` gap); 462/487 docs rendered to 12,276 page-PNGs @300dpi (25 corrupt PDFs fail `fitz.open` â€” dead downloads); shared render feeds OCR + PixelRAG.
+- OCR (vLLM :8905, ~4h): 462 transcripts. `02b_ocr_apply.R` gate (â‰¥300 chars AND â‰¥0.7Ã— old): **349 accepted / 113 ocr_no_gain** (median ratio 1.09; no-gain â‰ˆ 2009-2011 beamer PDFs where pdftools wins).
+- Stage 03 re-run (qwen3:14b): 218 fresh extractions at **71.1%** evidence pass; 51 persistent `no_tool_call` failures **reverted to pre-OCR text+json** (`02c_revert_03_failures.R` â€” strict best-of-both, no regressions). Fixed latent bare-string `key_findings` crash in 03+04 validators.
 - Result: **462 extracted talks** (was 443; +19 recovered incl. legacy ppt + garbled PDFs), corpus evidence pass 69.2% (68.9% before, on a larger pool), **4,111 chunks** in notes.duckdb (18 stale orphans purged by the new stage-05 cleanup), 199 topic / 111 method pages (181/96). OCR-sourced notes carry `source=ocr(paddle)` footers.
-- Downstream: unified Qdrant rebuilt (osqf 4,111 of 11,612); Rich_R `wiki_assoc` graph rebuilt (985 nodes / 462 talks / 890 entity edges; "robust portfolio optimization" → Palomar/Pfaff/Kapler ✓); **`pixel_osqf`** Qdrant collection embedding 12,276 page-images (Qwen3-VL-Embedding-2B) — `pixel_search(corpus='osqf')` in chat.py for chart/table questions.
+- Downstream: unified Qdrant rebuilt (osqf 4,111 of 11,612); Rich_R `wiki_assoc` graph rebuilt (985 nodes / 462 talks / 890 entity edges; "robust portfolio optimization" â†’ Palomar/Pfaff/Kapler âœ“); **`pixel_osqf`** Qdrant collection embedding 12,276 page-images (Qwen3-VL-Embedding-2B) â€” `pixel_search(corpus='osqf')` in chat.py for chart/table questions.
 - Rollback: `_cache/text_pre_ocr_20260708/`, `_cache/json_pre_ocr_20260708/`, `embeddings/notes.duckdb.bak_20260708`.
 
 ## [2026-06-17] render | n_talks=626, n_with_file=468, n_years=15, n_speakers=380, n_topics=181, n_methods=96
 
 
-# OSQF Wiki — Activity Log
+# OSQF Wiki â€” Activity Log
 
 ## [2026-05-03] render | n_talks=626, n_with_file=468, n_years=15, n_speakers=380, n_topics=181, n_methods=96
 
 Final state after post-build audit. Event-header filter extended to drop Break/Lunch/Kickoff/Conclusion/Conference Reception/Optional rows + anchor-text-leakage `(pdf)`/`(video)` titles. 209 event-header rows filtered from 835 manifest rows. Embeddings DB rebuilt: **3,940 chunks across 443 unique slugs** (only `archived` + `tiny_deck` notes embedded; `no_file` + `extraction_failed` skipped per stage 05).
 
-## [2026-05-02] build | initial pipeline run, 2025 smoke test → full backfill 2009-2025
+## [2026-05-02] build | initial pipeline run, 2025 smoke test â†’ full backfill 2009-2025
 
-Smoke test (`OSQF_YEARS=2025`): 41 manifest rows → 25 with files → 25 LLM extractions → 41 note pages, 225 embedded chunks, semantic queries validated.
+Smoke test (`OSQF_YEARS=2025`): 41 manifest rows â†’ 25 with files â†’ 25 LLM extractions â†’ 41 note pages, 225 embedded chunks, semantic queries validated.
 
 Full backfill (started 22:30, complete 02:30 = ~4 hr wall-clock):
 - Stage 01: 835 rows scraped across 15 years (2009-2019, 2022-2025; 2020-2021 absent), 469 files downloaded, 45 download errors (broken old links), 321 no-file rows (event headers, missing decks, panels).

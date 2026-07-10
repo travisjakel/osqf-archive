@@ -23,8 +23,9 @@ Then ask things like *"Who are the recurring experts on portfolio optimization
 and what did they present most recently?"* or *"Which talks covered regime
 switching, across all 18 years?"*
 
-Conference attendees: a hosted endpoint + shared token are on the talk's
-closing slide — same tools, zero install.
+Or use the **hosted endpoint** at `https://osqf.assetflow.ai` — same tools,
+zero install, semantic search included (the server embeds queries for you).
+It needs the shared bearer token from the conference talk's closing slide.
 
 ## What's inside
 
