@@ -256,7 +256,7 @@ if(!TOK){TOK=prompt('Access token (from the talk slide / QR):')||'';localStorage
 if(!text.trim()||!TOK)return;
 add('user',text);hist.push({role:'user',content:text});q.value='';go.disabled=true;
 const w=add('bot','…thinking');
-try{const r=await fetch('chat/api',{method:'POST',headers:{'Content-Type':'application/json'},
+try{const r=await fetch('/chat/api',{method:'POST',headers:{'Content-Type':'application/json'},
 body:JSON.stringify({token:TOK,messages:hist})});const j=await r.json();
 if(j.error){w.innerHTML=esc(j.error);if(r.status===403){TOK='';localStorage.removeItem('osqf_t')}}
 else{w.innerHTML=link(esc(j.answer));if(j.tools_used&&j.tools_used.length){const t=document.createElement('div');
