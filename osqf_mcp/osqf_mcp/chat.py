@@ -129,9 +129,11 @@ def _auth_label(token: str) -> str | None:
 
 
 # ---- agent loop ----------------------------------------------------------------
-def _llm(messages):
-    body = {"model": MODEL, "messages": messages, "tools": TOOLS,
+def _llm(messages, use_tools=True):
+    body = {"model": MODEL, "messages": messages,
             "max_tokens": 1200, "temperature": 0.2}
+    if use_tools:
+        body["tools"] = TOOLS
     req = urllib.request.Request(API_URL, data=json.dumps(body).encode(), headers={
         "Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as r:
@@ -161,7 +163,14 @@ def _run_agent(history):
                 res = json.dumps({"error": f"{type(e).__name__}: {e}"})[:500]
             trace.append(name)
             msgs.append({"role": "tool", "tool_call_id": c["id"], "content": res})
-    return "I hit my tool-call budget for one question — try something narrower.", trace, spent
+    # Tool budget exhausted: force a final answer from what was already retrieved.
+    msgs.append({"role": "user", "content":
+                 "(Tool-call limit reached. Answer the question now using only the tool "
+                 "results above; note briefly if the answer is partial.)"})
+    msg, usd = _llm(msgs, use_tools=False)
+    spent += usd
+    text = (msg.get("content") or "").strip()
+    return (text or "I ran out of tool calls before finishing — try a narrower question."), trace, spent
 
 
 # ---- routes --------------------------------------------------------------------
