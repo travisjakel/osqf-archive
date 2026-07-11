@@ -36,6 +36,7 @@ mkdir -p "$APP/data" "$APP/deploy"
 [ -f /tmp/notes.duckdb ] && cp /tmp/notes.duckdb "$APP/data/notes.duckdb"
 cp /tmp/deploy/*.sh "$APP/deploy/" 2>/dev/null || true
 cp /tmp/deploy/osqf-mcp.service /etc/systemd/system/osqf-mcp.service
+[ -f /tmp/deploy/osqf-chat.service ] && cp /tmp/deploy/osqf-chat.service /etc/systemd/system/osqf-chat.service
 [ -f "$APP/pkg/pyproject.toml" ] || { echo "missing $APP/pkg (scp the repo's osqf_mcp/ to /tmp/pkg)"; exit 1; }
 [ -f "$APP/data/notes.duckdb" ]  || { echo "missing $APP/data/notes.duckdb"; exit 1; }
 
@@ -68,6 +69,18 @@ systemctl enable --now osqf-mcp
 sleep 3
 curl -s --max-time 5 http://127.0.0.1:8788/health && echo " <- local health OK"
 
+# optional chat wrapper: needs /etc/osqf-chat.env with OPENROUTER_API_KEY
+if [ -f /etc/systemd/system/osqf-chat.service ]; then
+  if [ -f /etc/osqf-chat.env ]; then
+    systemctl enable --now osqf-chat
+    sleep 3
+    curl -s --max-time 5 http://127.0.0.1:8790/chat/health && echo " <- chat health OK"
+  else
+    echo "chat wrapper installed but NOT started: create /etc/osqf-chat.env"
+    echo "  (OPENROUTER_API_KEY=..., optional OSQF_CHAT_DAILY_USD/OSQF_CHAT_MSG_CAP)"
+  fi
+fi
+
 if [ -n "$DOMAIN" ]; then
   echo "== caddy (TLS for $DOMAIN) =="
   if ! command -v caddy >/dev/null 2>&1; then
@@ -88,6 +101,9 @@ $DOMAIN {
 		reverse_proxy 127.0.0.1:8788 {
 			header_up Authorization "Bearer {re.tok.1}"
 		}
+	}
+	handle /chat* {
+		reverse_proxy 127.0.0.1:8790
 	}
 	reverse_proxy 127.0.0.1:8788
 }

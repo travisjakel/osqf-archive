@@ -1,0 +1,25 @@
+[Unit]
+Description=osqf-archive chat wrapper (public demo UI)
+After=network-online.target osqf-mcp.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=osqf
+Group=osqf
+EnvironmentFile=/etc/osqf-mcp.env
+EnvironmentFile=/etc/osqf-chat.env
+Environment=HOME=/var/lib/osqf-mcp
+StateDirectory=osqf-mcp
+ExecStart=/opt/osqf-mcp/venv/bin/python -m osqf_mcp.chat
+WorkingDirectory=/opt/osqf-mcp
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/osqf-mcp
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

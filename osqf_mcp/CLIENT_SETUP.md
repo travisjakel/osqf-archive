@@ -1,7 +1,12 @@
 # osqf-archive MCP — client setup
 
-Chat with 18 years of osQF / R-in-finance conference talks from any MCP client
-(Claude Desktop, Claude Code, Cursor, ...). Two ways in:
+Chat with 18 years of osQF / R-in-finance conference talks.
+
+**Fastest: the browser demo** — no install at all:
+`https://osqf.assetflow.ai/chat?t=<TOKEN>` (token from the talk's closing
+slide). Shared daily budget; when it's spent, use the MCP routes below.
+
+For your own AI tooling (Claude Desktop, Claude Code, Cursor, ...), two ways in:
 
 ## A. Hosted (zero install beyond your MCP client)
 
