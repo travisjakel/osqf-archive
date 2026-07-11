@@ -95,6 +95,9 @@ if [ -n "$DOMAIN" ]; then
   # bearer headers, so the token rides the URL and Caddy converts it.
   cat > /etc/caddy/Caddyfile <<CADDYEOF
 $DOMAIN {
+	request_body {
+		max_size 256KB
+	}
 	@tok path_regexp tok ^/t/([^/]+)(/.*)\$
 	handle @tok {
 		rewrite * {re.tok.2}

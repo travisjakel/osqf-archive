@@ -22,7 +22,9 @@ import hashlib
 import json
 import os
 import threading
+import time
 import urllib.request
+from collections import deque
 from pathlib import Path
 
 from starlette.applications import Starlette
@@ -39,12 +41,14 @@ PRICE_IN = float(os.environ.get("OSQF_CHAT_PRICE_IN", "1.0"))    # $ / M tokens
 PRICE_OUT = float(os.environ.get("OSQF_CHAT_PRICE_OUT", "5.0"))
 DAILY_USD = float(os.environ.get("OSQF_CHAT_DAILY_USD", "5.0"))
 MSG_CAP = int(os.environ.get("OSQF_CHAT_MSG_CAP", "30"))
+RATE_PER_MIN = int(os.environ.get("OSQF_CHAT_RATE_PER_MIN", "8"))   # per token, sliding 60s
 STATE = Path(os.environ.get("OSQF_CHAT_STATE", "/var/lib/osqf-mcp")) / "chat_budget.json"
 MAX_TOOL_ROUNDS = 12
 TOOL_RESULT_CAP = 8000
 
 TOKENS = _load_token_table()
 _lock = threading.Lock()
+_recent: dict[str, deque] = {}   # label -> timestamps of recent requests
 
 SYSTEM = (
     "You are the osqf-archive assistant: a search agent over 18 years of osQF / "
@@ -186,6 +190,14 @@ async def api(request):
                for m in history if m.get("role") in ("user", "assistant")]
 
     with _lock:
+        now = time.monotonic()
+        dq = _recent.setdefault(label, deque())
+        while dq and now - dq[0] > 60:
+            dq.popleft()
+        if len(dq) >= RATE_PER_MIN:
+            return JSONResponse({"error": f"Slow down — this shared token is limited to "
+                f"{RATE_PER_MIN} messages per minute."}, status_code=429)
+        dq.append(now)
         st = _state()
         if st["usd"] >= DAILY_USD:
             return JSONResponse({"error": "Today's shared demo budget is exhausted. "
@@ -259,7 +271,7 @@ let TOK=P.get('t')||localStorage.getItem('osqf_t')||'';
 if(P.get('t'))localStorage.setItem('osqf_t',P.get('t'));
 const log=document.getElementById('log'),q=document.getElementById('q'),go=document.getElementById('go');
 const hist=[];
-function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function link(s){return s.replace(/(https?:\\/\\/[^\\s)]+)/g,'<a href="$1" target="_blank">$1</a>')}
 function add(cls,txt,tools){const d=document.createElement('div');d.className='msg '+cls;
 d.innerHTML=link(esc(txt));if(tools&&tools.length){const t=document.createElement('div');
