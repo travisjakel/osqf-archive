@@ -1,0 +1,26 @@
+query,gold,stratum,sem_rank,bm25_rank
+portfolio optimization tutorial using the Rmetrics packages,2009__diethelm_wuertz,09-11|pdf|ocr,10,2
+modeling fat tails and volatility clustering with copulas for market risk,2010__pfaff,09-11|pdf,4,3
+real-time signal extraction with direct filtering for algorithmic trading,2010__wildi,09-11|ppt|ocr,,
+package for running parallel R jobs on Amazon's cloud in two lines of code,2011__long,09-11|pdf|ocr,2,2
+benchmarking parallel loop backends in R for independent repeated analyses,2011__niemenmaa,09-11|ppt,1,1
+nonparametric detection of multiple change points with the e-divisive algorithm,2013__david_matteson,12-14|pdf,1,1
+identifying systemically risky financial institutions with network models,2013__sanjiv_das,12-14|pptx|ocr,12,8
+tests of robust regression versus least squares for factor model fits,2014__doug_martin,12-14|pptx|ocr,1,1
+book updating S-PLUS financial time series modeling to R,2014__eric_zivot,12-14|pdf|ocr,1,9
+accessing Redis in-memory data caches from R via Rcpp,2014__dirk_eddelbuettel_2,12-14|pdf|ocr,40,1
+the path of information transfer between securities as a priced equity factor,2015__stephen_rush,15-17|pdf,1,1
+which ETF impounds new information first - price discovery in SPY versus IVV,2015__eric_zivot,15-17|pptx,1,1
+credit risk modeling with rating migration Markov chains and distance to default,2015__alexander_mcneil,15-17|pdf|ocr,1,1
+no-nonsense benchmarking of machine learning tools on large classification datasets,2017__szilard_pafka,15-17|pdf,1,8
+text analysis with deep learning in R using MXNet,2017__qiang_kou,15-17|pdf|ocr,1,1
+time series platform for the tidyverse with rolling window functions,2018__matt_dancho,18-19|pptx|ocr,1,1
+comparing CAViaR conditional autoregressive value at risk specifications,2018__pedro_albuquergue,18-19|pdf,,2
+hierarchical ensemble learning for cross-sectional factor investing,2019__jingyu_he,18-19|pdf|ocr,1,1
+estimating bid-ask spreads and volatility from daily high-low prices,2019__hongyu_zhang,18-19|pptx|ocr,1,1
+sentiment analysis of bank annual reports to pick outperforming bank stocks,2019__sandra_rolnicki,18-19|pdf,1,1
+combining trend following with smart-money relative sentiment,2023__raymond_micaletti,22-25|pdf|ocr,1,1
+using credit risk measures in equity stock selection,2023__tarun_sanghi,22-25|pdf,1,1
+incentive design for data scientists in a crowdsourced hedge fund,2024__nuo_wen_lei,22-25|pdf|ocr,1,1
+running strategy backtesting on cloud infrastructure,2025__dan_wang,22-25|pptx|ocr,1,1
+weak micro-alpha signals combined with elastic net to predict the equity risk premium,2025__petra_bakosova,22-25|pptx|ocr,2,2

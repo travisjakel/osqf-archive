@@ -1,0 +1,26 @@
+query,gold_slugs,derived_from,stratum
+portfolio optimization tutorial using the Rmetrics packages,2009__diethelm_wuertz,source_head,09-11|pdf|ocr
+modeling fat tails and volatility clustering with copulas for market risk,2010__pfaff,source_head,09-11|pdf
+real-time signal extraction with direct filtering for algorithmic trading,2010__wildi,source_head,09-11|ppt|ocr
+package for running parallel R jobs on Amazon's cloud in two lines of code,2011__long,source_head,09-11|pdf|ocr
+benchmarking parallel loop backends in R for independent repeated analyses,2011__niemenmaa,source_head,09-11|ppt
+nonparametric detection of multiple change points with the e-divisive algorithm,2013__david_matteson,source_head+mid,12-14|pdf
+identifying systemically risky financial institutions with network models,2013__sanjiv_das,source_head,12-14|pptx|ocr
+tests of robust regression versus least squares for factor model fits,2014__doug_martin,source_head,12-14|pptx|ocr
+book updating S-PLUS financial time series modeling to R,2014__eric_zivot,source_head,12-14|pdf|ocr
+accessing Redis in-memory data caches from R via Rcpp,2014__dirk_eddelbuettel_2,source_head,12-14|pdf|ocr
+the path of information transfer between securities as a priced equity factor,2015__stephen_rush,source_head,15-17|pdf
+which ETF impounds new information first - price discovery in SPY versus IVV,2015__eric_zivot,source_head+mid,15-17|pptx
+credit risk modeling with rating migration Markov chains and distance to default,2015__alexander_mcneil,source_head,15-17|pdf|ocr
+no-nonsense benchmarking of machine learning tools on large classification datasets,2017__szilard_pafka,source_head+mid,15-17|pdf
+text analysis with deep learning in R using MXNet,2017__qiang_kou,source_head,15-17|pdf|ocr
+time series platform for the tidyverse with rolling window functions,2018__matt_dancho,source_head+mid,18-19|pptx|ocr
+comparing CAViaR conditional autoregressive value at risk specifications,2018__pedro_albuquergue,source_head,18-19|pdf
+hierarchical ensemble learning for cross-sectional factor investing,2019__jingyu_he,source_head,18-19|pdf|ocr
+estimating bid-ask spreads and volatility from daily high-low prices,2019__hongyu_zhang,source_head,18-19|pptx|ocr
+sentiment analysis of bank annual reports to pick outperforming bank stocks,2019__sandra_rolnicki,source_head,18-19|pdf
+combining trend following with smart-money relative sentiment,2023__raymond_micaletti,source_head,22-25|pdf|ocr
+using credit risk measures in equity stock selection,2023__tarun_sanghi,source_head,22-25|pdf
+incentive design for data scientists in a crowdsourced hedge fund,2024__nuo_wen_lei,source_head,22-25|pdf|ocr
+running strategy backtesting on cloud infrastructure,2025__dan_wang,source_head,22-25|pptx|ocr
+weak micro-alpha signals combined with elastic net to predict the equity risk premium,2025__petra_bakosova,source_head+mid,22-25|pptx|ocr
