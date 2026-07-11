@@ -40,7 +40,7 @@ PRICE_OUT = float(os.environ.get("OSQF_CHAT_PRICE_OUT", "5.0"))
 DAILY_USD = float(os.environ.get("OSQF_CHAT_DAILY_USD", "5.0"))
 MSG_CAP = int(os.environ.get("OSQF_CHAT_MSG_CAP", "30"))
 STATE = Path(os.environ.get("OSQF_CHAT_STATE", "/var/lib/osqf-mcp")) / "chat_budget.json"
-MAX_TOOL_ROUNDS = 6
+MAX_TOOL_ROUNDS = 12
 TOOL_RESULT_CAP = 8000
 
 TOKENS = _load_token_table()
