@@ -223,17 +223,22 @@ header h1{font-size:1.05em;margin:0}header p{margin:.15em 0 0;color:var(--dim);f
 #q{flex:1;padding:.7em .9em;border-radius:10px;border:1px solid #ffffff33;background:var(--panel);color:var(--text);font-size:1em}
 button{padding:.7em 1.2em;border:0;border-radius:10px;background:var(--acc);color:#fff;font-size:1em;cursor:pointer}
 button:disabled{opacity:.5}
-.ex{display:inline-block;margin:.25em .3em 0 0;padding:.35em .7em;border:1px solid #ffffff33;
-border-radius:999px;font-size:.8em;color:var(--dim);cursor:pointer}
+.exlabel{display:inline-block;margin:.25em .4em 0 0;font-size:.8em;color:var(--dim)}
+.ex{display:inline-block;margin:.25em .3em 0 0;padding:.35em .7em;border:1px solid var(--acc);
+border-radius:999px;font-size:.8em;color:var(--acc);cursor:pointer;user-select:none;
+transition:background .12s,color .12s,transform .06s}
+.ex:hover,.ex:focus-visible{background:var(--acc);color:#fff;outline:none}
+.ex:active{transform:scale(.96)}
 body.demo{font-size:20px}
 </style></head><body>
 <header><h1>osqf-archive</h1>
 <p>Chat with 18 years of osQF / R-in-finance talks (2009–2025). Answers cite real talks.
 Code + data: <a href="https://github.com/travisjakel/osqf-archive" style="color:var(--acc)">github.com/travisjakel/osqf-archive</a></p>
 <div id="ex">
-<span class="ex">Who are the recurring experts on portfolio optimization?</span>
-<span class="ex">Which talks covered regime switching, and what did they find?</span>
-<span class="ex">What R packages for backtesting were presented over the years?</span>
+<span class="exlabel">Try one:</span>
+<span class="ex" role="button" tabindex="0">Who are the recurring experts on portfolio optimization?</span>
+<span class="ex" role="button" tabindex="0">Which talks covered regime switching, and what did they find?</span>
+<span class="ex" role="button" tabindex="0">What R packages for backtesting were presented over the years?</span>
 </div></header>
 <div id="log"></div>
 <div id="bar"><input id="q" placeholder="Ask the archive…" autocomplete="off">
@@ -266,7 +271,8 @@ catch(e){w.textContent='network error — try again'}
 go.disabled=false;log.scrollTop=log.scrollHeight}
 go.onclick=()=>send(q.value);
 q.addEventListener('keydown',e=>{if(e.key==='Enter')send(q.value)});
-document.querySelectorAll('.ex').forEach(x=>x.onclick=()=>send(x.textContent));
+document.querySelectorAll('.ex').forEach(x=>{x.onclick=()=>send(x.textContent);
+x.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')send(x.textContent)})});
 </script></body></html>"""
 
 
