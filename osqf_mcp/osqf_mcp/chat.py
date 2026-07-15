@@ -19,16 +19,19 @@ from __future__ import annotations
 
 import datetime
 import hashlib
+import io
 import json
 import os
+import re
 import threading
 import time
 import urllib.request
+import zipfile
 from collections import deque
 from pathlib import Path
 
 from starlette.applications import Starlette
-from starlette.responses import HTMLResponse, JSONResponse
+from starlette.responses import HTMLResponse, JSONResponse, Response
 from starlette.routing import Route
 
 from . import server as S
@@ -177,6 +180,127 @@ def _run_agent(history):
     return (text or "I ran out of tool calls before finishing — try a narrower question."), trace, spent
 
 
+# ---- session handoff (OKF bundle) ----------------------------------------------
+# Deterministic export of the current session as an OKF (Open Knowledge Format)
+# bundle so a *different* LLM — local Ollama, Claude, anything — can take over
+# with full context. No LLM call is made; costs nothing against the daily caps.
+BASE_URL = os.environ.get("OSQF_CHAT_BASE_URL", "https://osqf.assetflow.ai")
+
+
+def _fm(d: dict) -> str:
+    """YAML frontmatter; JSON string quoting is valid YAML and escape-safe."""
+    lines = ["---"]
+    for k, v in d.items():
+        if isinstance(v, list):
+            lines.append(f"{k}: [" + ", ".join(json.dumps(str(x)) for x in v) + "]")
+        else:
+            lines.append(f"{k}: {json.dumps(str(v))}")
+    return "\n".join(lines) + "\n---\n\n"
+
+
+def _cited_slugs(history) -> list[str]:
+    text = "\n".join(m["content"] for m in history if m["role"] == "assistant")
+    urls = set(re.findall(r"https?://[^\s)\"'<>]+", text))
+    slugs = set(re.findall(r"\b(?:19|20)\d{2}__[a-z0-9_]+", text))
+    rows = [r for r in S._rows(S._ro, "SELECT slug, file_url FROM talks", cap=5000)
+            if r.get("slug")]
+    known = {r["slug"] for r in rows}
+    for r in rows:
+        if r.get("file_url") and r["file_url"] in urls:
+            slugs.add(r["slug"])
+    return [s for s in sorted(slugs) if s in known][:12]
+
+
+def _handoff_zip(history, token: str) -> bytes:
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    talks = []
+    for slug in _cited_slugs(history):
+        try:
+            talks.append(S.get_talk(slug))
+        except Exception:
+            pass
+
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
+        root = "osqf-handoff/"
+
+        turns = "\n".join(
+            f"## {'User' if m['role'] == 'user' else 'Assistant'}\n\n{m['content']}\n"
+            for m in history)
+        z.writestr(root + "session/transcript.md", _fm({
+            "type": "Conversation", "title": "osqf-archive chat transcript",
+            "description": f"{len(history)}-message session with the osqf-archive assistant",
+            "timestamp": now, "tags": ["osqf", "handoff", "session"]})
+            + "# Session transcript\n\nCited talks are expanded under the "
+              "bundle's talks/ directory.\n\n" + turns)
+
+        for t in talks:
+            meta = (t.get("meta") or [{}])[0]
+            note = t.get("note_markdown") or "(no extracted note for this talk)"
+            # notes carry wiki-internal relative links that don't exist in this
+            # bundle — unwrap them to plain text so the bundle lints clean
+            note = re.sub(r"\[([^\]]*)\]\((?:\.\./|/)[^)]*\)", r"\1", note)
+            z.writestr(root + f"talks/{t['slug']}.md", _fm({
+                "type": "Talk", "title": meta.get("title") or t["slug"],
+                "description": f"{meta.get('year')} osQF/R-Finance talk by {meta.get('speaker')}",
+                "resource": meta.get("file_url") or "",
+                "timestamp": now, "tags": ["osqf", "talk"]})
+                + f"# {meta.get('title') or t['slug']}\n\n"
+                  f"- **Year:** {meta.get('year')}\n"
+                  f"- **Speaker:** {meta.get('speaker')}\n"
+                  f"- **Slides:** {meta.get('file_url') or 'n/a'}\n"
+                  f"- **Tags:** {', '.join(t.get('tags') or []) or 'none'}\n\n"
+                  f"## Derived note\n\n{note[:6000]}\n")
+
+        z.writestr(root + "archive/continue-here.md", _fm({
+            "type": "Runbook", "title": "How to keep querying the osqf archive",
+            "description": "Live endpoints (token included) and offline options for the LLM taking over",
+            "timestamp": now, "tags": ["osqf", "handoff", "runbook"]})
+            + "# How to keep querying the archive\n\n"
+              "The archive: 626 osQF / R-Finance talks 2009-2025, 462 with extracted "
+              "notes, semantic + BM25 search, precomputed related-talk and expert "
+              "graphs.\n\n"
+              "## Live (uses the token from this session — rate-limited, rotates "
+              "after the conference)\n\n"
+              f"- Browser chat: {BASE_URL}/chat?t={token}\n"
+              f"- MCP endpoint (streamable-http, for Claude/agents): "
+              f"{BASE_URL}/t/{token}/mcp\n"
+              "- MCP tools: search_talks, get_talk, browse, related_talks, "
+              "find_experts, run_select (read-only SQL), about.\n\n"
+              "## Offline / self-hosted\n\n"
+              "- Repo (MIT): https://github.com/travisjakel/osqf-archive — "
+              "release assets include the full notes.duckdb index; stdio MCP mode "
+              "needs no models (BM25 fallback).\n"
+              "- This bundle is OKF (Open Knowledge Format): point any OKF consumer "
+              "at it, e.g. `pip install okf-ingest` then "
+              "`okf context osqf-handoff/ --query \"...\"` for index-first context "
+              "assembly.\n")
+
+        talk_lines = "\n".join(
+            f"- [{(t.get('meta') or [{}])[0].get('title') or t['slug']}]"
+            f"(talks/{t['slug']}.md)" for t in talks) or "- (no talks cited yet)"
+        z.writestr(root + "index.md", _fm({
+            "type": "Index", "title": "osqf-archive session handoff",
+            "description": "OKF bundle handing an in-progress osqf-archive chat session to another LLM",
+            "timestamp": now, "tags": ["osqf", "handoff"]})
+            + "# osqf-archive session handoff\n\n"
+              f"Generated {now} by {BASE_URL}/chat.\n\n"
+              "**To the LLM taking over:** you are continuing an in-progress "
+              "research session over an archive of 18 years of quantitative-finance "
+              "conference talks. Read [session/transcript.md](session/transcript.md) "
+              "for the conversation so far; each talk cited there has a full page "
+              "in the talks/ directory with its derived note. To answer new questions "
+              "with fresh retrieval instead of memory, use the live endpoints in "
+              "[archive/continue-here.md](archive/continue-here.md). Ground every "
+              "claim in a talk page or a fresh tool result — never invent talks or "
+              "speakers.\n\n"
+              "## Contents\n\n"
+              f"- [Session transcript](session/transcript.md) — {len(history)} messages\n"
+              f"{talk_lines}\n"
+              "- [How to keep querying](archive/continue-here.md)\n")
+    return buf.getvalue()
+
+
 # ---- routes --------------------------------------------------------------------
 async def api(request):
     body = await request.json()
@@ -221,6 +345,33 @@ async def api(request):
     return JSONResponse({"answer": answer, "tools_used": trace})
 
 
+async def handoff(request):
+    body = await request.json()
+    token = str(body.get("token", ""))
+    label = _auth_label(token)
+    if label is None:
+        return JSONResponse({"error": "invalid or missing access token"}, status_code=403)
+    history = body.get("messages", [])
+    if not isinstance(history, list) or not history:
+        return JSONResponse({"error": "nothing to hand off yet"}, status_code=400)
+    history = [{"role": m.get("role", "user"), "content": str(m.get("content", ""))[:4000]}
+               for m in history if m.get("role") in ("user", "assistant")][:40]
+
+    with _lock:  # same per-minute limiter as /chat/api; no daily-cap charge (no LLM call)
+        now = time.monotonic()
+        dq = _recent.setdefault(label, deque())
+        while dq and now - dq[0] > 60:
+            dq.popleft()
+        if len(dq) >= RATE_PER_MIN:
+            return JSONResponse({"error": "Slow down — try again in a minute."}, status_code=429)
+        dq.append(now)
+
+    data = _handoff_zip(history, token.strip())
+    stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M")
+    return Response(data, media_type="application/zip", headers={
+        "Content-Disposition": f'attachment; filename="osqf-handoff-{stamp}.zip"'})
+
+
 async def health(request):
     return JSONResponse({"status": "ok", "model": MODEL})
 
@@ -245,6 +396,7 @@ header h1{font-size:1.05em;margin:0}header p{margin:.15em 0 0;color:var(--dim);f
 #q{flex:1;padding:.7em .9em;border-radius:10px;border:1px solid #ffffff33;background:var(--panel);color:var(--text);font-size:1em}
 button{padding:.7em 1.2em;border:0;border-radius:10px;background:var(--acc);color:#fff;font-size:1em;cursor:pointer}
 button:disabled{opacity:.5}
+button.ghost{background:transparent;border:1px solid var(--acc);color:var(--acc)}
 .exlabel{display:inline-block;margin:.25em .4em 0 0;font-size:.8em;color:var(--dim)}
 .ex{display:inline-block;margin:.25em .3em 0 0;padding:.35em .7em;border:1px solid var(--acc);
 border-radius:999px;font-size:.8em;color:var(--acc);cursor:pointer;user-select:none;
@@ -264,13 +416,16 @@ Code + data: <a href="https://github.com/travisjakel/osqf-archive" style="color:
 </div></header>
 <div id="log"></div>
 <div id="bar"><input id="q" placeholder="Ask the archive…" autocomplete="off">
-<button id="go">Send</button></div>
+<button id="go">Send</button>
+<button id="ho" class="ghost" disabled
+ title="Download this session as an OKF bundle another LLM (local or cloud) can take over from">⬇ Handoff</button></div>
 <script>
 const P=new URLSearchParams(location.search);
 if(P.get('demo'))document.body.classList.add('demo');
 let TOK=P.get('t')||localStorage.getItem('osqf_t')||'';
 if(P.get('t'))localStorage.setItem('osqf_t',P.get('t'));
-const log=document.getElementById('log'),q=document.getElementById('q'),go=document.getElementById('go');
+const log=document.getElementById('log'),q=document.getElementById('q'),go=document.getElementById('go'),
+ho=document.getElementById('ho');
 const hist=[];
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function link(s){return s.replace(/(https?:\\/\\/[^\\s)]+)/g,'<a href="$1" target="_blank">$1</a>')}
@@ -288,10 +443,18 @@ body:JSON.stringify({token:TOK,messages:hist})});const j=await r.json();
 if(j.error){w.innerHTML=esc(j.error);if(r.status===403){TOK='';localStorage.removeItem('osqf_t')}}
 else{w.innerHTML=link(esc(j.answer));if(j.tools_used&&j.tools_used.length){const t=document.createElement('div');
 t.className='tools';t.textContent='tools: '+j.tools_used.join(' → ');w.appendChild(t)}
-hist.push({role:'assistant',content:j.answer})}}
+hist.push({role:'assistant',content:j.answer});ho.disabled=false}}
 catch(e){w.textContent='network error — try again'}
 go.disabled=false;log.scrollTop=log.scrollHeight}
 go.onclick=()=>send(q.value);
+ho.onclick=async()=>{if(!hist.length||!TOK)return;ho.disabled=true;
+try{const r=await fetch('/chat/api/handoff',{method:'POST',headers:{'Content-Type':'application/json'},
+body:JSON.stringify({token:TOK,messages:hist})});
+if(!r.ok){const j=await r.json().catch(()=>({}));alert(j.error||'handoff failed')}
+else{const b=await r.blob();const a=document.createElement('a');a.href=URL.createObjectURL(b);
+a.download=(r.headers.get('Content-Disposition')||'').match(/filename="([^"]+)"/)?.[1]||'osqf-handoff.zip';
+a.click();URL.revokeObjectURL(a.href)}}catch(e){alert('network error')}
+ho.disabled=false};
 q.addEventListener('keydown',e=>{if(e.key==='Enter')send(q.value)});
 document.querySelectorAll('.ex').forEach(x=>{x.onclick=()=>send(x.textContent);
 x.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')send(x.textContent)})});
@@ -306,6 +469,7 @@ app = Starlette(routes=[
     Route("/chat", page),
     Route("/chat/", page),
     Route("/chat/api", api, methods=["POST"]),
+    Route("/chat/api/handoff", handoff, methods=["POST"]),
     Route("/chat/health", health),
 ])
 
