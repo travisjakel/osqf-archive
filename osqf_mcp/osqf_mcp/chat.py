@@ -452,8 +452,15 @@ try{const r=await fetch('/chat/api/handoff',{method:'POST',headers:{'Content-Typ
 body:JSON.stringify({token:TOK,messages:hist})});
 if(!r.ok){const j=await r.json().catch(()=>({}));alert(j.error||'handoff failed')}
 else{const b=await r.blob();const a=document.createElement('a');a.href=URL.createObjectURL(b);
-a.download=(r.headers.get('Content-Disposition')||'').match(/filename="([^"]+)"/)?.[1]||'osqf-handoff.zip';
-a.click();URL.revokeObjectURL(a.href)}}catch(e){alert('network error')}
+const fn=(r.headers.get('Content-Disposition')||'').match(/filename="([^"]+)"/)?.[1]||'osqf-handoff.zip';
+a.download=fn;a.click();URL.revokeObjectURL(a.href);
+add('bot','Handoff saved to your downloads as '+fn+'.\\n\\nTo continue with a different LLM:\\n'+
+'1. Unzip it — you get an osqf-handoff/ folder (an OKF knowledge bundle).\\n'+
+'2. Give the new LLM the folder (or paste index.md into the chat) and say: '+
+'"Read index.md, then session/transcript.md, and take over this session."\\n'+
+'3. Cited talks are under talks/ with full notes; live endpoints + your access token are in archive/continue-here.md.\\n'+
+'4. Tool-using agents can also run: pip install okf-ingest, then okf context osqf-handoff/ --query "…"')}}
+catch(e){alert('network error')}
 ho.disabled=false};
 q.addEventListener('keydown',e=>{if(e.key==='Enter')send(q.value)});
 document.querySelectorAll('.ex').forEach(x=>{x.onclick=()=>send(x.textContent);
