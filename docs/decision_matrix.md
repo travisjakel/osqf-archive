@@ -1,3 +1,12 @@
+---
+type: Runbook
+title: "OCR / VLM Conditions of Use — document text & visual extraction"
+description: "Which tool to reach for when extracting content from documents (PDFs, decks, scans): pdftools/officer vs PaddleOCR-VL vs PixelRAG, per the 2026-07-08 OSQF bake-off."
+timestamp: 2026-07-08T00:00:00Z
+tags: [ops, ocr, vlm, pixelrag, osqf]
+status: active
+---
+
 # OCR / VLM Conditions of Use — document text & visual extraction
 
 _Created 2026-07-08 (OSQF/R_Finance corpus re-extraction project). Owner: osqf-archive._

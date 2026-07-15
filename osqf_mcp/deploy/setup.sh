@@ -98,6 +98,9 @@ $DOMAIN {
 	request_body {
 		max_size 256KB
 	}
+	handle /favicon.ico {
+		respond 204
+	}
 	@tok path_regexp tok ^/t/([^/]+)(/.*)\$
 	handle @tok {
 		rewrite * {re.tok.2}

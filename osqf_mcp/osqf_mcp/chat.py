@@ -228,6 +228,7 @@ async def health(request):
 PAGE = """<!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>osqf-archive — chat with 18 years of R/Finance</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%93%88</text></svg>">
 <style>
 :root{--bg:#0f1420;--panel:#1a2233;--text:#e8ecf4;--dim:#8a94a8;--acc:#4f8ef7}
 @media (prefers-color-scheme: light){:root{--bg:#f5f7fb;--panel:#fff;--text:#1a2233;--dim:#5a6478;--acc:#2563eb}}
