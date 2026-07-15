@@ -391,12 +391,18 @@ header h1{font-size:1.05em;margin:0}header p{margin:.15em 0 0;color:var(--dim);f
 .msg{margin:.6em 0;padding:.7em 1em;border-radius:10px;white-space:pre-wrap;word-wrap:break-word}
 .user{background:var(--acc);color:#fff;margin-left:15%}
 .bot{background:var(--panel);margin-right:5%}
-.bot a{color:var(--acc)} .tools{color:var(--dim);font-size:.75em;margin:.2em 0 0 .4em}
+.bot a{color:var(--acc)}
 #bar{display:flex;gap:.6em;padding: .8em 1.2em 1.1em;max-width:900px;width:100%;margin:0 auto}
 #q{flex:1;padding:.7em .9em;border-radius:10px;border:1px solid #ffffff33;background:var(--panel);color:var(--text);font-size:1em}
 button{padding:.7em 1.2em;border:0;border-radius:10px;background:var(--acc);color:#fff;font-size:1em;cursor:pointer}
 button:disabled{opacity:.5}
-button.ghost{background:transparent;border:1px solid var(--acc);color:var(--acc)}
+.acts{display:flex;gap:.4em;margin:.55em 0 0}
+button.act{padding:.25em .75em;font-size:.75em;border-radius:999px;background:transparent;
+border:1px solid #ffffff33;color:var(--dim)}
+button.act:hover{border-color:var(--acc);color:var(--acc)}
+.src{margin:.45em 0 0;padding:.5em .75em;border-radius:8px;background:#00000026;
+font-size:.8em;color:var(--dim);word-break:break-all}
+.src a{color:var(--acc)}
 .exlabel{display:inline-block;margin:.25em .4em 0 0;font-size:.8em;color:var(--dim)}
 .ex{display:inline-block;margin:.25em .3em 0 0;padding:.35em .7em;border:1px solid var(--acc);
 border-radius:999px;font-size:.8em;color:var(--acc);cursor:pointer;user-select:none;
@@ -416,42 +422,39 @@ Code + data: <a href="https://github.com/travisjakel/osqf-archive" style="color:
 </div></header>
 <div id="log"></div>
 <div id="bar"><input id="q" placeholder="Ask the archive…" autocomplete="off">
-<button id="go">Send</button>
-<button id="ho" class="ghost" disabled
- title="Download this session as an OKF bundle another LLM (local or cloud) can take over from">⬇ Handoff</button></div>
+<button id="go">Send</button></div>
 <script>
 const P=new URLSearchParams(location.search);
 if(P.get('demo'))document.body.classList.add('demo');
 let TOK=P.get('t')||localStorage.getItem('osqf_t')||'';
 if(P.get('t'))localStorage.setItem('osqf_t',P.get('t'));
-const log=document.getElementById('log'),q=document.getElementById('q'),go=document.getElementById('go'),
-ho=document.getElementById('ho');
+const log=document.getElementById('log'),q=document.getElementById('q'),go=document.getElementById('go');
 const hist=[];
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
-function link(s){return s.replace(/(https?:\\/\\/[^\\s)]+)/g,'<a href="$1" target="_blank">$1</a>')}
-function add(cls,txt,tools){const d=document.createElement('div');d.className='msg '+cls;
-d.innerHTML=link(esc(txt));if(tools&&tools.length){const t=document.createElement('div');
-t.className='tools';t.textContent='tools: '+tools.join(' → ');d.appendChild(t)}
-log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
-async function send(text){
-if(!TOK){TOK=prompt('Access token (from the talk slide / QR):')||'';localStorage.setItem('osqf_t',TOK)}
-if(!text.trim()||!TOK)return;
-add('user',text);hist.push({role:'user',content:text});q.value='';go.disabled=true;
-const w=add('bot','…thinking');
-try{const r=await fetch('/chat/api',{method:'POST',headers:{'Content-Type':'application/json'},
-body:JSON.stringify({token:TOK,messages:hist})});const j=await r.json();
-if(j.error){w.innerHTML=esc(j.error);if(r.status===403){TOK='';localStorage.removeItem('osqf_t')}}
-else{w.innerHTML=link(esc(j.answer));if(j.tools_used&&j.tools_used.length){const t=document.createElement('div');
-t.className='tools';t.textContent='tools: '+j.tools_used.join(' → ');w.appendChild(t)}
-hist.push({role:'assistant',content:j.answer});ho.disabled=false}}
-catch(e){w.textContent='network error — try again'}
-go.disabled=false;log.scrollTop=log.scrollHeight}
-go.onclick=()=>send(q.value);
-ho.onclick=async()=>{if(!hist.length||!TOK)return;ho.disabled=true;
+function link(s){return s.replace(/(https?:\\/\\/[^\\s)\\]]+)/g,'<a href="$1" target="_blank">$1</a>')}
+function add(cls,txt){const d=document.createElement('div');d.className='msg '+cls;
+d.innerHTML=link(esc(txt));log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+function mkbtn(label,fn){const b=document.createElement('button');b.className='act';
+b.textContent=label;b.onclick=()=>fn(b);return b}
+function finish(w,ans,tools){
+w.innerHTML=link(esc(ans));
+const src=document.createElement('div');src.className='src';src.style.display='none';
+const urls=[...new Set(ans.match(/https?:\\/\\/[^\\s)\\]]+/g)||[])];
+src.innerHTML=(urls.length?'<b>Cited links</b><br>'+urls.map(u=>'<a href="'+esc(u)+'" target="_blank">'+esc(u)+'</a>').join('<br>')+'<br>':'')+
+'<b>Tools</b>: '+(tools&&tools.length?esc(tools.join(' → ')):'none');
+const acts=document.createElement('div');acts.className='acts';
+acts.appendChild(mkbtn('Copy',b=>{navigator.clipboard.writeText(ans).then(
+()=>{b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy',1200)},
+()=>{b.textContent='copy failed'})}));
+acts.appendChild(mkbtn('Sources',()=>{src.style.display=src.style.display==='none'?'block':'none';
+log.scrollTop=log.scrollHeight}));
+acts.appendChild(mkbtn('Handoff',handoff));
+w.appendChild(acts);w.appendChild(src)}
+async function handoff(b){if(!hist.length||!TOK)return;b.disabled=true;
 try{const r=await fetch('/chat/api/handoff',{method:'POST',headers:{'Content-Type':'application/json'},
 body:JSON.stringify({token:TOK,messages:hist})});
 if(!r.ok){const j=await r.json().catch(()=>({}));alert(j.error||'handoff failed')}
-else{const b=await r.blob();const a=document.createElement('a');a.href=URL.createObjectURL(b);
+else{const bl=await r.blob();const a=document.createElement('a');a.href=URL.createObjectURL(bl);
 const fn=(r.headers.get('Content-Disposition')||'').match(/filename="([^"]+)"/)?.[1]||'osqf-handoff.zip';
 a.download=fn;a.click();URL.revokeObjectURL(a.href);
 add('bot','Handoff saved to your downloads as '+fn+'.\\n\\nTo continue with a different LLM:\\n'+
@@ -461,7 +464,19 @@ add('bot','Handoff saved to your downloads as '+fn+'.\\n\\nTo continue with a di
 '3. Cited talks are under talks/ with full notes; live endpoints + your access token are in archive/continue-here.md.\\n'+
 '4. Tool-using agents can also run: pip install okf-ingest, then okf context osqf-handoff/ --query "…"')}}
 catch(e){alert('network error')}
-ho.disabled=false};
+b.disabled=false}
+async function send(text){
+if(!TOK){TOK=prompt('Access token (from the talk slide / QR):')||'';localStorage.setItem('osqf_t',TOK)}
+if(!text.trim()||!TOK)return;
+add('user',text);hist.push({role:'user',content:text});q.value='';go.disabled=true;
+const w=add('bot','…thinking');
+try{const r=await fetch('/chat/api',{method:'POST',headers:{'Content-Type':'application/json'},
+body:JSON.stringify({token:TOK,messages:hist})});const j=await r.json();
+if(j.error){w.innerHTML=esc(j.error);if(r.status===403){TOK='';localStorage.removeItem('osqf_t')}}
+else{hist.push({role:'assistant',content:j.answer});finish(w,j.answer,j.tools_used)}}
+catch(e){w.textContent='network error — try again'}
+go.disabled=false;log.scrollTop=log.scrollHeight}
+go.onclick=()=>send(q.value);
 q.addEventListener('keydown',e=>{if(e.key==='Enter')send(q.value)});
 document.querySelectorAll('.ex').forEach(x=>{x.onclick=()=>send(x.textContent);
 x.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')send(x.textContent)})});
