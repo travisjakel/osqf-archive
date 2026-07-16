@@ -421,7 +421,7 @@ Code + data: <a href="https://github.com/travisjakel/osqf-archive" style="color:
 <span class="ex" role="button" tabindex="0">What R packages for backtesting were presented over the years?</span>
 </div></header>
 <div id="log"></div>
-<div id="bar"><input id="q" placeholder="Ask the archive…" autocomplete="off">
+<div id="bar"><input id="q" placeholder="Ask the archive… (/copy n → clipboard context for another LLM)" autocomplete="off">
 <button id="go">Send</button></div>
 <script>
 const P=new URLSearchParams(location.search);
@@ -497,6 +497,15 @@ add('bot','Handoff saved to your downloads as '+fn+'.\\n\\nTo continue with a di
 catch(e){alert('network error')}
 b.disabled=false}
 async function send(text){
+const cm=text.trim().match(/^\\/copy\\+?(?:\\s+(\\d+))?$/i);
+if(cm){q.value='';
+const avail=hist.filter(x=>x.role==='assistant').length;
+if(!avail){add('bot','Nothing to copy yet — ask a question first, then /copy or /copy n.');return}
+const n=cm[1]?parseInt(cm[1],10):1e9;
+copyText(qaBlob(hist.length-1,n)).then(
+()=>add('bot','Copied ✓ — '+Math.min(n,avail)+' Q&A pair(s) on your clipboard as an OKF context blob. Paste into any LLM session to hand this conversation over.'),
+()=>add('bot','Copy failed — try the Copy + button on a response instead.'));
+return}
 if(!TOK){TOK=prompt('Access token (from the talk slide / QR):')||'';localStorage.setItem('osqf_t',TOK)}
 if(!text.trim()||!TOK)return;
 add('user',text);hist.push({role:'user',content:text});q.value='';go.disabled=true;
