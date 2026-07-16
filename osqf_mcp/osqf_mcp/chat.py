@@ -436,16 +436,47 @@ function add(cls,txt){const d=document.createElement('div');d.className='msg '+c
 d.innerHTML=link(esc(txt));log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
 function mkbtn(label,fn){const b=document.createElement('button');b.className='act';
 b.textContent=label;b.onclick=()=>fn(b);return b}
-function finish(w,ans,tools){
+function copyText(t){
+const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand('copy')}catch(e){}
+ta.remove();
+return ok?Promise.resolve():navigator.clipboard.writeText(t)}
+function qaBlob(idx,n){
+const upto=hist.slice(0,idx+1),pairs=[];
+for(let i=0;i<upto.length;i++){if(upto[i].role==='assistant'){
+let qi=i-1;while(qi>=0&&upto[qi].role!=='user')qi--;
+pairs.push({q:qi>=0?upto[qi].content:'(no question)',a:upto[i].content})}}
+const take=pairs.slice(-n);
+return '---\\ntype: "Conversation"\\ntitle: "osqf-archive chat excerpt"\\n'+
+'description: "'+take.length+' Q&A with the osqf-archive assistant over 18 years of osQF/R-Finance talks (2009-2025)"\\n'+
+'timestamp: "'+new Date().toISOString()+'"\\nsource: "'+location.origin+'/chat"\\n'+
+'tags: ["osqf", "conversation", "handoff"]\\n---\\n\\n'+
+'**Context for the LLM taking over:** the Q&A below comes from the osqf-archive assistant, '+
+'a retrieval agent over 626 osQF/R-Finance conference talks (2009-2025). Citations like '+
+'(year, speaker: title) refer to real archive talks; treat them as grounded sources.\\n\\n'+
+take.map(p=>'## Q: '+p.q+'\\n\\n'+p.a+'\\n').join('\\n')+
+'\\n## Continue querying (optional)\\n'+
+'- MCP endpoint (streamable-http): '+location.origin+'/t/'+TOK+'/mcp\\n'+
+'- Browser chat: '+location.origin+'/chat?t='+TOK+'\\n'+
+'- Tools: search_talks, get_talk, browse, related_talks, find_experts, run_select, about\\n'}
+function finish(w,ans,tools,idx){
 w.innerHTML=link(esc(ans));
 const src=document.createElement('div');src.className='src';src.style.display='none';
 const urls=[...new Set(ans.match(/https?:\\/\\/[^\\s)\\]]+/g)||[])];
 src.innerHTML=(urls.length?'<b>Cited links</b><br>'+urls.map(u=>'<a href="'+esc(u)+'" target="_blank">'+esc(u)+'</a>').join('<br>')+'<br>':'')+
 '<b>Tools</b>: '+(tools&&tools.length?esc(tools.join(' → ')):'none');
 const acts=document.createElement('div');acts.className='acts';
-acts.appendChild(mkbtn('Copy',b=>{navigator.clipboard.writeText(ans).then(
+acts.appendChild(mkbtn('Copy',b=>{copyText(ans).then(
 ()=>{b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy',1200)},
 ()=>{b.textContent='copy failed'})}));
+acts.appendChild(mkbtn('Copy +',b=>{
+const raw=prompt('How many recent Q&A pairs to copy? (blank = all)');
+if(raw===null)return;
+let n=parseInt(raw,10);if(!(n>0))n=1e9;
+const blob=qaBlob(idx,n);
+setTimeout(()=>{copyText(blob).then(   // let focus return after the prompt closes
+()=>{b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy +',1200)},
+()=>{b.textContent='copy failed'})},150)}));
 acts.appendChild(mkbtn('Sources',()=>{src.style.display=src.style.display==='none'?'block':'none';
 log.scrollTop=log.scrollHeight}));
 acts.appendChild(mkbtn('Handoff',handoff));
@@ -473,7 +504,7 @@ const w=add('bot','…thinking');
 try{const r=await fetch('/chat/api',{method:'POST',headers:{'Content-Type':'application/json'},
 body:JSON.stringify({token:TOK,messages:hist})});const j=await r.json();
 if(j.error){w.innerHTML=esc(j.error);if(r.status===403){TOK='';localStorage.removeItem('osqf_t')}}
-else{hist.push({role:'assistant',content:j.answer});finish(w,j.answer,j.tools_used)}}
+else{hist.push({role:'assistant',content:j.answer});finish(w,j.answer,j.tools_used,hist.length-1)}}
 catch(e){w.textContent='network error — try again'}
 go.disabled=false;log.scrollTop=log.scrollHeight}
 go.onclick=()=>send(q.value);
