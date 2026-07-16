@@ -109,7 +109,9 @@ $DOMAIN {
 		}
 	}
 	handle /chat* {
-		reverse_proxy 127.0.0.1:8790
+		reverse_proxy 127.0.0.1:8790 {
+			flush_interval -1
+		}
 	}
 	reverse_proxy 127.0.0.1:8788
 }

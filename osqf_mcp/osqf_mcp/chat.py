@@ -1,19 +1,24 @@
 """Thin public chat wrapper over the osqf-archive tools.
 
 One Starlette app (default 127.0.0.1:8790, put Caddy in front): a single-page
-chat UI + /chat/api agent loop. The LLM is a cloud API (OpenAI-compatible,
-default OpenRouter); the seven archive tools are called IN-PROCESS from
-osqf_mcp.server, so the demo exercises exactly what MCP clients see.
+chat UI + /chat/api SSE agent loop. The LLM is a cloud API (OpenAI-compatible,
+default OpenRouter); the archive tools are called IN-PROCESS from
+osqf_mcp.server, so the demo exercises exactly what MCP clients see. Answers
+stream token-by-token; identical questions are served from a deterministic
+cache (free); slide-page images (OSQF_PAGES_DIR) render inline via show_page.
 
 Guards (this is a public page over a paid API):
   * same bearer-token table as the MCP server (?t=<token> or form field)
   * per-token daily message cap          (OSQF_CHAT_MSG_CAP, default 30)
+  * per-token per-minute rate limit      (OSQF_CHAT_RATE_PER_MIN, default 8)
   * hard daily spend cap in USD          (OSQF_CHAT_DAILY_USD, default 5.0)
-  * tool-result truncation + bounded agent loop (6 tool rounds max)
+  * tool-result truncation + bounded agent loop (MAX_TOOL_ROUNDS)
+  * cache hits bypass all caps — they cost nothing
 
 Env: OPENROUTER_API_KEY (required)   OSQF_CHAT_MODEL (default anthropic/claude-haiku-4.5)
      OSQF_CHAT_PORT=8790  OSQF_CHAT_PRICE_IN=1.0  OSQF_CHAT_PRICE_OUT=5.0  ($/Mtok)
-     OSQF_CHAT_STATE (default /var/lib/osqf-mcp)
+     OSQF_CHAT_STATE (default /var/lib/osqf-mcp)   OSQF_CHAT_CACHE_TTL (default 86400)
+     OSQF_PAGES_DIR (default /opt/osqf-mcp/pages)  OSQF_CHAT_BASE_URL
 """
 from __future__ import annotations
 
@@ -31,7 +36,8 @@ from collections import deque
 from pathlib import Path
 
 from starlette.applications import Starlette
-from starlette.responses import HTMLResponse, JSONResponse, Response
+from starlette.responses import (FileResponse, HTMLResponse, JSONResponse, Response,
+                                 StreamingResponse)
 from starlette.routing import Route
 
 from . import server as S
@@ -59,7 +65,10 @@ SYSTEM = (
     "Always ground answers in tool results — never invent talks or speakers. "
     "Cite talks inline as (year, speaker: title) and include the file_url link when you "
     "have it. Prefer search_talks + get_talk; use find_experts for who-questions and "
-    "related_talks for exploration. Be concise: a short direct answer, then the "
+    "related_talks for exploration. When the user asks about a chart, table, or figure, "
+    "or asks to SEE a slide/deck, call show_page for the cited talk and put the returned "
+    "image_url on its own line — the page renders it inline with page-flip controls. "
+    "Be concise: a short direct answer, then the "
     "citations. If a question is unrelated to the archive or quantitative finance, "
     "say so briefly and suggest an archive question instead."
 )
@@ -106,10 +115,38 @@ TOOLS = [
         "name": "about",
         "description": "Archive contents, coverage and retrieval mode.",
         "parameters": {"type": "object", "properties": {}}}},
+    {"type": "function", "function": {
+        "name": "show_page",
+        "description": "Embed a slide-page image of a talk in the chat. Returns image_url "
+                       "and the talk's page count; put image_url on its own line in the "
+                       "answer to display it. Page 1 is the title slide. Use when the user "
+                       "asks about a chart/table/figure or wants to see the deck.",
+        "parameters": {"type": "object", "properties": {
+            "slug": {"type": "string"}, "page": {"type": "integer", "default": 1}},
+            "required": ["slug"]}}},
 ]
+
+# slide-page images (built by downsample_pages.py; served by /chat/page/...)
+PAGES_DIR = Path(os.environ.get("OSQF_PAGES_DIR", "/opt/osqf-mcp/pages"))
+try:
+    _PAGES = json.loads((PAGES_DIR / "manifest.json").read_text())
+except Exception:
+    _PAGES = {}
+
+
+def show_page(slug: str, page: int = 1) -> dict:
+    n = _PAGES.get(slug)
+    if not n:
+        return {"error": f"no page images available for '{slug}'"}
+    page = max(1, min(int(page), n))
+    return {"image_url": f"{BASE_URL}/chat/page/{slug}/{page}",
+            "page": page, "n_pages": n,
+            "note": "put image_url on its own line in the answer to render it inline"}
+
+
 TOOL_FNS = {"search_talks": S.search_talks, "get_talk": S.get_talk, "browse": S.browse,
             "related_talks": S.related_talks, "find_experts": S.find_experts,
-            "run_select": S.run_select, "about": S.about}
+            "run_select": S.run_select, "about": S.about, "show_page": show_page}
 
 
 # ---- budget state --------------------------------------------------------------
@@ -135,33 +172,127 @@ def _auth_label(token: str) -> str | None:
     return TOKENS.get(hashlib.sha256(token.strip().encode()).hexdigest())
 
 
-# ---- agent loop ----------------------------------------------------------------
-def _llm(messages, use_tools=True):
-    body = {"model": MODEL, "messages": messages,
-            "max_tokens": 1200, "temperature": 0.2}
+# ---- answer cache ---------------------------------------------------------------
+# Deterministic same-question cache: demo-day insurance. A cache hit costs no
+# LLM call and charges neither the message cap nor the rate limiter.
+CACHE_TTL = int(os.environ.get("OSQF_CHAT_CACHE_TTL", "86400"))
+CACHE_MAX = 200
+CACHE_PATH = STATE.parent / "chat_cache.json"
+
+
+def _cache_key(text: str) -> str:
+    norm = re.sub(r"\s+", " ", text.strip().lower()).rstrip("?!. ")
+    return hashlib.sha256(norm.encode()).hexdigest()[:32]
+
+
+def _cache_load() -> dict:
+    try:
+        return json.loads(CACHE_PATH.read_text())
+    except Exception:
+        return {}
+
+
+def _cache_get(key):
+    e = _cache_load().get(key)
+    return e if e and time.time() - e["ts"] < CACHE_TTL else None
+
+
+def _cache_put(key, answer, trace):
+    c = _cache_load()
+    c[key] = {"answer": answer, "trace": trace, "ts": time.time()}
+    while len(c) > CACHE_MAX:
+        c.pop(min(c, key=lambda k: c[k]["ts"]))
+    CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    CACHE_PATH.write_text(json.dumps(c))
+
+
+# ---- agent loop (streaming) ------------------------------------------------------
+def _llm_stream(messages, use_tools=True):
+    """Generator over one OpenRouter call: yields ("delta", text) as answer tokens
+    arrive and ("reset", None) if tool calls appear after text was streamed.
+    Returns (assistant_message, usd) via StopIteration.value."""
+    body = {"model": MODEL, "messages": messages, "max_tokens": 1200,
+            "temperature": 0.2, "stream": True,
+            "stream_options": {"include_usage": True}}
     if use_tools:
         body["tools"] = TOOLS
     req = urllib.request.Request(API_URL, data=json.dumps(body).encode(), headers={
         "Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        j = json.loads(r.read())
-    u = j.get("usage", {})
-    usd = (u.get("prompt_tokens", 0) * PRICE_IN + u.get("completion_tokens", 0) * PRICE_OUT) / 1e6
-    return j["choices"][0]["message"], usd
+    content, calls, usage, streamed = [], {}, {}, False
+    with urllib.request.urlopen(req, timeout=180) as r:
+        for raw in r:
+            line = raw.decode("utf-8", "replace").strip()
+            if not line.startswith("data:"):
+                continue
+            data = line[5:].strip()
+            if data == "[DONE]":
+                break
+            try:
+                j = json.loads(data)
+            except Exception:
+                continue
+            if j.get("usage"):
+                usage = j["usage"]
+            d = ((j.get("choices") or [{}])[0]).get("delta") or {}
+            for tc in d.get("tool_calls") or []:
+                slot = calls.setdefault(tc.get("index", 0), {
+                    "id": "", "type": "function",
+                    "function": {"name": "", "arguments": ""}})
+                if tc.get("id"):
+                    slot["id"] = tc["id"]
+                fn = tc.get("function") or {}
+                slot["function"]["name"] += fn.get("name") or ""
+                slot["function"]["arguments"] += fn.get("arguments") or ""
+                if streamed:  # text we already forwarded wasn't the final answer
+                    streamed, content = False, []
+                    yield ("reset", None)
+            if d.get("content"):
+                content.append(d["content"])
+                if not calls:
+                    streamed = True
+                    yield ("delta", d["content"])
+    usd = (usage.get("prompt_tokens", 0) * PRICE_IN +
+           usage.get("completion_tokens", 0) * PRICE_OUT) / 1e6
+    msg = {"role": "assistant", "content": "".join(content) or None}
+    if calls:
+        msg["tool_calls"] = [calls[i] for i in sorted(calls)]
+    return msg, usd
 
 
-def _run_agent(history):
+def _call_live(msgs, use_tools=True):
+    """Generator: forwards one _llm_stream call's events live as UI dicts, then
+    yields the terminal ("__res__", (msg, usd)) marker."""
+    gen = _llm_stream(msgs, use_tools=use_tools)
+    while True:
+        try:
+            kind, val = next(gen)
+        except StopIteration as st:
+            yield ("__res__", st.value)
+            return
+        yield {"t": "delta", "d": val} if kind == "delta" else {"t": "reset"}
+
+
+def _agent_events(history):
+    """Generator of UI event dicts; final event is {"t":"fin", answer, trace, usd}."""
     msgs = [{"role": "system", "content": SYSTEM}] + history[-12:]
     spent, trace = 0.0, []
     for _ in range(MAX_TOOL_ROUNDS):
-        msg, usd = _llm(msgs)
+        msg = usd = None
+        for ev in _call_live(msgs):
+            if isinstance(ev, tuple):
+                msg, usd = ev[1]
+            else:
+                yield ev
         spent += usd
         calls = msg.get("tool_calls") or []
         if not calls:
-            return (msg.get("content") or "").strip(), trace, spent
+            yield {"t": "fin", "answer": (msg.get("content") or "").strip(),
+                   "trace": trace, "usd": spent}
+            return
         msgs.append(msg)
         for c in calls:
             name = c["function"]["name"]
+            yield {"t": "tool", "name": name}
             try:
                 args = json.loads(c["function"].get("arguments") or "{}")
                 out = TOOL_FNS[name](**args) if name in TOOL_FNS else {"error": "unknown tool"}
@@ -174,10 +305,16 @@ def _run_agent(history):
     msgs.append({"role": "user", "content":
                  "(Tool-call limit reached. Answer the question now using only the tool "
                  "results above; note briefly if the answer is partial.)"})
-    msg, usd = _llm(msgs, use_tools=False)
+    msg = usd = None
+    for ev in _call_live(msgs, use_tools=False):
+        if isinstance(ev, tuple):
+            msg, usd = ev[1]
+        else:
+            yield ev
     spent += usd
-    text = (msg.get("content") or "").strip()
-    return (text or "I ran out of tool calls before finishing — try a narrower question."), trace, spent
+    answer = ((msg.get("content") or "").strip()
+              or "I ran out of tool calls before finishing — try a narrower question.")
+    yield {"t": "fin", "answer": answer, "trace": trace, "usd": spent}
 
 
 # ---- session handoff (OKF bundle) ----------------------------------------------
@@ -302,6 +439,10 @@ def _handoff_zip(history, token: str) -> bytes:
 
 
 # ---- routes --------------------------------------------------------------------
+def _sse(d) -> str:
+    return f"data: {json.dumps(d)}\n\n"
+
+
 async def api(request):
     body = await request.json()
     label = _auth_label(body.get("token", ""))
@@ -312,6 +453,16 @@ async def api(request):
         return JSONResponse({"error": "empty messages"}, status_code=400)
     history = [{"role": m.get("role", "user"), "content": str(m.get("content", ""))[:4000]}
                for m in history if m.get("role") in ("user", "assistant")]
+    last_user = next((m["content"] for m in reversed(history) if m["role"] == "user"), "")
+    key = _cache_key(last_user)
+
+    with _lock:
+        hit = _cache_get(key)
+    if hit:  # free: no LLM call, no cap or rate-limit charge
+        def cached():
+            yield _sse({"t": "delta", "d": hit["answer"]})
+            yield _sse({"t": "done", "tools": hit["trace"], "cached": True})
+        return StreamingResponse(cached(), media_type="text/event-stream")
 
     with _lock:
         now = time.monotonic()
@@ -333,16 +484,25 @@ async def api(request):
         st["msgs"][label] = st["msgs"].get(label, 0) + 1
         _save(st)
 
-    try:
-        answer, trace, spent = _run_agent(history)
-    except Exception as e:
-        return JSONResponse({"error": f"upstream model error: {type(e).__name__}"}, status_code=502)
+    single_turn = sum(1 for m in history if m["role"] == "user") == 1
 
-    with _lock:
-        st = _state()
-        st["usd"] = round(st["usd"] + spent, 6)
-        _save(st)
-    return JSONResponse({"answer": answer, "tools_used": trace})
+    def gen():
+        try:
+            for ev in _agent_events(history):
+                if ev["t"] == "fin":
+                    with _lock:
+                        st = _state()
+                        st["usd"] = round(st["usd"] + ev["usd"], 6)
+                        _save(st)
+                        if single_turn and ev["answer"] and not ev["answer"].startswith("I ran out"):
+                            _cache_put(key, ev["answer"], ev["trace"])
+                    yield _sse({"t": "done", "tools": ev["trace"], "cached": False})
+                else:
+                    yield _sse(ev)
+        except Exception as e:
+            yield _sse({"t": "err", "m": f"upstream model error: {type(e).__name__}"})
+    return StreamingResponse(gen(), media_type="text/event-stream", headers={
+        "Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
 async def handoff(request):
@@ -370,6 +530,21 @@ async def handoff(request):
     stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M")
     return Response(data, media_type="application/zip", headers={
         "Content-Disposition": f'attachment; filename="osqf-handoff-{stamp}.zip"'})
+
+
+async def page_img(request):
+    # <img> tags can't send headers, so the token rides the query string
+    if _auth_label(request.query_params.get("t", "")) is None:
+        return JSONResponse({"error": "invalid or missing access token"}, status_code=403)
+    slug = request.path_params["slug"]
+    page = request.path_params["page"]
+    if not re.fullmatch(r"[a-z0-9_]{1,120}", slug) or not page.isdigit():
+        return JSONResponse({"error": "not found"}, status_code=404)
+    f = PAGES_DIR / slug / f"{int(page)}.jpg"
+    if not f.is_file():
+        return JSONResponse({"error": "not found"}, status_code=404)
+    return FileResponse(f, media_type="image/jpeg",
+                        headers={"Cache-Control": "public, max-age=86400"})
 
 
 async def health(request):
@@ -403,6 +578,10 @@ button.act:hover{border-color:var(--acc);color:var(--acc)}
 .src{margin:.45em 0 0;padding:.5em .75em;border-radius:8px;background:#00000026;
 font-size:.8em;color:var(--dim);word-break:break-all}
 .src a{color:var(--acc)}
+.pv{margin:.55em 0}
+.pv img{max-width:100%;border-radius:8px;border:1px solid #ffffff22;display:block}
+.pvc{display:flex;gap:.5em;align-items:center;margin-top:.3em}
+.pvn{color:var(--dim);font-size:.8em}
 .exlabel{display:inline-block;margin:.25em .4em 0 0;font-size:.8em;color:var(--dim)}
 .ex{display:inline-block;margin:.25em .3em 0 0;padding:.35em .7em;border:1px solid var(--acc);
 border-radius:999px;font-size:.8em;color:var(--acc);cursor:pointer;user-select:none;
@@ -432,6 +611,13 @@ const log=document.getElementById('log'),q=document.getElementById('q'),go=docum
 const hist=[];
 function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function link(s){return s.replace(/(https?:\\/\\/[^\\s)\\]]+)/g,'<a href="$1" target="_blank">$1</a>')}
+function pgurl(slug,p){return location.origin+'/chat/page/'+slug+'/'+p+'?t='+encodeURIComponent(TOK)}
+function pagify(html){return html.replace(
+/<a href="[^"]*\\/chat\\/page\\/([a-z0-9_]+)\\/(\\d+)[^"]*"[^>]*>[^<]*<\\/a>/g,
+(m,slug,p)=>'<div class="pv" data-slug="'+slug+'" data-page="'+p+'">'+
+'<img src="'+pgurl(slug,p)+'" loading="lazy">'+
+'<div class="pvc"><button class="act pvp">‹</button><span class="pvn">page '+p+'</span>'+
+'<button class="act pvx">›</button></div></div>')}
 function add(cls,txt){const d=document.createElement('div');d.className='msg '+cls;
 d.innerHTML=link(esc(txt));log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
 function mkbtn(label,fn){const b=document.createElement('button');b.className='act';
@@ -460,7 +646,7 @@ take.map(p=>'## Q: '+p.q+'\\n\\n'+p.a+'\\n').join('\\n')+
 '- Browser chat: '+location.origin+'/chat?t='+TOK+'\\n'+
 '- Tools: search_talks, get_talk, browse, related_talks, find_experts, run_select, about\\n'}
 function finish(w,ans,tools,idx){
-w.innerHTML=link(esc(ans));
+w.innerHTML=pagify(link(esc(ans)));
 const src=document.createElement('div');src.className='src';src.style.display='none';
 const urls=[...new Set(ans.match(/https?:\\/\\/[^\\s)\\]]+/g)||[])];
 src.innerHTML=(urls.length?'<b>Cited links</b><br>'+urls.map(u=>'<a href="'+esc(u)+'" target="_blank">'+esc(u)+'</a>').join('<br>')+'<br>':'')+
@@ -511,12 +697,35 @@ if(!text.trim()||!TOK)return;
 add('user',text);hist.push({role:'user',content:text});q.value='';go.disabled=true;
 const w=add('bot','…thinking');
 try{const r=await fetch('/chat/api',{method:'POST',headers:{'Content-Type':'application/json'},
-body:JSON.stringify({token:TOK,messages:hist})});const j=await r.json();
-if(j.error){w.innerHTML=esc(j.error);if(r.status===403){TOK='';localStorage.removeItem('osqf_t')}}
-else{hist.push({role:'assistant',content:j.answer});finish(w,j.answer,j.tools_used,hist.length-1)}}
+body:JSON.stringify({token:TOK,messages:hist})});
+const ct=r.headers.get('content-type')||'';
+if(ct.includes('json')){const j=await r.json();
+w.innerHTML=esc(j.error||'error');if(r.status===403){TOK='';localStorage.removeItem('osqf_t')}}
+else{const rd=r.body.getReader(),dec=new TextDecoder();
+let buf='',acc='',tools=[],err=null;
+while(true){const{done,value}=await rd.read();if(done)break;
+buf+=dec.decode(value,{stream:true});let i;
+while((i=buf.indexOf('\\n\\n'))>=0){const ln=buf.slice(0,i).trim();buf=buf.slice(i+2);
+if(!ln.startsWith('data:'))continue;let e;try{e=JSON.parse(ln.slice(5))}catch(x){continue}
+if(e.t==='delta'){acc+=e.d;w.innerHTML=link(esc(acc));log.scrollTop=log.scrollHeight}
+else if(e.t==='tool'&&!acc){w.innerHTML='<span style="color:var(--dim)">… '+esc(e.name)+'</span>'}
+else if(e.t==='reset'){acc='';w.innerHTML='…thinking'}
+else if(e.t==='err'){err=e.m}
+else if(e.t==='done'){tools=e.tools||[]}}}
+if(acc){hist.push({role:'assistant',content:acc});finish(w,acc,tools,hist.length-1)}
+else{w.innerHTML=esc(err||'no answer — try again')}}}
 catch(e){w.textContent='network error — try again'}
 go.disabled=false;log.scrollTop=log.scrollHeight}
 go.onclick=()=>send(q.value);
+log.addEventListener('click',ev=>{const b=ev.target,pv=b.closest&&b.closest('.pv');
+if(!pv||b.tagName!=='BUTTON')return;
+let p=parseInt(pv.dataset.page,10);
+if(b.classList.contains('pvp'))p=Math.max(1,p-1);
+else if(b.classList.contains('pvx'))p=p+1;else return;
+const img=pv.querySelector('img'),lab=pv.querySelector('.pvn'),old=pv.dataset.page;
+img.onerror=()=>{img.onerror=null;pv.dataset.page=old;
+img.src=pgurl(pv.dataset.slug,old);lab.textContent='page '+old};
+pv.dataset.page=p;img.src=pgurl(pv.dataset.slug,p);lab.textContent='page '+p});
 q.addEventListener('keydown',e=>{if(e.key==='Enter')send(q.value)});
 document.querySelectorAll('.ex').forEach(x=>{x.onclick=()=>send(x.textContent);
 x.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')send(x.textContent)})});
@@ -532,6 +741,7 @@ app = Starlette(routes=[
     Route("/chat/", page),
     Route("/chat/api", api, methods=["POST"]),
     Route("/chat/api/handoff", handoff, methods=["POST"]),
+    Route("/chat/page/{slug}/{page}", page_img),
     Route("/chat/health", health),
 ])
 

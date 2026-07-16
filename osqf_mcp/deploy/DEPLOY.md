@@ -72,7 +72,26 @@ Then register it in an MCP client per `../CLIENT_SETUP.md` (hosted section).
 Rate limit defaults to 60 req/min globally (`OSQF_RATE_LIMIT` in
 `/etc/osqf-mcp.env`).
 
-## 6. Teardown
+## 6. Optional: browser chat wrapper (`/chat`)
+
+A zero-install chat UI over the same tools, backed by a cloud LLM. Needs
+`/etc/osqf-chat.env` (root 600) with `OPENROUTER_API_KEY=...`; then
+`setup.sh` enables the `osqf-chat` service automatically. Answers stream
+(SSE), identical questions are served from a free deterministic cache, and
+every response carries Copy / Copy+ / Sources / Handoff actions plus a
+`/copy [n]` input command.
+
+Env knobs (all optional): `OSQF_CHAT_MODEL`, `OSQF_CHAT_DAILY_USD` (default
+5.0), `OSQF_CHAT_MSG_CAP` (30/token/day), `OSQF_CHAT_RATE_PER_MIN` (8),
+`OSQF_CHAT_CACHE_TTL` (86400 s), `OSQF_CHAT_BASE_URL`, `OSQF_PAGES_DIR`.
+
+**Slide-page images** (inline `show_page` viewer): render the pixel corpus
+to web JPEGs with `deploy/downsample_pages.py`, then ship
+`<out>/` (JPEGs + `manifest.json`) to `/opt/osqf-mcp/pages/` and restart
+`osqf-chat`. Without the directory the chat still works — `show_page`
+just reports no images.
+
+## 7. Teardown
 
 Delete the Lightsail instance and release the static IP (a detached static
 IP bills). DNS record can stay — recreate later with the same runbook.
