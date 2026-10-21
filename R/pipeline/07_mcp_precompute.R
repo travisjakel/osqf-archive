@@ -44,7 +44,8 @@ stopifnot(file.copy(LIVE_DB, OUT_DB))
 cat(sprintf("copied live db -> %s (%.1f MB)\n", OUT_DB, file.size(OUT_DB) / 2^20))
 
 con <- dbConnect(duckdb::duckdb(), OUT_DB)
-on.exit(dbDisconnect(con, shutdown = TRUE), add = TRUE)
+# Disconnected explicitly at the end: a top-level on.exit() fires immediately
+# under source() (see 05_build_embeddings.R).
 
 # ---- 2. talks (sanitized manifest) ---------------------------------------------
 man <- as.data.table(read_fst(file.path(ROOT, "manifest.fst")))
@@ -171,3 +172,5 @@ cat(sprintf("\nDONE: %s (%.1f MB)\n", OUT_DB, file.size(OUT_DB) / 2^20))
 for (t in dbGetQuery(con, "SHOW TABLES")$name)
   cat(sprintf("  %-16s %8d rows\n", t,
               dbGetQuery(con, sprintf('SELECT count(*) n FROM "%s"', t))$n))
+
+dbDisconnect(con, shutdown = TRUE)

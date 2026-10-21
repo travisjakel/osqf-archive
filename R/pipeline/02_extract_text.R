@@ -96,7 +96,9 @@ if (WORKERS > 1) {
 } else {
   future::plan(future::sequential)
 }
-on.exit(future::plan(future::sequential), add = TRUE)
+# No top-level on.exit() here: under source() (run_all.R) it fires as soon as
+# its own statement finishes, which reset the plan to sequential BEFORE the
+# extraction ran. The plan is reset explicitly at the end instead.
 
 t0 <- Sys.time()
 results <- future.apply::future_Map(
@@ -128,3 +130,5 @@ work[, status := res_dt$status]
 print(work[, .N, by = .(file_ext, status)][order(file_ext, -N)])
 cat(sprintf("\nLog written to %s\n", log_path))
 if (nrow(errs) > 0) cat(sprintf("Errors written to %s (%d rows)\n", err_path, nrow(errs)))
+
+future::plan(future::sequential)  # release the workers (see the note at the plan above)

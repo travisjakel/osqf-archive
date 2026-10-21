@@ -34,7 +34,9 @@ cat(sprintf("DB path    : %s\n", DB_PATH))
 # create a missing parent directory.
 dir.create(dirname(DB_PATH), recursive = TRUE, showWarnings = FALSE)
 con <- dbConnect(duckdb::duckdb(), DB_PATH)
-on.exit(dbDisconnect(con, shutdown = TRUE), add = TRUE)
+# No top-level on.exit(dbDisconnect()): under source() (run_all.R) it fires as
+# soon as its own statement finishes, so the very next query met a closed
+# connection ("Invalid connection"). Disconnected explicitly at the end.
 dbExecute(con, "INSTALL vss; LOAD vss;")
 dbExecute(con, "SET hnsw_enable_experimental_persistence = true;")
 
@@ -266,3 +268,5 @@ if (!"chunks_emb_idx" %in% existing_idx$index_name) {
 n_chunks <- dbGetQuery(con, "SELECT COUNT(*) AS n FROM chunks")$n
 cat(sprintf("\nNew embedded: %d\nSkipped     : %d\nFailed      : %d\nTotal in DB : %d\n",
             n_new, n_skip, n_fail, n_chunks))
+
+dbDisconnect(con, shutdown = TRUE)

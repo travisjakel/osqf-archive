@@ -110,7 +110,8 @@ for (i in which(papers$has_pdf)) {
 
 dir.create(dirname(DB_PATH), recursive = TRUE, showWarnings = FALSE)  # absent in a fresh clone
 con <- dbConnect(duckdb::duckdb(), DB_PATH)
-on.exit(dbDisconnect(con, shutdown = TRUE), add = TRUE)
+# Disconnected explicitly at the end: a top-level on.exit() fires immediately
+# under source() (see 05_build_embeddings.R).
 dbExecute(con, "INSTALL vss; LOAD vss;")
 dbExecute(con, "SET hnsw_enable_experimental_persistence = true;")
 dbExecute(con, "
@@ -155,3 +156,5 @@ write_fst(unique(links[, .(slug, paper_id, kind)]), LINKS_FST)
 tot <- dbGetQuery(con, "SELECT COUNT(*) n, COUNT(DISTINCT paper_id) p FROM paper_chunks")
 cat(sprintf("paper_chunks: +%d new | total %d chunks / %d papers | edges: %d\n",
             n_new, tot$n, tot$p, nrow(unique(links[, .(slug, paper_id)]))))
+
+dbDisconnect(con, shutdown = TRUE)
