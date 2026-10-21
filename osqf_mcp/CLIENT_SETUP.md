@@ -56,7 +56,8 @@ is forever and needs nothing from anyone.
 
 ## B. Offline (runs on your laptop, no server, no account)
 
-1. `pip install "mcp>=1.9" "duckdb>=1.1"` (Python ≥ 3.10)
+1. `pip install "mcp>=1.9,<2" "duckdb>=1.1"` (Python ≥ 3.10; `mcp` 2.x removed the
+   `FastMCP` API this server uses)
 2. Download **`notes.duckdb`** from the repo's Release assets (~60 MB).
 3. Point your MCP client at the package over stdio:
 

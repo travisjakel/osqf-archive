@@ -16,7 +16,8 @@ project: not affiliated with or endorsed by the osQF conference.
 
 No models, no GPU, no server needed:
 
-1. `pip install "mcp>=1.9" "duckdb>=1.1"`
+1. `pip install "mcp>=1.9,<2" "duckdb>=1.1"` (`mcp` 2.x removed the `FastMCP`
+   API this server uses)
 2. Download `notes.duckdb` from this repo's **Releases** (~50 MB).
 3. Register the stdio server in your MCP client (Claude Desktop, Claude Code,
    Cursor, ...) — full copy-paste configs in

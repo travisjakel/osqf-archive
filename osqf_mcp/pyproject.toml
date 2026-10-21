@@ -7,7 +7,8 @@ requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
 authors = [{ name = "Travis S. Jakel" }]
 dependencies = [
-    "mcp>=1.9",
+    # <2: mcp 2.0 removed mcp.server.fastmcp, which server.py imports (2026-09-28).
+    "mcp>=1.9,<2",
     "duckdb>=1.1",
 ]
 
