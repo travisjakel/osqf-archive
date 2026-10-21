@@ -2,7 +2,7 @@
 type: Talk
 title: Augmenting Trading Systems with Hidden Markov Models using BayesHMM
 description: Using Hidden Markov Models (HMM) with BayesHMM to extract latent states from noisy time series data in trading systems.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Luis Damiano
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__luis_damiano.pdf"
 slug: 2019__luis_damiano
 status: archived
 tags: [osqf, 2019, luis_damiano]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Augmenting Trading Systems with Hidden Markov Models using BayesHMM

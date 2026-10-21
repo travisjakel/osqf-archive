@@ -14,7 +14,7 @@ ev <- rbindlist(lapply(jf, function(p) {
 cat(sprintf("JSONs: %d | mean evidence pass: %.1f%% (baseline 68.9%%) | zero-pass: %d (baseline 28)\n",
             nrow(ev), 100 * mean(ev$pr, na.rm = TRUE), ev[pr == 0, .N]))
 
-source("./embeddings/query.R")
+source("./R/query.R")
 for (q in c("oil prices housing market Houston",
             "adverse selection health insurance",
             "order book microstructure liquidity")) {

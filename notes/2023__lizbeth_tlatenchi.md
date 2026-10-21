@@ -2,7 +2,7 @@
 type: Talk
 title: "Emerging Markets: The Relationship Between Corruption and Governance Practices"
 description: Examines relationships between corruption types and governance in emerging markets using WGI and V-Dem datasets
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Lizbeth Tlatenchi
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__lizbeth_tlatenchi.pptx"
 slug: 2023__lizbeth_tlatenchi
 status: archived
 tags: [osqf, 2023, lizbeth_tlatenchi, lasso_regression]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Emerging Markets: The Relationship Between Corruption and Governance Practices

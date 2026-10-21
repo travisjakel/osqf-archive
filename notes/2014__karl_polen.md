@@ -2,7 +2,7 @@
 type: Talk
 title: Private Equity Performance Analytics Implemented in R
 description: "Private equity performance analysis using R, focusing on IRR calculation, PME benchmarks, and Direct Alpha method."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Karl Polen
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__karl_polen.pdf"
 slug: 2014__karl_polen
 status: archived
 tags: [osqf, 2014, karl_polen]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Private Equity Performance Analytics Implemented in R

@@ -2,7 +2,7 @@
 type: Talk
 title: "Analyzing the Interplay Between Public Pension Finances and Governmental Finances: Lessons from Linking an Economic Model to a Pension Fund Model"
 description: "Linking macroeconomic and pension fund models to assess compounded risks from business cycles, correlated returns, and tax revenue fluctuations in public pension systems."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Yimeng Yin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__yimeng_yin.pptx"
 slug: 2019__yimeng_yin
 status: archived
 tags: [osqf, 2019, yimeng_yin]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Analyzing the Interplay Between Public Pension Finances and Governmental Finances: Lessons from Linking an Economic Model to a Pension Fund Model

@@ -2,7 +2,7 @@
 type: Talk
 title: Information Ratio Maximizing Fundamental Factor Models
 description: "This talk presents a revised Fundamental Law of Active Management that improves IR estimation by accounting for IC variability, validated across eight factors and 2000+ stocks."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Doug Martin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__doug_martin.pdf"
 slug: 2016__doug_martin
 status: archived
 tags: [osqf, 2016, doug_martin]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Information Ratio Maximizing Fundamental Factor Models

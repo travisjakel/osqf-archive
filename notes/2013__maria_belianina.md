@@ -2,7 +2,7 @@
 type: Talk
 title: OneTick and RHandling High and Low Frequency Data
 description: OneTick and R integration for handling high/low frequency financial time series data with real-time analytics
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Maria Belianina
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__maria_belianina.pdf"
 slug: 2013__maria_belianina
 status: archived
 tags: [osqf, 2013, maria_belianina, time_series_databases]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # OneTick and RHandling High and Low Frequency Data

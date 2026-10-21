@@ -2,7 +2,7 @@
 type: Talk
 title: "BondValuation: An R Package for Fixed Coupon Bond Analysis"
 description: "Presentation of the BondValuation R package for fixed coupon bond analysis, focusing on day count conventions, irregular coupon periods, and data quality."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Wadim Djatschenko
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__wadim_djatschenko.pptx"
 slug: 2019__wadim_djatschenko
 status: archived
 tags: [osqf, 2019, wadim_djatschenko]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # BondValuation: An R Package for Fixed Coupon Bond Analysis

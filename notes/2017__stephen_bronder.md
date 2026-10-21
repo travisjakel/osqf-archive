@@ -2,7 +2,7 @@
 type: Talk
 title: Integrating Forecasting and Machine Learning in the mlr Framework
 description: The talk demonstrates integrating forecasting and machine learning in the mlr framework using Apple stock data.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Stephen Bronder
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__stephen_bronder.pdf"
 slug: 2017__stephen_bronder
 status: archived
 tags: [osqf, 2017, stephen_bronder, forecasting]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Integrating Forecasting and Machine Learning in the mlr Framework

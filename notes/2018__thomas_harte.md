@@ -2,7 +2,7 @@
 type: Talk
 title: Trading the UntradablePricing Derivatives When Prices Are Not Observable
 description: Pricing derivatives on untradable assets like private equity funds using extended Black-Scholes models and factor decomposition
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Thomas Harte
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__thomas_harte.pdf"
 slug: 2018__thomas_harte
 status: archived
 tags: [osqf, 2018, thomas_harte]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Trading the UntradablePricing Derivatives When Prices Are Not Observable

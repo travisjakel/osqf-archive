@@ -2,7 +2,7 @@
 type: Talk
 title: Empirical Statistics of Cryptocurrency Returns
 description: "Cryptocurrency returns exhibit fatter tails than equities, with Bitcoin more extreme than Ethereum, challenging traditional market-making profitability."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Brian Boonstra
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__brian_boonstra.pdf"
 slug: 2019__brian_boonstra
 status: archived
 tags: [osqf, 2019, brian_boonstra]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Empirical Statistics of Cryptocurrency Returns

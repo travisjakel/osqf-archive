@@ -2,7 +2,7 @@
 type: Talk
 title: "How Common is Insider Trading? Evidence from the Options Market"
 description: "The study finds that insider trading in options markets declined significantly after Raj Rajaratnam's 2009 arrest, evidenced by the loss of predictive power in option trading strategies."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Oleg Bondarenko
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__oleg_bondarenko.pdf"
 slug: 2023__oleg_bondarenko
 status: archived
 tags: [osqf, 2023, oleg_bondarenko]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # How Common is Insider Trading? Evidence from the Options Market

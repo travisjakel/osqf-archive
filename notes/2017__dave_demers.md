@@ -2,7 +2,7 @@
 type: Talk
 title: Risk Fast and Slow
 description: "Explores dual approaches to risk management: real-time data analysis and long-term regime identification."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Dave DeMers
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__dave_demers.pdf"
 slug: 2017__dave_demers
 status: archived
 tags: [osqf, 2017, dave_demers, risk_management]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Risk Fast and Slow

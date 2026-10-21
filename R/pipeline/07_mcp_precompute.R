@@ -27,9 +27,9 @@ suppressPackageStartupMessages({
 })
 
 HOME_DOCS <- path.expand("~")
-ROOT   <- Sys.getenv("OSQF_WIKI_ROOT",  file.path(HOME_DOCS, "R_Files", "osqf_wiki"))
-STAGE  <- Sys.getenv("OSQF_STAGE_DIR",  file.path(HOME_DOCS, "public_exports", "osqf-archive"))
-ASSETS <- Sys.getenv("OSQF_ASSETS_DIR", file.path(HOME_DOCS, "public_exports", "_release_assets_v0.1"))
+ROOT   <- Sys.getenv("OSQF_WIKI_ROOT",  ".")
+STAGE  <- Sys.getenv("OSQF_STAGE_DIR",  ".")
+ASSETS <- Sys.getenv("OSQF_ASSETS_DIR", "release")
 
 LIVE_DB <- file.path(ROOT, "embeddings", "notes.duckdb")
 OUT_DB  <- file.path(ASSETS, "notes.duckdb")

@@ -2,7 +2,7 @@
 type: Talk
 title: The Networks Of Firms Implied By The News
 description: Extracting firm networks from news articles to address data scarcity in economic networks.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Gustavo Schwenkler
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__gustavo_schwenkler.pdf"
 slug: 2025__gustavo_schwenkler
 status: archived
 tags: [osqf, 2025, gustavo_schwenkler]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Networks Of Firms Implied By The News

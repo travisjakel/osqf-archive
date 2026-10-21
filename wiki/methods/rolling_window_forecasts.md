@@ -1,11 +1,12 @@
 ---
 type: Method
 title: "Method: rolling window forecasts"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 key: rolling window forecasts
 kind: method
 n_talks: 2
 tags: [osqf, method, rolling_window_forecasts]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Method: rolling window forecasts

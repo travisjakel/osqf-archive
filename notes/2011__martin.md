@@ -2,7 +2,7 @@
 type: Talk
 title: Tail Risk Budgeting versus Modern Portfolio Theory
 description: Comparison of Tail Risk Budgeting approaches versus Modern Portfolio Theory in portfolio optimization
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Martin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__martin.pptx"
 slug: 2011__martin
 status: archived
 tags: [osqf, 2011, martin]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Tail Risk Budgeting versus Modern Portfolio Theory

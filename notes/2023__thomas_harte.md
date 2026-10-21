@@ -2,7 +2,7 @@
 type: Talk
 title: "A Cunning Plan... The Lambda Calculus, Lisp, Scheme, and R"
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Thomas Harte
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__thomas_harte.NA"
 slug: 2023__thomas_harte
 status: no_file
 tags: [osqf, 2023, thomas_harte]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # A Cunning Plan... The Lambda Calculus, Lisp, Scheme, and R

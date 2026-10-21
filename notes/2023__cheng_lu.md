@@ -2,7 +2,7 @@
 type: Talk
 title: Non-Myopic Equity Risk Premium
 description: Proposed a non-myopic approach for predicting equity risk premium using reinforcement learning and equilibrium views
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Cheng Lu
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__cheng_lu.pdf"
 slug: 2023__cheng_lu
 status: archived
 tags: [osqf, 2023, cheng_lu]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Non-Myopic Equity Risk Premium

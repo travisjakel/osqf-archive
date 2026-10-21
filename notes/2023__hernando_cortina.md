@@ -2,7 +2,7 @@
 type: Talk
 title: "Hockeystick: Visualizing Global Warming with R"
 description: "Introduces the 'hockeystick' R package for visualizing climate data including CO2 levels, temperature anomalies, and sea level rise."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Hernando Cortina
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__hernando_cortina.pdf"
 slug: 2023__hernando_cortina
 status: archived
 tags: [osqf, 2023, hernando_cortina]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Hockeystick: Visualizing Global Warming with R

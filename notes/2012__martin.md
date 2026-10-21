@@ -2,7 +2,7 @@
 type: Talk
 title: Robust Statistics in Finance
 description: This talk explains how robust statistical methods improve portfolio construction by reducing sensitivity to outliers compared to classical techniques like least squares regression.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Martin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__martin.pdf"
 slug: 2012__martin
 status: archived
 tags: [osqf, 2012, martin, robust_statistics, robust_regression]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Robust Statistics in Finance

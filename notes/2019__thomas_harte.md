@@ -2,7 +2,7 @@
 type: Talk
 title: "Hedging the Unhedgeable: Hedging Risk When Prices Are Not Observable"
 description: "This talk presents a framework for hedging derivatives on private-equity funds when market prices are unobservable, using Bayesian calibration of stochastic differential equations (SDEs) and passive portfolio replication as hedging instruments."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Thomas Harte
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__thomas_harte.pdf"
 slug: 2019__thomas_harte
 status: archived
 tags: [osqf, 2019, thomas_harte, stochastic_differential_equations_sdes]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Hedging the Unhedgeable: Hedging Risk When Prices Are Not Observable

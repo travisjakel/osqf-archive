@@ -2,7 +2,7 @@
 type: Talk
 title: Building Portfolios of Spreads
 description: "This talk explains how to construct portfolios of spreads using returns-based analysis and risk parity techniques, addressing challenges with traditional return calculations and position sizing."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Paul Teetor
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__paul_teetor.pdf"
 slug: 2025__paul_teetor
 status: archived
 tags: [osqf, 2025, paul_teetor, portfolio_construction, risk_parity]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Building Portfolios of Spreads

@@ -2,7 +2,7 @@
 type: Talk
 title: "Forecasting at a Digital Healthcare Tech Startup: A Time Series Framework"
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Laura Rose
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__laura_rose.NA"
 slug: 2025__laura_rose
 status: no_file
 tags: [osqf, 2025, laura_rose]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Forecasting at a Digital Healthcare Tech Startup: A Time Series Framework

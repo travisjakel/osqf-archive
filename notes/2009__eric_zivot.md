@@ -2,7 +2,7 @@
 type: Talk
 title: Making the Transition from S-PLUS and S+Finmetrics and Using R in a Hedge Fund of Funds Environment
 description: "Using R for hedge fund of funds risk management, including factor models and portfolio analysis"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2009
 date: ~
 speaker: Eric Zivot
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2009/2009__eric_zivot.pdf"
 slug: 2009__eric_zivot
 status: archived
 tags: [osqf, 2009, eric_zivot]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Making the Transition from S-PLUS and S+Finmetrics and Using R in a Hedge Fund of Funds Environment

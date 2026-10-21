@@ -2,7 +2,7 @@
 type: Talk
 title: Forecasting Performance of Markov-Switching GARCH ModelsA Large-Scale Empirical Study
 description: "The MSGARCH R package implements Markov-switching GARCH models with C++ optimization, supporting volatility forecasting and risk measures."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Keven Bluteau
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__keven_bluteau.pdf"
 slug: 2017__keven_bluteau
 status: archived
 tags: [osqf, 2017, keven_bluteau, maximum_likelihood_estimation_mle]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Forecasting Performance of Markov-Switching GARCH ModelsA Large-Scale Empirical Study

@@ -2,7 +2,7 @@
 type: Talk
 title: DeathstarSeamless Distributed Computing for R
 description: deathstar is a dead simple way to run lapply across EC2 nodes or local compute nodes using ZMQ for data/code transfer
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Armstrong
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__armstrong.pdf"
 slug: 2012__armstrong
 status: archived
 tags: [osqf, 2012, armstrong, distributed_computing]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # DeathstarSeamless Distributed Computing for R

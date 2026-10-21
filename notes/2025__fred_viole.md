@@ -2,7 +2,7 @@
 type: Talk
 title: Partial Moments in QF
 description: "Partial moments in quantitative finance, their equivalences to traditional statistics, and applications in portfolio theory, forecasting, and utility modeling."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Fred Viole
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__fred_viole.pdf"
 slug: 2025__fred_viole
 status: archived
 tags: [osqf, 2025, fred_viole]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Partial Moments in QF

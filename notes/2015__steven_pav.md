@@ -2,7 +2,7 @@
 type: Talk
 title: Portfolio Cramer-Rao Bounds (why bad things happen to good quants)
 description: "The talk explains how the Cramer-Rao bound limits portfolio performance, highlighting issues like overfitting and the impact of diversification."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Steven Pav
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__steven_pav.pdf"
 slug: 2015__steven_pav
 status: archived
 tags: [osqf, 2015, steven_pav, portfolio_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Portfolio Cramer-Rao Bounds (why bad things happen to good quants)

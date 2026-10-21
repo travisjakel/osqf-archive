@@ -2,7 +2,7 @@
 type: Talk
 title: Risk and Performance Estimator Standard Errors for Serially Correlated Returns
 description: "This talk introduces a method to compute standard errors for risk/performance estimators when returns are serially correlated, emphasizing their often-ignored importance."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Xin Chen
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__xin_chen.pdf"
 slug: 2017__xin_chen
 status: archived
 tags: [osqf, 2017, xin_chen, risk_performance_estimation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Risk and Performance Estimator Standard Errors for Serially Correlated Returns

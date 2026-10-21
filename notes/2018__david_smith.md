@@ -2,7 +2,7 @@
 type: Talk
 title: Speeding up R with Parallel Programming in the Cloud
 description: This talk demonstrates how to accelerate R code using parallel programming frameworks and cloud computing resources like Azure Batch.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: David Smith
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__david_smith.pptx"
 slug: 2018__david_smith
 status: archived
 tags: [osqf, 2018, david_smith]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speeding up R with Parallel Programming in the Cloud

@@ -2,7 +2,7 @@
 type: Talk
 title: "Evolution of the Prudent Person Rule: Information from Pension Fund Disclosures"
 description: "Analysis of Dutch pension fund annual reports to assess adherence to the Prudent Person Rule through text analysis of investment policy, risk management, governance, and sustainability disclosures."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Kris Boudt
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__kris_boudt.pdf"
 slug: 2025__kris_boudt
 status: archived
 tags: [osqf, 2025, kris_boudt]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Evolution of the Prudent Person Rule: Information from Pension Fund Disclosures

@@ -2,7 +2,7 @@
 type: Talk
 title: Currency Risk and Information Diffusion
 description: "Currency market information diffuses to equity markets at varying speeds, with adverse selection in equities determining the pace."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Stephen Rush
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__stephen_rush.pdf"
 slug: 2018__stephen_rush
 status: archived
 tags: [osqf, 2018, stephen_rush]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Currency Risk and Information Diffusion

@@ -2,7 +2,7 @@
 type: Talk
 title: The informational role of algorithmic traders in the option market
 description: "Examines whether algorithmic traders generate informed trading in index options, finding no predictive power in their net buying pressure (NBP)."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Rohini Grover
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__rohini_grover.pdf"
 slug: 2015__rohini_grover
 status: archived
 tags: [osqf, 2015, rohini_grover, algorithmic_trading, regression_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The informational role of algorithmic traders in the option market

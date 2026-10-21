@@ -2,7 +2,7 @@
 type: Talk
 title: The Market for English Premier League (EPL) Odds
 description: The talk presents a method using real-time soccer betting odds and the Skellam process to model and predict match outcomes.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Guanhao Feng
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__guanhao_feng_2.pdf"
 slug: 2017__guanhao_feng_2
 status: archived
 tags: [osqf, 2017, guanhao_feng]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Market for English Premier League (EPL) Odds

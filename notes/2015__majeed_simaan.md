@@ -2,7 +2,7 @@
 type: Talk
 title: "Global Minimum Variance Portfolio: a Horse Race of Volatilities"
 description: "Analysis of global minimum variance portfolio performance using different volatility estimation methods (sample, RiskMetrics, GARCH) across 2003-2015"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Majeed Simaan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__majeed_simaan.pdf"
 slug: 2015__majeed_simaan
 status: archived
 tags: [osqf, 2015, majeed_simaan, portfolio_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Global Minimum Variance Portfolio: a Horse Race of Volatilities

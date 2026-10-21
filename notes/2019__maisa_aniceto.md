@@ -2,7 +2,7 @@
 type: Talk
 title: "Stroll Through the Forest: Applying Random Forest to Predict Credit Risk"
 description: "Applying Random Forest to predict credit risk using a Brazilian dataset with over 100,000 consumers."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Maisa Aniceto
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__maisa_aniceto.pdf"
 slug: 2019__maisa_aniceto
 status: archived
 tags: [osqf, 2019, maisa_aniceto, random_forest]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Stroll Through the Forest: Applying Random Forest to Predict Credit Risk

@@ -2,7 +2,7 @@
 type: Talk
 title: Convex Optimization for High-Dimensional Portfolio Construction
 description: "This talk explains how convex optimization techniques, particularly Lasso and its variants, can be applied to high-dimensional portfolio construction problems with constraints like sparsity and diversification."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Michael Weylandt
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__michael_weylandt.pdf"
 slug: 2017__michael_weylandt
 status: archived
 tags: [osqf, 2017, michael_weylandt, portfolio_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Convex Optimization for High-Dimensional Portfolio Construction

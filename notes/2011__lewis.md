@@ -2,7 +2,7 @@
 type: Talk
 title: The betfair Package
 description: The betfair R package implements the Betfair API for sports betting and market data access.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Lewis
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__lewis.pdf"
 slug: 2011__lewis
 status: archived
 tags: [osqf, 2011, lewis, r_package_development]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The betfair Package

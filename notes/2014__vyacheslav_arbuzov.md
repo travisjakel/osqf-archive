@@ -2,7 +2,7 @@
 type: Talk
 title: "Microstructure of Fin. Markets. HFT, Regulation and Structural Changes"
 description: "Analysis of HFT regulation impacts, order book dynamics, and structural market changes using Russian and EU market data."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Vyacheslav Arbuzov
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__vyacheslav_arbuzov.pdf"
 slug: 2014__vyacheslav_arbuzov
 status: archived
 tags: [osqf, 2014, vyacheslav_arbuzov, high_frequency_trading_hft]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Microstructure of Fin. Markets. HFT, Regulation and Structural Changes

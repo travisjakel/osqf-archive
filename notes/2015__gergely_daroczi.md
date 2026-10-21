@@ -2,7 +2,7 @@
 type: Talk
 title: Network analysis of the Hungarian interbank lending market
 description: Network analysis of the Hungarian interbank lending market
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Gergely Daroczi
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__gergely_daroczi.pdf"
 slug: 2015__gergely_daroczi
 status: archived
 tags: [osqf, 2015, gergely_daroczi, network_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Network analysis of the Hungarian interbank lending market

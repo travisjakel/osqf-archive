@@ -2,7 +2,7 @@
 type: Talk
 title: BCP Stability AnalyticsNew Directions in Tactical Asset Management
 description: BCP Stability Analytics applies Bayesian change point methods to improve tactical asset management through volatility reduction and drawdown minimization.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Tobias Setz
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__tobias_setz.pdf"
 slug: 2014__tobias_setz
 status: archived
 tags: [osqf, 2014, tobias_setz]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # BCP Stability AnalyticsNew Directions in Tactical Asset Management

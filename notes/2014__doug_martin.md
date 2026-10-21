@@ -2,7 +2,7 @@
 type: Talk
 title: Tests for Robust versus Least Squares Factor Model Fits
 description: Presentation on statistical tests comparing robust and least squares factor model fits in finance.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Doug Martin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__doug_martin.pptx"
 slug: 2014__doug_martin
 status: archived
 tags: [osqf, 2014, doug_martin, factor_model_comparison]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Tests for Robust versus Least Squares Factor Model Fits

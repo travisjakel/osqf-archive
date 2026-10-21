@@ -2,7 +2,7 @@
 type: Talk
 title: "An Outsider's Education in Quantitative Trading"
 description: "Louis Marascio discusses the challenges of quantitative trading for outsiders, emphasizing pitfalls like over-reliance on backtesting, the importance of strategy focus, and the human factor in trading."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Louis Marascio
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__louis_marascio.pdf"
 slug: 2015__louis_marascio
 status: archived
 tags: [osqf, 2015, louis_marascio, backtesting]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # An Outsider's Education in Quantitative Trading

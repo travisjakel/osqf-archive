@@ -1,11 +1,12 @@
 ---
 type: Speaker
 title: "Speaker: Maria Belianina"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 speaker: Maria Belianina
 speaker_slug: maria_belianina
 n_talks: 4
 tags: [osqf, speaker, maria_belianina]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speaker: Maria Belianina

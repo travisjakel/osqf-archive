@@ -2,7 +2,7 @@
 type: Talk
 title: A Bayesian Multivariate Functional Dynamic Linear Model
 description: "A Bayesian model for multivariate functional time series, decomposing data into dynamic factors and functional components using splines and MCMC."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Daniel Kowal
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__daniel_kowal.pdf"
 slug: 2017__daniel_kowal
 status: archived
 tags: [osqf, 2017, daniel_kowal, gibbs_sampling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # A Bayesian Multivariate Functional Dynamic Linear Model

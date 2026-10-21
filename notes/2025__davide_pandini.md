@@ -2,7 +2,7 @@
 type: Talk
 title: "From Regression to Neural Networks: Evaluating AI Models for Real-World Financial Trading Strategies"
 description: "The talk evaluates AI models for real-world financial trading strategies, comparing regression and neural networks."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Davide Pandini
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__davide_pandini.pdf"
 slug: 2025__davide_pandini
 status: archived
 tags: [osqf, 2025, davide_pandini]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # From Regression to Neural Networks: Evaluating AI Models for Real-World Financial Trading Strategies

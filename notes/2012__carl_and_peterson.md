@@ -2,7 +2,7 @@
 type: Talk
 title: Evaluating Strategic Portfolios of Hedge Funds
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Carl/Peterson
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2012__carl_and_peterson
 status: no_file
 tags: [osqf, 2012, carl_and_peterson]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Evaluating Strategic Portfolios of Hedge Funds

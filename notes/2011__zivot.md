@@ -2,7 +2,7 @@
 type: Talk
 title: Factor Risk and Performance Attribution
 description: "Factor models for risk measurement, management, and performance attribution using Monte Carlo methods and Euler's theorem decomposition"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Zivot
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__zivot.pptx"
 slug: 2011__zivot
 status: archived
 tags: [osqf, 2011, zivot, factor_model_monte_carlo_fmmc]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Factor Risk and Performance Attribution

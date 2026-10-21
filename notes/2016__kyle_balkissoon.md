@@ -2,7 +2,7 @@
 type: Talk
 title: A Practitioners analysis of the overnight effect
 description: "Analysis of the overnight effect in financial markets, including statistical properties and a minimum variance portfolio strategy."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Kyle Balkissoon
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__kyle_balkissoon.pdf"
 slug: 2016__kyle_balkissoon
 status: archived
 tags: [osqf, 2016, kyle_balkissoon]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # A Practitioners analysis of the overnight effect

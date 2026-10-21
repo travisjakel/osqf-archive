@@ -2,7 +2,7 @@
 type: Talk
 title: 7 Steps to Systematic Investing
 description: "A tutorial on systematic investing covering data collection, model development, backtesting, risk management, deployment, and ongoing maintenance"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Jeff Ryan and Justin Shea
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__jeff_ryan_and_justin_shea.pdf"
 slug: 2025__jeff_ryan_and_justin_shea
 status: archived
 tags: [osqf, 2025, jeff_ryan_and_justin_shea]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # 7 Steps to Systematic Investing

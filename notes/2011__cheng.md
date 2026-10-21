@@ -2,7 +2,7 @@
 type: Talk
 title: RStudio
 description: RStudio
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Cheng
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__cheng.pdf"
 slug: 2011__cheng
 status: tiny_deck
 tags: [osqf, 2011, cheng]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # RStudio

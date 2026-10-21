@@ -2,7 +2,7 @@
 type: Talk
 title: R tools for Portfolio Optimization
 description: "Presentation on using R packages for portfolio optimization techniques including mean-variance, conditional value-at-risk, and nonlinear methods."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2009
 date: ~
 speaker: Guy Yollin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2009/2009__guy_yollin.pdf"
 slug: 2009__guy_yollin
 status: archived
 tags: [osqf, 2009, guy_yollin, portfolio_optimization, quadratic_programming]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # R tools for Portfolio Optimization

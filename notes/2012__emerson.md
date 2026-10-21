@@ -2,7 +2,7 @@
 type: Talk
 title: Towards Terrabytes of TAQ
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Emerson
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2012__emerson
 status: no_file
 tags: [osqf, 2012, emerson]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Towards Terrabytes of TAQ

@@ -2,7 +2,7 @@
 type: Talk
 title: Cross-Over Options
 description: Introduces cross-over (CO) options – a novel class of path-dependent volatility instruments with robust replication strategies and applications to vanilla options and variance trading.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Oleg Bondarenko
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__oleg_bondarenko.pdf"
 slug: 2025__oleg_bondarenko
 status: archived
 tags: [osqf, 2025, oleg_bondarenko]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Cross-Over Options

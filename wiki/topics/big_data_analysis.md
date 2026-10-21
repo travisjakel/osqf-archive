@@ -1,11 +1,12 @@
 ---
 type: Topic
 title: "Topic: big data analysis"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 key: big data analysis
 kind: topic
 n_talks: 3
 tags: [osqf, topic, big_data_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Topic: big data analysis

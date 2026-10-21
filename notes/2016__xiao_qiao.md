@@ -2,7 +2,7 @@
 type: Talk
 title: "A Practitioner's Defense of Return Predictability"
 description: The talk presents evidence that return predictability can be leveraged for profitable market-timing strategies despite academic skepticism.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Xiao Qiao
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__xiao_qiao.pdf"
 slug: 2016__xiao_qiao
 status: archived
 tags: [osqf, 2016, xiao_qiao, return_predictability]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # A Practitioner's Defense of Return Predictability

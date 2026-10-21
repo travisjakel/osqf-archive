@@ -2,7 +2,7 @@
 type: Talk
 title: Risk Parity Portfolios with the package riskParityPortfolio
 description: "Introduces the R package riskParityPortfolio for computing risk parity portfolios, discussing formulations, and illustrating applications in portfolio optimization."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Daniel Palomar
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__daniel_palomar.pdf"
 slug: 2019__daniel_palomar
 status: archived
 tags: [osqf, 2019, daniel_palomar, euler_s_theorem_risk_decomposition]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Risk Parity Portfolios with the package riskParityPortfolio

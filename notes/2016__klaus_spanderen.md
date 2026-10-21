@@ -2,7 +2,7 @@
 type: Talk
 title: Calibration of the Heston Local Stochastic Volatility Model
 description: Combines Heston and Local Volatility models to improve option pricing calibration
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Klaus Spanderen
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__klaus_spanderen.pdf"
 slug: 2016__klaus_spanderen
 status: archived
 tags: [osqf, 2016, klaus_spanderen, options_pricing]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Calibration of the Heston Local Stochastic Volatility Model

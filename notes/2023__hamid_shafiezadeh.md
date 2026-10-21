@@ -2,7 +2,7 @@
 type: Talk
 title: "fedz1 Package: An Easier Access to Financial Accounts of the U.S. (Z.1)"
 description: "The fedz1 R package provides consolidated access to U.S. Financial Accounts (Z.1) data via web scraping, enabling exploration of 20,000+ datasets through functions like get_series and search_series."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Hamid Shafiezadeh
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__hamid_shafiezadeh.html"
 slug: 2023__hamid_shafiezadeh
 status: archived
 tags: [osqf, 2023, hamid_shafiezadeh, financial_data_access]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # fedz1 Package: An Easier Access to Financial Accounts of the U.S. (Z.1)

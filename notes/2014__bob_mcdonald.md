@@ -2,7 +2,7 @@
 type: Talk
 title: Using R in a Business School
 description: Demonstrates using R to teach MBA derivatives concepts like binomial pricing and American options with pedagogical benefits.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Bob McDonald
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__bob_mcdonald.pdf"
 slug: 2014__bob_mcdonald
 status: archived
 tags: [osqf, 2014, bob_mcdonald]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Using R in a Business School

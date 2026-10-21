@@ -2,7 +2,7 @@
 type: Talk
 title: "Buy the Dip?"
 description: "The talk examines the 'Buy the Dip' investment heuristic, its popularity, and its performance across different market conditions."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Majeed Simaan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__majeed_simaan.pdf"
 slug: 2023__majeed_simaan
 status: archived
 tags: [osqf, 2023, majeed_simaan, mean_variance_portfolio_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Buy the Dip?

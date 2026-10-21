@@ -2,7 +2,7 @@
 type: Talk
 title: Connecting QAI to R
 description: "Creating an R database to organize vendor data for research and production use, addressing challenges in data preparation and reproducibility."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Patrick Howerter
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__patrick_howerter.pdf"
 slug: 2016__patrick_howerter
 status: archived
 tags: [osqf, 2016, patrick_howerter]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Connecting QAI to R

@@ -2,7 +2,7 @@
 type: Talk
 title: Anti-Money Laundering and Suspicious Activity ReportingA New Hope
 description: Using crowd-sourced message board analysis to detect suspicious activity in penny stocks and securities markets for AML purposes
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Casey King
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__casey_king.pptx"
 slug: 2014__casey_king
 status: archived
 tags: [osqf, 2014, casey_king]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Anti-Money Laundering and Suspicious Activity ReportingA New Hope

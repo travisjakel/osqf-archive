@@ -2,7 +2,7 @@
 type: Talk
 title: RserveCLIAn Rserve Client Implementation for CLI/.NET
 description: Implementation of an Rserve client for CLI/.NET to bridge R and .NET ecosystems
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: "Haynold:"
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__haynold.pdf"
 slug: 2011__haynold
 status: archived
 tags: [osqf, 2011, haynold]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # RserveCLIAn Rserve Client Implementation for CLI/.NET

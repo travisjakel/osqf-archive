@@ -2,7 +2,7 @@
 type: Talk
 title: ICA for Multivariate Nonlinear Financial Time Series
 description: Application of Independent Component Analysis (ICA) to multivariate financial time series for volatility modeling and dimensionality reduction.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2009
 date: ~
 speaker: David Matteson
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2009/2009__david_matteson.pdf"
 slug: 2009__david_matteson
 status: archived
 tags: [osqf, 2009, david_matteson]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # ICA for Multivariate Nonlinear Financial Time Series

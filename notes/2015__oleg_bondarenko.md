@@ -2,7 +2,7 @@
 type: Talk
 title: High-Frequency Trading Invariants for Equity Index Futures
 description: "The study examines intraday trading invariants in the E-Mini S&P 500 futures market, analyzing patterns across different trading regimes and market conditions."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Oleg Bondarenko
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__oleg_bondarenko.pdf"
 slug: 2015__oleg_bondarenko
 status: archived
 tags: [osqf, 2015, oleg_bondarenko]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # High-Frequency Trading Invariants for Equity Index Futures

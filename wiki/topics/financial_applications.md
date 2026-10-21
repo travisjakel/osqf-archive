@@ -1,11 +1,12 @@
 ---
 type: Topic
 title: "Topic: financial applications"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 key: financial applications
 kind: topic
 n_talks: 2
 tags: [osqf, topic, financial_applications]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Topic: financial applications

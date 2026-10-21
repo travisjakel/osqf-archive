@@ -2,7 +2,7 @@
 type: Talk
 title: Analyzing Illiquid and Opaque Returns
 description: "Analyzing illiquid and opaque investments using returns rather than holdings, with a focus on liquid factor models and partial least squares estimation."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Dale Rosenthal
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__dale_rosenthal.pdf"
 slug: 2025__dale_rosenthal
 status: archived
 tags: [osqf, 2025, dale_rosenthal]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Analyzing Illiquid and Opaque Returns

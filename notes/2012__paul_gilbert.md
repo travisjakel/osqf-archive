@@ -2,7 +2,7 @@
 type: Talk
 title: Lock-In Avoidance and Quality Assurance
 description: Paul Gilbert discusses strategies for avoiding lock-in to legacy systems and ensuring quality in R-based financial data workflows.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Paul Gilbert
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__paul_gilbert.pdf"
 slug: 2012__paul_gilbert
 status: archived
 tags: [osqf, 2012, paul_gilbert]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Lock-In Avoidance and Quality Assurance

@@ -2,7 +2,7 @@
 type: Talk
 title: Portfolio Selection with Support Vector Regression
 description: Using Support Vector Regression (SVR) with kernel selection to optimize stock portfolio returns while managing risk.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Pedro Alexander
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__pedro_alexander.ppt"
 slug: 2016__pedro_alexander
 status: archived
 tags: [osqf, 2016, pedro_alexander, portfolio_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Portfolio Selection with Support Vector Regression

@@ -2,7 +2,7 @@
 type: Talk
 title: Information Diffusion in Equity Markets
 description: "The path of information transfer between securities influences equity returns, acting as a priced factor."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Stephen Rush
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__stephen_rush.pdf"
 slug: 2015__stephen_rush
 status: archived
 tags: [osqf, 2015, stephen_rush, information_diffusion]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Information Diffusion in Equity Markets

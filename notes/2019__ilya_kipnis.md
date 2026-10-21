@@ -2,7 +2,7 @@
 type: Talk
 title: "KDA Asset Allocation: An Ensemble Tactical Asset Allocation Strategy"
 description: "KDA Asset Allocation presents an ensemble tactical asset allocation strategy combining momentum filters, canary universe selection, and min-variance optimization across 10 global asset classes."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Ilya Kipnis
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__ilya_kipnis.pptx"
 slug: 2019__ilya_kipnis
 status: archived
 tags: [osqf, 2019, ilya_kipnis, tactical_asset_allocation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # KDA Asset Allocation: An Ensemble Tactical Asset Allocation Strategy

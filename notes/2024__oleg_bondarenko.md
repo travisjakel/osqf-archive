@@ -2,7 +2,7 @@
 type: Talk
 title: FX Futures Invariance
 description: "The study explores invariance properties in FX futures markets, testing hypotheses like MMI and TIH through empirical analysis on CME data."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Oleg Bondarenko
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__oleg_bondarenko.pdf"
 slug: 2024__oleg_bondarenko
 status: archived
 tags: [osqf, 2024, oleg_bondarenko]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # FX Futures Invariance

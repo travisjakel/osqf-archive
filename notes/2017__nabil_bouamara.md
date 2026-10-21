@@ -2,7 +2,7 @@
 type: Talk
 title: The Alpha and Beta of Equity Hedge UCITS Funds - Implications for Momentum Investing
 description: Analysis of Equity Hedge UCITS fund alpha/beta decomposition and its implications for momentum investing strategies
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Nabil Bouamara
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__nabil_bouamara.pdf"
 slug: 2017__nabil_bouamara
 status: archived
 tags: [osqf, 2017, nabil_bouamara]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Alpha and Beta of Equity Hedge UCITS Funds - Implications for Momentum Investing

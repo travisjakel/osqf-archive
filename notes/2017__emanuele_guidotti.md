@@ -2,7 +2,7 @@
 type: Talk
 title: yuimaGUIA graphical user interface for the yuima package
 description: yuimaGUI provides a user-friendly interface for advanced stochastic process analysis using the yuima R package.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Emanuele Guidotti
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__emanuele_guidotti.pptx"
 slug: 2017__emanuele_guidotti
 status: archived
 tags: [osqf, 2017, emanuele_guidotti, stochastic_differential_equations_sdes, quasi_maximum_likelihood_estimation_qmle]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # yuimaGUIA graphical user interface for the yuima package

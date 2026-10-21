@@ -2,7 +2,7 @@
 type: Talk
 title: Modeling and analysis of financial crashes using empirical market microstructure with parallel computations in R
 description: "Using R with parallel computing and empirical market microstructure to model financial crashes, focusing on bubble detection via the LPPL model."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Vyacheslav Arbuzov
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__vyacheslav_arbuzov.pdf"
 slug: 2013__vyacheslav_arbuzov
 status: archived
 tags: [osqf, 2013, vyacheslav_arbuzov]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Modeling and analysis of financial crashes using empirical market microstructure with parallel computations in R

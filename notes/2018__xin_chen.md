@@ -2,7 +2,7 @@
 type: Talk
 title: Generalized Linear Model Fitting with Elastic Net Regularization for Gamma Distributed Data using Rcpp
 description: Generalized Linear Model with Elastic Net Regularization for Gamma Distributed Response Variables using Rcpp
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: XIn Chen
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__xin_chen.pdf"
 slug: 2018__xin_chen
 status: archived
 tags: [osqf, 2018, xin_chen]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Generalized Linear Model Fitting with Elastic Net Regularization for Gamma Distributed Data using Rcpp

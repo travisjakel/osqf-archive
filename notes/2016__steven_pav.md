@@ -2,7 +2,7 @@
 type: Talk
 title: Madnessa package for Multivariate Automatic Differentiation
 description: "The 'madness' R package implements multivariate automatic differentiation for statistical computing with array-to-array operations."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Steven Pav
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__steven_pav.pdf"
 slug: 2016__steven_pav
 status: archived
 tags: [osqf, 2016, steven_pav]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Madnessa package for Multivariate Automatic Differentiation

@@ -1,11 +1,12 @@
 ---
 type: Topic
 title: "Topic: regression analysis"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 key: regression analysis
 kind: topic
 n_talks: 2
 tags: [osqf, topic, regression_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Topic: regression analysis

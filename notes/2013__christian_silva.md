@@ -2,7 +2,7 @@
 type: Talk
 title: Understanding moving averages strategies with the help of toy models using R
 description: Mathematical analysis of moving average strategies using toy models in R to evaluate performance in stationary vs non-stationary markets
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Christian Silva
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__christian_silva.pdf"
 slug: 2013__christian_silva
 status: archived
 tags: [osqf, 2013, christian_silva]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Understanding moving averages strategies with the help of toy models using R

@@ -2,7 +2,7 @@
 type: Talk
 title: Financial network analysis using SWIFT and R
 description: Building infrastructure to analyze how EU accession affects financial systems using SWIFT data and R
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Kresimir Kalafatic
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__kresimir_kalafatic.pdf"
 slug: 2015__kresimir_kalafatic
 status: archived
 tags: [osqf, 2015, kresimir_kalafatic]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Financial network analysis using SWIFT and R

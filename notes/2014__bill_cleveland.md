@@ -2,7 +2,7 @@
 type: Talk
 title: Divide and Recombine for the Analysis of Large Complex Data with R
 description: "Divide & Recombine (D&R) framework for analyzing large complex data using R front-end with Hadoop back-end, enabling parallel computation and statistical analysis at data granularity level."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Bill Cleveland
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__bill_cleveland.pdf"
 slug: 2014__bill_cleveland
 status: archived
 tags: [osqf, 2014, bill_cleveland, big_data_analysis, logistic_regression]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Divide and Recombine for the Analysis of Large Complex Data with R

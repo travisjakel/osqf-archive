@@ -2,7 +2,7 @@
 type: Talk
 title: Portfolio Analysis and Optimization with R/Rmetrics
 description: "Portfolio optimization techniques using R/Rmetrics, covering risk measures, constraints, and software tools."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2009
 date: ~
 speaker: Diethelm Wuertz
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2009/2009__diethelm_wuertz.pdf"
 slug: 2009__diethelm_wuertz
 status: archived
 tags: [osqf, 2009, diethelm_wuertz, portfolio_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Portfolio Analysis and Optimization with R/Rmetrics

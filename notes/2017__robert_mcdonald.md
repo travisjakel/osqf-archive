@@ -2,7 +2,7 @@
 type: Talk
 title: Ratings and Asset AllocationAn Experimental Analysis
 description: "Experimental analysis of how categorized star ratings (e.g., Morningstar) influence investment decisions and asset allocation."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Robert McDonald
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__robert_mcdonald.pdf"
 slug: 2017__robert_mcdonald
 status: archived
 tags: [osqf, 2017, robert_mcdonald]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Ratings and Asset AllocationAn Experimental Analysis

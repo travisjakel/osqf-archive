@@ -2,7 +2,7 @@
 type: Talk
 title: Implied expected returns and the choice of a mean-variance efficient portfolio proxy
 description: "Proposes reverse-engineering mean-variance efficient portfolios to estimate expected returns, finding statistically significant Sharpe ratio improvements over market portfolio-based implied returns."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: David Ardia
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__david_ardia.pdf"
 slug: 2013__david_ardia
 status: archived
 tags: [osqf, 2013, david_ardia, mean_variance_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Implied expected returns and the choice of a mean-variance efficient portfolio proxy

@@ -2,7 +2,7 @@
 type: Talk
 title: Collinearity Visualized
 description: Collinearity Visualized explains how geometric representations can clarify instability in multiple regression models when independent variables are highly correlated.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Renato Staub
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__renato_staub.pptx"
 slug: 2019__renato_staub
 status: archived
 tags: [osqf, 2019, renato_staub]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Collinearity Visualized

@@ -2,7 +2,7 @@
 type: Talk
 title: "Multi-Factor Models and Analytics with R, OneTick, and OneQuantData"
 description: "Demonstration of PCA-based multi-factor trading strategies using OneTick's time series database and R for real-time/historical financial data analysis."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Maria Belianina
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__maria_belianina.pdf"
 slug: 2014__maria_belianina
 status: archived
 tags: [osqf, 2014, maria_belianina, principal_component_analysis_pca]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Multi-Factor Models and Analytics with R, OneTick, and OneQuantData

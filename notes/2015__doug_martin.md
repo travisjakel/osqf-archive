@@ -2,7 +2,7 @@
 type: Talk
 title: "Nonparametric vs Parametric ShortfallWhat are the Differences?"
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Doug Martin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__doug_martin.NA"
 slug: 2015__doug_martin
 status: no_file
 tags: [osqf, 2015, doug_martin]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Nonparametric vs Parametric ShortfallWhat are the Differences?

@@ -2,7 +2,7 @@
 type: Talk
 title: Example-driven Introduction to Rcpp
 description: "Rcpp enables seamless integration of C++ with R, demonstrated through performance comparisons and example implementations."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Dirk Eddelbuettel
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__dirk_eddelbuettel.pdf"
 slug: 2013__dirk_eddelbuettel
 status: archived
 tags: [osqf, 2013, dirk_eddelbuettel, rcpp_integration]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Example-driven Introduction to Rcpp

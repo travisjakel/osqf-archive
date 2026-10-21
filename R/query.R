@@ -1,7 +1,7 @@
 # query.R — semantic search helper for the OSQF Conference Wiki.
 #
 # Usage:
-#   source("./embeddings/query.R")
+#   source("./R/query.R")
 #   osqf_query("optimal execution under transaction costs")
 #   osqf_query("R packages for portfolio optimization")
 #   osqf_query("market microstructure", filter = list(year = 2024:2025))
@@ -18,6 +18,12 @@ suppressPackageStartupMessages({
   library(fst)
 })
 
+# ONE embedding transport for the estate. Same GGUF, same 768 dims, same
+# vectors (cosine 0.99999 vs the old direct-to-Ollama call); it just resolves
+# the endpoint from LLM_LOCAL_BACKEND / LLM_EMBED_URL / OLLAMA_URL instead of
+# hard-coding Ollama's /api/embeddings, which llama-swap does not serve.
+source("R/embed_local.R")   # embed_one/embed_texts: one transport, 768d
+
 `%||%` <- function(a, b) if (is.null(a) || length(a) == 0) b else a
 
 .OSQF_ROOT      <- "."
@@ -25,17 +31,16 @@ suppressPackageStartupMessages({
 .OSQF_TAGS      <- file.path(.OSQF_ROOT, "embeddings", "talk_tags.fst")
 .OSQF_NOTES     <- file.path(.OSQF_ROOT, "notes")
 .OSQF_OLLAMA    <- Sys.getenv("OLLAMA_URL", "http://localhost:11434")
+# NULL => embed_local_url() decides (llama-swap when LLM_LOCAL_BACKEND says so,
+# else OLLAMA_URL). Set OSQF_WIKI_EMBED_URL only to pin this one wiki elsewhere.
+.OSQF_EMBED_URL <- {
+  .u <- Sys.getenv("OSQF_WIKI_EMBED_URL", "")
+  if (nzchar(.u)) .u else NULL
+}
 .OSQF_EMBED_MODEL <- Sys.getenv("OSQF_WIKI_EMBED_MODEL", "nomic-embed-text:latest")
 
-.osqf_embed <- function(text) {
-  resp <- httr2::request(.OSQF_OLLAMA) |>
-    httr2::req_url_path("/api/embeddings") |>
-    httr2::req_body_json(list(model = .OSQF_EMBED_MODEL, prompt = text),
-                          auto_unbox = TRUE) |>
-    httr2::req_timeout(60) |>
-    httr2::req_perform()
-  as.numeric(httr2::resp_body_json(resp)$embedding)
-}
+.osqf_embed <- function(text)
+  embed_one(text, model = .OSQF_EMBED_MODEL, url = .OSQF_EMBED_URL)
 
 .osqf_filter_sql <- function(filter) {
   if (length(filter) == 0) return("")

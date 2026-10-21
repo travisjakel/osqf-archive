@@ -2,7 +2,7 @@
 type: Talk
 title: Using and Contributing to the data.table Package for Efficient Big Data Analysis
 description: "Promoting data.table's efficiency, new features, and community governance for big data analysis in R."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Tyson Barrett
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__tyson_barrett.pdf"
 slug: 2024__tyson_barrett
 status: archived
 tags: [osqf, 2024, tyson_barrett, r_programming]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Using and Contributing to the data.table Package for Efficient Big Data Analysis

@@ -2,7 +2,7 @@
 type: Talk
 title: Evaluating Hedge Funds with Machine Learning-Based Benchmarks
 description: This paper evaluates hedge funds using machine learning-based benchmarks to address limitations of traditional linear models in capturing nonlinear strategy payoffs and fund-specific risk exposures.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Tengjia Shu
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__tengjia_shu.pdf"
 slug: 2024__tengjia_shu
 status: archived
 tags: [osqf, 2024, tengjia_shu]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Evaluating Hedge Funds with Machine Learning-Based Benchmarks

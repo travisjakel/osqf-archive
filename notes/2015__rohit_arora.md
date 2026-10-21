@@ -2,7 +2,7 @@
 type: Talk
 title: Inefficiency of Modified VaR and ES
 description: "Analysis of the inefficiency of modified VaR and ES compared to standard parametric models, highlighting higher variance due to non-MLE estimation"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Rohit Arora
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__rohit_arora.pdf"
 slug: 2015__rohit_arora
 status: archived
 tags: [osqf, 2015, rohit_arora, risk_management]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Inefficiency of Modified VaR and ES

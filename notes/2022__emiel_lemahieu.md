@@ -2,7 +2,7 @@
 type: Talk
 title: "Portfolio drawdown optimization with generative machine learning: opportunities and pitfalls"
 description: Portfolio drawdown optimization using generative machine learning to model financial markets and improve asset allocation strategies.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Emiel Lemahieu
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__emiel_lemahieu.pptx"
 slug: 2022__emiel_lemahieu
 status: archived
 tags: [osqf, 2022, emiel_lemahieu]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Portfolio drawdown optimization with generative machine learning: opportunities and pitfalls

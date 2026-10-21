@@ -2,7 +2,7 @@
 type: Talk
 title: "Pricing Copper Better Than Bloomberg: Better than KOSPI Levels?"
 description: "Chris Thomas presents a refined copper pricing model using commodity indices and macroeconomic factors, outperforming Bloomberg's KOSPI-based approach."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Chris Thomas
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__chris_thomas.pptx"
 slug: 2022__chris_thomas
 status: archived
 tags: [osqf, 2022, chris_thomas, linear_regression]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Pricing Copper Better Than Bloomberg: Better than KOSPI Levels?

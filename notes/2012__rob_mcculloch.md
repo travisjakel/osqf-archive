@@ -2,7 +2,7 @@
 type: Talk
 title: Cholesky Stochastic Volatility
 description: "Bayesian state space models for financial time series, focusing on stochastic volatility and parameter estimation via MCMC."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Rob McCulloch
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__rob_mcculloch.pdf"
 slug: 2012__rob_mcculloch
 status: archived
 tags: [osqf, 2012, rob_mcculloch, state_space_models]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Cholesky Stochastic Volatility

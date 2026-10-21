@@ -2,7 +2,7 @@
 type: Talk
 title: Measuring Income Statement Sharpe Ratios using R
 description: "This talk explains how to calculate Sharpe Ratios from income statement data using R, drawing parallels between sports analytics and financial risk-adjusted returns."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Mark Bennett
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__mark_bennett.pdf"
 slug: 2016__mark_bennett
 status: archived
 tags: [osqf, 2016, mark_bennett]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Measuring Income Statement Sharpe Ratios using R

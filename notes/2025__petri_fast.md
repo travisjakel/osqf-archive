@@ -2,7 +2,7 @@
 type: Talk
 title: Build a Better Elastic Net Forecast With Custom Penalties
 description: Enhancing elastic net forecasts using contribution limits to prevent over-reliance on individual features in financial prediction models
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Petri Fast
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__petri_fast.pptx"
 slug: 2025__petri_fast
 status: archived
 tags: [osqf, 2025, petri_fast]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Build a Better Elastic Net Forecast With Custom Penalties

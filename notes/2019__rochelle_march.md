@@ -2,7 +2,7 @@
 type: Talk
 title: Quantifying Company Impact on the UN Sustainable Development Goals
 description: "Trucost's SDG Evaluation Tool measures company impact on UN Sustainable Development Goals using a multi-regional input-output model and interactive dashboards."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Rochelle March
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__rochelle_march.pdf"
 slug: 2019__rochelle_march
 status: archived
 tags: [osqf, 2019, rochelle_march]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Quantifying Company Impact on the UN Sustainable Development Goals

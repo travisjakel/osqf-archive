@@ -14,6 +14,10 @@ suppressPackageStartupMessages({
   library(fst); library(jsonlite); library(duckdb); library(DBI); library(digest)
 })
 source("R/pipeline/00_helpers.R")
+# ONE embedding transport for the estate -- see R/embed_local.R. Same weights,
+# same 768 dims; the endpoint comes from LLM_LOCAL_BACKEND / LLM_EMBED_URL /
+# OLLAMA_URL rather than being hard-coded to Ollama's /api/embeddings.
+source("R/embed_local.R")   # embed_one/embed_texts: one transport, 768d
 
 PAPER_PDF  <- file.path(WIKI_ROOT, "_cache", "papers")
 PAPER_TXT  <- file.path(WIKI_ROOT, "_cache", "papers_text")
@@ -94,15 +98,14 @@ for (i in which(papers$has_pdf)) {
 }
 
 # ---- 4. Embed page chunks into paper_chunks -----------------------------------
-embed_one <- function(text) {
-  resp <- tryCatch(
-    httr2::request(OLLAMA_URL) |>
-      httr2::req_url_path("/api/embeddings") |>
-      httr2::req_body_json(list(model = EMBED_MODEL, prompt = text), auto_unbox = TRUE) |>
-      httr2::req_timeout(60) |> httr2::req_perform(),
-    error = function(e) NULL)
-  if (is.null(resp) || httr2::resp_status(resp) >= 400) return(NULL)
-  as.numeric(httr2::resp_body_json(resp)$embedding)
+# RENAMED from `embed_one` to `.paper_embed` on purpose. R/embed_local.R
+# exports a function called embed_one(), and a local `embed_one <- function(x)
+# ... embed_one(...)` in the SAME environment resolves its own call lexically to
+# itself: infinite recursion, one stack overflow per chunk, and the only symptom
+# is a build that dies with no useful message. Distinct name, one call site.
+.paper_embed <- function(text) {
+  tryCatch(embed_one(text, model = EMBED_MODEL, timeout = 60),
+           error = function(e) NULL)
 }
 
 con <- dbConnect(duckdb::duckdb(), DB_PATH)
@@ -125,11 +128,17 @@ for (i in which(papers$has_pdf)) {
     if (nchar(t) < 100) next
     cid <- sprintf("%s::p%03d", papers$paper_id[i], pg)
     if (cid %in% have) next
-    emb <- embed_one(t)
+    emb <- .paper_embed(t)
     if (is.null(emb) || length(emb) != 768L) next
     emb_str <- paste0("[", paste(sprintf("%.7g", emb), collapse = ","), "]")
+    # DELETE-THEN-INSERT, not INSERT OR REPLACE. Measured 2026-09-09: with a
+    # persisted HNSW index on `embedding`, INSERT OR REPLACE updates every
+    # ORDINARY column and SILENTLY LEAVES THE INDEXED VECTOR COLUMN AT ITS OLD
+    # VALUE, returning 1 row affected with no error. DELETE first and the
+    # INSERT writes the vector correctly.
+    dbExecute(con, "DELETE FROM paper_chunks WHERE chunk_id = ?", list(cid))
     dbExecute(con, sprintf("
-      INSERT OR REPLACE INTO paper_chunks VALUES ($1,$2,$3,$4,$5,$6,$7, %s);", emb_str),
+      INSERT INTO paper_chunks VALUES ($1,$2,$3,$4,$5,$6,$7, %s);", emb_str),
       params = list(cid, papers$paper_id[i], papers$kind[i], pg, t,
                     digest(t, algo = "sha1"), papers$slugs[i]))
     n_new <- n_new + 1L

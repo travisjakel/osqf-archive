@@ -2,7 +2,7 @@
 type: Talk
 title: Micro-Alphas
 description: Using machine learning to predict equity risk premium via combined weak signals (micro-alphas).
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Petra Bakosova
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__petra_bakosova.pptx"
 slug: 2025__petra_bakosova
 status: archived
 tags: [osqf, 2025, petra_bakosova, elastic_net_regularization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Micro-Alphas

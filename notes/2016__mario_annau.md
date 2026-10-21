@@ -2,7 +2,7 @@
 type: Talk
 title: h5 - An Object Oriented Interface to HDF5
 description: "Introduces h5, an R package providing an object-oriented interface to the HDF5 file format for efficient data storage and retrieval."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Mario Annau
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__mario_annau.pdf"
 slug: 2016__mario_annau
 status: archived
 tags: [osqf, 2016, mario_annau]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # h5 - An Object Oriented Interface to HDF5

@@ -2,7 +2,7 @@
 type: Talk
 title: "Mergers and acquisitions: Influence of competition on the target company evaluation."
 description: "Analyzes how competition affects premium valuation in M&A deals using 2007-2015 data."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Fernando Anselmo Filho
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__fernando_anselmo_filho.pdf"
 slug: 2019__fernando_anselmo_filho
 status: archived
 tags: [osqf, 2019, fernando_anselmo_filho]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Mergers and acquisitions: Influence of competition on the target company evaluation.

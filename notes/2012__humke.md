@@ -2,7 +2,7 @@
 type: Talk
 title: "Achieving High-Performing, Simulation-Based Operational Risk Measurement with R and RevoScaleR"
 description: Operational risk measurement using R and RevoScaleR with Monte Carlo simulations and parallelization techniques.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Humke
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__humke.pdf"
 slug: 2012__humke
 status: archived
 tags: [osqf, 2012, humke, operational_risk, monte_carlo_simulation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Achieving High-Performing, Simulation-Based Operational Risk Measurement with R and RevoScaleR

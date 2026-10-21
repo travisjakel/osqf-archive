@@ -2,7 +2,7 @@
 type: Talk
 title: RcppArmadilloAccelerating R with High-Performance C++ Linear Algebra
 description: RcppArmadillo accelerates R by integrating high-performance C++ linear algebra libraries for statistical computing.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Dirk Eddelbuettel
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__dirk_eddelbuettel_2.pdf"
 slug: 2013__dirk_eddelbuettel_2
 status: archived
 tags: [osqf, 2013, dirk_eddelbuettel]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # RcppArmadilloAccelerating R with High-Performance C++ Linear Algebra

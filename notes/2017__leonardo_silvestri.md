@@ -2,7 +2,7 @@
 type: Talk
 title: "ztsdb, a time-series DBMS for R users"
 description: "ztsdb is a time-series database management system designed for R users, offering features like fast querying, seamless R integration, and temporal data handling."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Leonardo Silvestri
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__leonardo_silvestri.pdf"
 slug: 2017__leonardo_silvestri
 status: archived
 tags: [osqf, 2017, leonardo_silvestri]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # ztsdb, a time-series DBMS for R users

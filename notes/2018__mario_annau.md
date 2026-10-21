@@ -2,7 +2,7 @@
 type: Talk
 title: hdf5r - HDF5 for R Reloaded
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Mario Annau
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2018__mario_annau
 status: no_file
 tags: [osqf, 2018, mario_annau]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # hdf5r - HDF5 for R Reloaded

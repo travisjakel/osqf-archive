@@ -2,7 +2,7 @@
 type: Talk
 title: Advanced Bayesian Time Series Analysis using Stan
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: M. Weylandt + T. Harte
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__m_weylandt_t_harte.NA"
 slug: 2017__m_weylandt_t_harte
 status: no_file
 tags: [osqf, 2017, m_weylandt_t_harte]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Advanced Bayesian Time Series Analysis using Stan

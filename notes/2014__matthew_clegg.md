@@ -2,7 +2,7 @@
 type: Talk
 title: On the Persistence of Cointegration in Pairs Trading
 description: "Testing whether cointegration relationships in pairs trading strategies persist over time using S&P 500 data."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Matthew Clegg
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__matthew_clegg.pdf"
 slug: 2014__matthew_clegg
 status: archived
 tags: [osqf, 2014, matthew_clegg, pairs_trading]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # On the Persistence of Cointegration in Pairs Trading

@@ -2,7 +2,7 @@
 type: Talk
 title: Implementation of the stochastic volatility and interest rate model with multiple GPUs in R
 description: Implementation of a multi-GPU stochastic volatility and interest rate model in R for financial simulations
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: JJ Lay
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__jj_lay.pdf"
 slug: 2018__jj_lay
 status: archived
 tags: [osqf, 2018, jj_lay, stochastic_volatility_modeling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Implementation of the stochastic volatility and interest rate model with multiple GPUs in R

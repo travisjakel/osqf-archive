@@ -2,7 +2,7 @@
 type: Talk
 title: Mutually Exciting Hawkes Processes for Microstructure Noise Modelling
 description: "Applying mutually exciting Hawkes processes to model microstructure noise in financial data, with focus on volatility and correlation estimation."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Dunand-Chatellet
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__dunand_chatellet.pdf"
 slug: 2011__dunand_chatellet
 status: archived
 tags: [osqf, 2011, dunand_chatellet]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Mutually Exciting Hawkes Processes for Microstructure Noise Modelling

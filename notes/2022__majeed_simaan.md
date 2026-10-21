@@ -2,7 +2,7 @@
 type: Talk
 title: "Pricing Model Complexity: The Case for Volatility-Managed Portfolios"
 description: "The talk explores how model complexity impacts financial risk management, advocating for volatility-managed portfolios to address non-linear relationships in hedging."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Majeed Simaan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__majeed_simaan.pdf"
 slug: 2022__majeed_simaan
 status: archived
 tags: [osqf, 2022, majeed_simaan]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Pricing Model Complexity: The Case for Volatility-Managed Portfolios

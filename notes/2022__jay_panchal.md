@@ -2,7 +2,7 @@
 type: Talk
 title: "qicR: Quantum Information & Computation in R - Bringing quantum computing to the R ecosystem"
 description: "Introducing qicR: An R package for quantum computing, with applications in finance and optimization"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Jay Panchal
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__jay_panchal.pdf"
 slug: 2022__jay_panchal
 status: archived
 tags: [osqf, 2022, jay_panchal, variational_quantum_eigensolver_vqe]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # qicR: Quantum Information & Computation in R - Bringing quantum computing to the R ecosystem

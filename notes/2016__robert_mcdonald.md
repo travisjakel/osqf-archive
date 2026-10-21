@@ -2,7 +2,7 @@
 type: Talk
 title: The derivmkts package
 description: "The derivmkts R package provides functions for option pricing, binomial models, and financial simulations."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Robert McDonald
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__robert_mcdonald.pdf"
 slug: 2016__robert_mcdonald
 status: archived
 tags: [osqf, 2016, robert_mcdonald, option_pricing]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The derivmkts package

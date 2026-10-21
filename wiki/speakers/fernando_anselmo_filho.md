@@ -1,11 +1,12 @@
 ---
 type: Speaker
 title: "Speaker: Fernando Anselmo Filho"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 speaker: Fernando Anselmo Filho
 speaker_slug: fernando_anselmo_filho
 n_talks: 1
 tags: [osqf, speaker, fernando_anselmo_filho]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speaker: Fernando Anselmo Filho

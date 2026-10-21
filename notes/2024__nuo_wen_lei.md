@@ -2,7 +2,7 @@
 type: Talk
 title: Better Incentives for Participants in Crowd-Sourced Hedge Funds
 description: "This talk discusses improving incentive structures for data scientists contributing to crowd-sourced hedge funds, using Numerai as a case study."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Nuo Wen Lei
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__nuo_wen_lei.pdf"
 slug: 2024__nuo_wen_lei
 status: archived
 tags: [osqf, 2024, nuo_wen_lei]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Better Incentives for Participants in Crowd-Sourced Hedge Funds

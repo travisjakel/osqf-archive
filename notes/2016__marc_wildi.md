@@ -2,7 +2,7 @@
 type: Talk
 title: Monitoring the US Economya System of Timely (Real-Time Daily Mixed-Frequency) Indicators
 description: Using mixed-frequency data in the frequency domain (MDFA) to create real-time daily macroeconomic indicators.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Marc Wildi
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__marc_wildi.pdf"
 slug: 2016__marc_wildi
 status: archived
 tags: [osqf, 2016, marc_wildi, economic_indicators]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Monitoring the US Economya System of Timely (Real-Time Daily Mixed-Frequency) Indicators

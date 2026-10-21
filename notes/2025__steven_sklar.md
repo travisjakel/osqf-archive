@@ -2,7 +2,7 @@
 type: Talk
 title: "The Future of Fast Databases: Lessons from a Decade of QuestDB"
 description: "QuestDB's evolution as a high-performance time-series database, focusing on modern data architectures and financial applications."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Steven Sklar
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__steven_sklar.pdf"
 slug: 2025__steven_sklar
 status: archived
 tags: [osqf, 2025, steven_sklar, time_series_databases]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Future of Fast Databases: Lessons from a Decade of QuestDB

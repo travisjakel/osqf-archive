@@ -2,7 +2,7 @@
 type: Talk
 title: "Portfolio Performance Attribution: A Machine Learning Based Approach"
 description: Using machine learning to automate portfolio performance attribution by optimizing factor selection and categorical variable cutoffs.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Ryan Brown
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__ryan_brown.pptx"
 slug: 2022__ryan_brown
 status: archived
 tags: [osqf, 2022, ryan_brown]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Portfolio Performance Attribution: A Machine Learning Based Approach

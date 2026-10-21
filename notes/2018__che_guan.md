@@ -2,7 +2,7 @@
 type: Talk
 title: Machine Learning Application in Digital Currency Price Prediction
 description: "Application of random forests and gradient boosting models to predict Bitcoin price movements using multiple factors including alternative coin prices, gold/silver prices, and search trends"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Che Guan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__che_guan.pdf"
 slug: 2018__che_guan
 status: archived
 tags: [osqf, 2018, che_guan, machine_learning_finance, random_forests]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Machine Learning Application in Digital Currency Price Prediction

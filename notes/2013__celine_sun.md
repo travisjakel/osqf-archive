@@ -2,7 +2,7 @@
 type: Talk
 title: Estimating High Dimensional Covariance Matrices Using a Factor Model
 description: "Proposes two new high-dimensional covariance matrix estimators using factor models and SVD, with applications to portfolio optimization and volatility forecasting."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Celine Sun
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__celine_sun.ppt"
 slug: 2013__celine_sun
 status: archived
 tags: [osqf, 2013, celine_sun, covariance_matrix_estimation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Estimating High Dimensional Covariance Matrices Using a Factor Model

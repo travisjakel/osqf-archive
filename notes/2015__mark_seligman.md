@@ -2,7 +2,7 @@
 type: Talk
 title: The Arborist a High-Performance Random Forest Implementation
 description: The Arborist is a high-performance random forest implementation optimized for various hardware and data types.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Mark Seligman
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__mark_seligman.pdf"
 slug: 2015__mark_seligman
 status: archived
 tags: [osqf, 2015, mark_seligman]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Arborist a High-Performance Random Forest Implementation

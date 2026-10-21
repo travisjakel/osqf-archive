@@ -2,7 +2,7 @@
 type: Talk
 title: Markov-Switching GARCH Models in RThe MSGARCH Package
 description: "Empirical study shows Markov-Switching GARCH (MSGARCH) models outperform single-regime GARCH models in risk forecasting, especially for stocks, using MCMC estimation."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: David Ardia
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__david_ardia.pdf"
 slug: 2017__david_ardia
 status: archived
 tags: [osqf, 2017, david_ardia, volatility_modeling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Markov-Switching GARCH Models in RThe MSGARCH Package

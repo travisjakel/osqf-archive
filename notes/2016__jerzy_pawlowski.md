@@ -2,7 +2,7 @@
 type: Talk
 title: Exploring Higher Order Risk Premia Using High Frequency Data
 description: "Analyzing higher-order risk premia using high-frequency data and R packages for volatility, liquidity, and Hurst exponent estimation."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Jerzy Pawlowski
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__jerzy_pawlowski.pdf"
 slug: 2016__jerzy_pawlowski
 status: archived
 tags: [osqf, 2016, jerzy_pawlowski, risk_premia, garman_klass_volatility_estimator]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Exploring Higher Order Risk Premia Using High Frequency Data

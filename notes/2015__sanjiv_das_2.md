@@ -2,7 +2,7 @@
 type: Talk
 title: Matrix MetricsNetwork-Based Systemic Risk Scoring
 description: Analyzing network-based systemic risk scoring using graph theory and co-lending data from financial institutions
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Sanjiv Das
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__sanjiv_das_2.pdf"
 slug: 2015__sanjiv_das_2
 status: archived
 tags: [osqf, 2015, sanjiv_das]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Matrix MetricsNetwork-Based Systemic Risk Scoring

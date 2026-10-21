@@ -2,7 +2,7 @@
 type: Talk
 title: Bootstrapping Seasonal Spreads
 description: The talk explains how bootstrapping seasonal spreads can help in trade sizing and risk management.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Paul Teetor
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__paul_teetor.pdf"
 slug: 2014__paul_teetor
 status: archived
 tags: [osqf, 2014, paul_teetor]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Bootstrapping Seasonal Spreads

@@ -2,7 +2,7 @@
 type: Talk
 title: Rcpp and RInside for R and C++ Integration
 description: Rcpp and RInside enable seamless integration between R and C++ for performance and functionality.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Eddelbuettel
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__eddelbuettel.pdf"
 slug: 2012__eddelbuettel
 status: archived
 tags: [osqf, 2012, eddelbuettel]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Rcpp and RInside for R and C++ Integration

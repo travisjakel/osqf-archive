@@ -2,7 +2,7 @@
 type: Talk
 title: Efficient Multivariate Analysis of Change Points
 description: The talk presents a method for detecting change points in multivariate time series using energy distance and the e-cp3o procedure.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Nicholas James
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__nicholas_james.pdf"
 slug: 2015__nicholas_james
 status: archived
 tags: [osqf, 2015, nicholas_james, change_point_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Efficient Multivariate Analysis of Change Points

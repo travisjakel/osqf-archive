@@ -2,7 +2,7 @@
 type: Talk
 title: Ex post risk analysisHow the GSoC contributed to PerformanceAnalytics
 description: Presentation on ex post risk analysis focusing on contributions from Google Summer of Code (GSoC) to the R/Finance PerformanceAnalytics package.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Mathieu Lestel
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__mathieu_lestel.pdf"
 slug: 2013__mathieu_lestel
 status: archived
 tags: [osqf, 2013, mathieu_lestel]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Ex post risk analysisHow the GSoC contributed to PerformanceAnalytics

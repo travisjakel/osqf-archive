@@ -2,7 +2,7 @@
 type: Talk
 title: Capital Markets Use Cases for Retrieval Augmented Generation Chatbots
 description: "NVIDIA presents RAG chatbots for capital markets, focusing on middle/back-office use cases with private document corpora."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Mark Bennet
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__mark_bennet.pdf"
 slug: 2024__mark_bennet
 status: archived
 tags: [osqf, 2024, mark_bennet]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Capital Markets Use Cases for Retrieval Augmented Generation Chatbots

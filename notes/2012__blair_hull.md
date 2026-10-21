@@ -2,7 +2,7 @@
 type: Talk
 title: Examining the RevolutionHow Technology is Changing the Trading Landscape
 description: "Blair Hull discusses how technology, including HFT and market structure changes like Reg NMS, has transformed trading, highlighting issues like the Flash Crash and the role of speed."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Blair Hull
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__blair_hull.pdf"
 slug: 2012__blair_hull
 status: archived
 tags: [osqf, 2012, blair_hull, high_frequency_trading_hft]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Examining the RevolutionHow Technology is Changing the Trading Landscape

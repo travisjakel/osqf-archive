@@ -2,7 +2,7 @@
 type: Talk
 title: Extension of the Tower Method for Missing Values to Time Series
 description: "Introduces toweranNA, a prediction-oriented R package for missing values using the Tower Method, which avoids imputation by leveraging complete cases and k-nearest neighbors."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Norm Matloff
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__norm_matloff.pdf"
 slug: 2019__norm_matloff
 status: archived
 tags: [osqf, 2019, norm_matloff]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Extension of the Tower Method for Missing Values to Time Series

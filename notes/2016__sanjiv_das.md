@@ -2,7 +2,7 @@
 type: Talk
 title: An Index-Based Measure of Liquidity
 description: Development of an index-based measure of liquidity using ETF-NAV differences to address post-2008 liquidity measurement gaps
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Sanjiv Das
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__sanjiv_das.pdf"
 slug: 2016__sanjiv_das
 status: archived
 tags: [osqf, 2016, sanjiv_das]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # An Index-Based Measure of Liquidity

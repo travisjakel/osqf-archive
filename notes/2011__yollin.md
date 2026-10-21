@@ -2,7 +2,7 @@
 type: Talk
 title: Can you do better than cap-weighted equity benchmarks
 description: The talk explores alternative index constructions that outperform cap-weighted equity benchmarks using minimum variance and CVaR optimization techniques.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Yollin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__yollin.pdf"
 slug: 2011__yollin
 status: archived
 tags: [osqf, 2011, yollin, mean_variance_portfolio_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Can you do better than cap-weighted equity benchmarks

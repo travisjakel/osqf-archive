@@ -2,7 +2,7 @@
 type: Talk
 title: Multi-Asset Principal Component Regression using RcppParallel
 description: "The 'roll' R package uses RcppParallel to accelerate rolling principal component regression and linear models for multi-asset portfolio analysis."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Jason Foster
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__jason_foster.pdf"
 slug: 2016__jason_foster
 status: archived
 tags: [osqf, 2016, jason_foster]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Multi-Asset Principal Component Regression using RcppParallel

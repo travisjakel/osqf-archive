@@ -2,7 +2,7 @@
 type: Talk
 title: MLEMVDA R Package for Maximum Likelihood Estimation of Multivariate Diffusion Models
 description: "The MLEMVD R package enables maximum likelihood estimation for multivariate diffusion models, with applications in financial modeling."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Matthew Dixon
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__matthew_dixon.pdf"
 slug: 2017__matthew_dixon
 status: archived
 tags: [osqf, 2017, matthew_dixon]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # MLEMVDA R Package for Maximum Likelihood Estimation of Multivariate Diffusion Models

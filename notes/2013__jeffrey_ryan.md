@@ -2,7 +2,7 @@
 type: Talk
 title: Options Trading with RAn Introduction to the greeks Package
 description: "Introduction to the greeks R package for options trading, demonstrating Greek calculations and payoff visualization."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Jeffrey Ryan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__jeffrey_ryan.pdf"
 slug: 2013__jeffrey_ryan
 status: archived
 tags: [osqf, 2013, jeffrey_ryan, options_pricing, black_scholes_model]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Options Trading with RAn Introduction to the greeks Package

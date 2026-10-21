@@ -2,7 +2,7 @@
 type: Talk
 title: The Timing of Variance Risk Premia around Macroeconomic News Events
 description: "The study shows that costs of insuring against variance and jump risk are concentrated around macroeconomic news events, with significant returns around specific announcements like Non-Farm Payrolls and FOMC meetings."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Paul Laux
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__paul_laux.pdf"
 slug: 2018__paul_laux
 status: archived
 tags: [osqf, 2018, paul_laux]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Timing of Variance Risk Premia around Macroeconomic News Events

@@ -2,7 +2,7 @@
 type: Talk
 title: Code Architecture of a Mid-Term Trading Strategy
 description: "The talk outlines the code architecture for a mid-term trading strategy, covering data preprocessing, model building with random forests, and backtesting frameworks."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Seth Therrien
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__seth_therrien.pptx"
 slug: 2022__seth_therrien
 status: archived
 tags: [osqf, 2022, seth_therrien]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Code Architecture of a Mid-Term Trading Strategy

@@ -1,11 +1,12 @@
 ---
 type: Speaker
 title: "Speaker: Hernando Cortina"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 speaker: Hernando Cortina
 speaker_slug: hernando_cortina
 n_talks: 3
 tags: [osqf, speaker, hernando_cortina]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speaker: Hernando Cortina

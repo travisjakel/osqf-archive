@@ -232,7 +232,13 @@ for (i in seq_len(nrow(todo))) {
     sep = "\n"
   )
 
-  out <- ollama_tool_call(
+  # llm_tool_call, NOT ollama_tool_call: the latter hardcodes Ollama's
+  # /api/chat against ollama_url() and never consults LLM_LOCAL_BACKEND, so it
+  # cannot reach llama-swap (:11435, OpenAI /v1/chat/completions) -- which is
+  # what this estate serves since 2026-09-10. Same signature. The dispatcher's
+  # sha1 cache key carries `backend` only when non-default, so every existing
+  # cache entry stays hot across this change.
+  out <- llm_tool_call(
     system     = SYSTEM_PROMPT,
     user       = user_msg,
     tool       = extract_tool,

@@ -2,7 +2,7 @@
 type: Talk
 title: "Stan (Almost!) Has GPU Capabilities Now! Example Performance of Gaussian Processes"
 description: "Stan is introducing GPU support for Gaussian Processes, achieving up to 8x speedups while maintaining precision."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Stephen Bronder
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__stephen_bronder.pdf"
 slug: 2018__stephen_bronder
 status: archived
 tags: [osqf, 2018, stephen_bronder]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Stan (Almost!) Has GPU Capabilities Now! Example Performance of Gaussian Processes

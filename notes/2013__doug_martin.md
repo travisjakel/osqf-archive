@@ -2,7 +2,7 @@
 type: Talk
 title: Robust Covariances And DistancesCommon Risk Factor Versus Idiosyncratic Outliers
 description: "The talk discusses robust covariance estimation techniques for distinguishing between common risk factors and idiosyncratic outliers in financial data, with applications to portfolio optimization and risk management."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Doug Martin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__doug_martin.pdf"
 slug: 2013__doug_martin
 status: archived
 tags: [osqf, 2013, doug_martin, minimum_covariance_determinant_mcd]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Robust Covariances And DistancesCommon Risk Factor Versus Idiosyncratic Outliers

@@ -1,11 +1,12 @@
 ---
 type: Method
 title: "Method: maximum likelihood estimation mle"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 key: maximum likelihood estimation mle
 kind: method
 n_talks: 4
 tags: [osqf, method, maximum_likelihood_estimation_mle]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Method: maximum likelihood estimation mle

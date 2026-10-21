@@ -2,7 +2,7 @@
 type: Talk
 title: The partialAR Package for Modeling Time Series with both Permanent and Transient Components
 description: "The partialAR package models time series with both permanent and transient components, enabling cointegration analysis in financial data."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Matthew Clegg
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__matthew_clegg.pdf"
 slug: 2015__matthew_clegg
 status: archived
 tags: [osqf, 2015, matthew_clegg, time_series_modeling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The partialAR Package for Modeling Time Series with both Permanent and Transient Components

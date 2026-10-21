@@ -2,7 +2,7 @@
 type: Talk
 title: Deep Implied Volatility Surfaces
 description: Using deep learning with torch for R to construct implied volatility surfaces from high-speed option data
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Francois Cocquemas
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__francois_cocquemas.pdf"
 slug: 2023__francois_cocquemas
 status: archived
 tags: [osqf, 2023, francois_cocquemas]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Deep Implied Volatility Surfaces

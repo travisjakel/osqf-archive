@@ -1,11 +1,12 @@
 ---
 type: Speaker
 title: "Speaker: Heidi Chen"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 speaker: Heidi Chen
 speaker_slug: heidi_chen
 n_talks: 1
 tags: [osqf, speaker, heidi_chen]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speaker: Heidi Chen

@@ -2,7 +2,7 @@
 type: Talk
 title: Interactively Exploring Financial Trades in R
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Ryan Hafen
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__ryan_hafen.NA"
 slug: 2016__ryan_hafen
 status: extraction_failed
 tags: [osqf, 2016, ryan_hafen]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Interactively Exploring Financial Trades in R

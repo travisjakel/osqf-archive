@@ -2,7 +2,7 @@
 type: Talk
 title: An R Package on Credit Default Swaps
 description: An R package for modeling Credit Default Swaps (CDS) with ISDA-standard calculations and real-world data integration
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Heidi Chen
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__heidi_chen.pdf"
 slug: 2014__heidi_chen
 status: archived
 tags: [osqf, 2014, heidi_chen]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # An R Package on Credit Default Swaps

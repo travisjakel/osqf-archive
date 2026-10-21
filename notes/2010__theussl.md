@@ -2,7 +2,7 @@
 type: Talk
 title: Distributed Text Mining with tm
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2010
 date: ~
 speaker: Theussl
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2010__theussl
 status: no_file
 tags: [osqf, 2010, theussl]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Distributed Text Mining with tm

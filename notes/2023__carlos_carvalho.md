@@ -2,7 +2,7 @@
 type: Talk
 title: Bayesian Time Series
 description: "Predicting the cross section of firm returns using characteristics and Bayesian machine learning methods like BART, with a focus on variable selection and interpreting nonlinearities."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Carlos Carvalho
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__carlos_carvalho.pdf"
 slug: 2023__carlos_carvalho
 status: archived
 tags: [osqf, 2023, carlos_carvalho, predictive_modeling, bayesian_additive_regression_trees_bart]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Bayesian Time Series

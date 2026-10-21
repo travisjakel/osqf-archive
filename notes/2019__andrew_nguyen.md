@@ -2,7 +2,7 @@
 type: Talk
 title: "DELPHI-BR: Data-driven Early-warning Learning-based system Prognosticating High-Impact Banking Risks"
 description: Comparing logistic regression and machine learning models for predicting bank failures using diverse financial data
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Andrew Nguyen
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__andrew_nguyen.pdf"
 slug: 2019__andrew_nguyen
 status: archived
 tags: [osqf, 2019, andrew_nguyen, logistic_regression]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # DELPHI-BR: Data-driven Early-warning Learning-based system Prognosticating High-Impact Banking Risks

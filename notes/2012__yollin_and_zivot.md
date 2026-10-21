@@ -2,7 +2,7 @@
 type: Talk
 title: Time Series Forecasting with State Space Models
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Yollin/Zivot
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2012__yollin_and_zivot
 status: no_file
 tags: [osqf, 2012, yollin_and_zivot]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Time Series Forecasting with State Space Models

@@ -2,7 +2,7 @@
 type: Talk
 title: Alt. Data Sources for Measuring Market Sentiment and Events
 description: Explores alternative data sources like danceability indices and social media sentiment to measure market sentiment and predict financial trends using R.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Rothermich
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__rothermich.pdf"
 slug: 2011__rothermich
 status: archived
 tags: [osqf, 2011, rothermich, sentiment_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Alt. Data Sources for Measuring Market Sentiment and Events

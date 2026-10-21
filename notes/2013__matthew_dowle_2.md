@@ -2,7 +2,7 @@
 type: Talk
 title: Introduction to data.table
 description: "Introduction to data.table: Efficient data manipulation in R with fast aggregation, reference updates, and optimized file reading."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Matthew Dowle
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__matthew_dowle_2.pdf"
 slug: 2013__matthew_dowle_2
 status: archived
 tags: [osqf, 2013, matthew_dowle, data_manipulation_r, fast_aggregation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Introduction to data.table

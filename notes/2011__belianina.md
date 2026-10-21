@@ -2,7 +2,7 @@
 type: Talk
 title: Solutions from OneTick and R
 description: "Integration of OneTick and R for Portfolio & Risk Analytics with real-time and historical data processing"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Belianina
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__belianina.pptx"
 slug: 2011__belianina
 status: archived
 tags: [osqf, 2011, belianina]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Solutions from OneTick and R

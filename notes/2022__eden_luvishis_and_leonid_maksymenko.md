@@ -2,7 +2,7 @@
 type: Talk
 title: Financial Applications of Linear Risk Management via Non-linear Machine Learning
 description: "The talk explores using nonlinear machine learning to enhance linear risk management, addressing limitations of traditional models through explainable AI techniques."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Eden Luvishis and Leonid Maksymenko
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__eden_luvishis_and_leonid_maksymenko.pdf"
 slug: 2022__eden_luvishis_and_leonid_maksymenko
 status: archived
 tags: [osqf, 2022, eden_luvishis_and_leonid_maksymenko, financial_risk_management]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Financial Applications of Linear Risk Management via Non-linear Machine Learning

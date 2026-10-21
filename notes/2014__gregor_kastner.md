@@ -2,7 +2,7 @@
 type: Talk
 title: stochvolDealing with Stochastic Volatility in Time Series
 description: The R package stochvol provides methods for modeling stochastic volatility in time series data.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Gregor Kastner
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__gregor_kastner.pdf"
 slug: 2014__gregor_kastner
 status: archived
 tags: [osqf, 2014, gregor_kastner, stochastic_volatility_modeling, mcmc_estimation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # stochvolDealing with Stochastic Volatility in Time Series

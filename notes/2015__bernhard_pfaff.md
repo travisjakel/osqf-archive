@@ -2,7 +2,7 @@
 type: Talk
 title: The sequel of cccpSolving cone constrained convex programs
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Bernhard Pfaff
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__bernhard_pfaff.NA"
 slug: 2015__bernhard_pfaff
 status: no_file
 tags: [osqf, 2015, bernhard_pfaff]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The sequel of cccpSolving cone constrained convex programs

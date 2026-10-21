@@ -2,7 +2,7 @@
 type: Talk
 title: VEC and GVAR Models using R
 description: "The talk critiques the Basel Committee's separate treatment of market and credit risk, demonstrating how integrated risk analysis using VEC/GVAR models reveals significant underestimation of risk in foreign currency loan portfolios."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2009
 date: ~
 speaker: Klaus Rheinberger
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2009/2009__klaus_rheinberger.pdf"
 slug: 2009__klaus_rheinberger
 status: archived
 tags: [osqf, 2009, klaus_rheinberger]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # VEC and GVAR Models using R

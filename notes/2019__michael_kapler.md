@@ -2,7 +2,7 @@
 type: Talk
 title: Importance of Calendar Patterns
 description: "Discussion of calendar patterns (e.g., end-of-month, Halloween effect) and their impact on financial data, with introduction of the rtsviz.calpat R package for visualization."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Michael Kapler
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__michael_kapler.pdf"
 slug: 2019__michael_kapler
 status: archived
 tags: [osqf, 2019, michael_kapler]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Importance of Calendar Patterns

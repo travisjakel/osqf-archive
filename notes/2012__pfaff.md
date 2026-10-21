@@ -2,7 +2,7 @@
 type: Talk
 title: Diversification ReconsideredMinimum Tail Dependence
 description: "The talk re-examines diversification strategies by focusing on minimum tail dependence, proposing optimal portfolios that minimize lower tail risk."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Pfaff
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__pfaff.pdf"
 slug: 2012__pfaff
 status: archived
 tags: [osqf, 2012, pfaff, diversification]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Diversification ReconsideredMinimum Tail Dependence

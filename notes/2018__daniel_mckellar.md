@@ -2,7 +2,7 @@
 type: Talk
 title: Global Financial CommunitiesGeography and Industry Effects
 description: Analysis of global financial information networks reveals geography as a dominant factor in information flow and return correlations.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Daniel McKellar
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__daniel_mckellar.pdf"
 slug: 2018__daniel_mckellar
 status: archived
 tags: [osqf, 2018, daniel_mckellar]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Global Financial CommunitiesGeography and Industry Effects

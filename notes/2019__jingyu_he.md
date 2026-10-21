@@ -2,7 +2,7 @@
 type: Talk
 title: "Factor Investing: Hierarchical Ensemble Learning"
 description: Factor investing using hierarchical ensemble learning to predict asset returns and optimize portfolios with Bayesian modeling.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Jingyu He
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__jingyu_he.pdf"
 slug: 2019__jingyu_he
 status: archived
 tags: [osqf, 2019, jingyu_he, factor_investing]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Factor Investing: Hierarchical Ensemble Learning

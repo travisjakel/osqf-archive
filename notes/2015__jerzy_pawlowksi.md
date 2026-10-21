@@ -2,7 +2,7 @@
 type: Talk
 title: "Are High Frequency Traders Prudent and Temperate?"
 description: Analyzes high-frequency trading behavior through statistical measures of prudence (skewness preference) and temperance (kurtosis aversion) using R packages.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Jerzy Pawlowksi
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__jerzy_pawlowksi.pdf"
 slug: 2015__jerzy_pawlowksi
 status: archived
 tags: [osqf, 2015, jerzy_pawlowksi, high_frequency_trading, garman_klass_volatility_estimator]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Are High Frequency Traders Prudent and Temperate?

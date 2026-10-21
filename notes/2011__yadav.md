@@ -2,7 +2,7 @@
 type: Talk
 title: Modeling Low Default Credit Portfolios in R
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Yadav
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2011__yadav
 status: no_file
 tags: [osqf, 2011, yadav]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Modeling Low Default Credit Portfolios in R

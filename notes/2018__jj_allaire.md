@@ -2,7 +2,7 @@
 type: Talk
 title: Machine Learning with TensorFlow and R
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: JJ Allaire
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2018__jj_allaire
 status: no_file
 tags: [osqf, 2018, jj_allaire]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Machine Learning with TensorFlow and R

@@ -2,7 +2,7 @@
 type: Talk
 title: "Forecasting vs. Looking-Ahead: Instilling Effective Leads into Classic Forecast Designs"
 description: "The talk critiques classic forecasting's reliance on MSE, introducing novel 'Look Ahead' criteria (MSE-LA) to decouple forecasts from present data and improve lead times in business-cycle analysis."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Marc Wildi
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__marc_wildi.pdf"
 slug: 2024__marc_wildi
 status: archived
 tags: [osqf, 2024, marc_wildi, forecasting]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Forecasting vs. Looking-Ahead: Instilling Effective Leads into Classic Forecast Designs

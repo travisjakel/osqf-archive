@@ -13,6 +13,11 @@ _Created 2026-07-08 (OSQF/R_Finance corpus re-extraction project). Owner: osqf-a
 
 Which tool to reach for when getting content out of documents (PDFs, decks, scans), based on the 2026-07-08 bake-off on 15 stratified OSQF/R_Finance conference decks (`osqf_wiki/_cache/ocr_bakeoff/results.json`).
 
+> **Companion page.** This page picks the OCR *engine*. [[document_intake_ocr_routing]] (2026-09-03) answers the question **before** it — whether to run an
+> OCR layer at all — and holds the per-page economics: the born-digital bypass, the finding that
+> vision-direct costs about the same as OCR-plus-text, and OCR's real job as the **provenance** layer
+> (bounding boxes for field-level exception triage) rather than the extraction layer.
+
 ## Decision matrix
 
 | Input / question | Tool | Why |

@@ -2,7 +2,7 @@
 type: Talk
 title: Portfolio Selection with Probabilistic UtilityRevisited
 description: Reinterpreting utility functions as log-densities and using Hybrid Monte Carlo for high-dimensional portfolio optimization.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Bernhard Pfaff
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__bernhard_pfaff.pdf"
 slug: 2013__bernhard_pfaff
 status: archived
 tags: [osqf, 2013, bernhard_pfaff, portfolio_selection]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Portfolio Selection with Probabilistic UtilityRevisited

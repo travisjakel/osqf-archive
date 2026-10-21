@@ -2,7 +2,7 @@
 type: Talk
 title: "Global Adaptive Asset Allocation, and the Possible End of Momentum"
 description: Analysis of global adaptive asset allocation strategies and challenges to momentum investing using historical asset data and Monte Carlo simulations.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Ilya Kipnis
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__ilya_kipnis.pptx"
 slug: 2017__ilya_kipnis
 status: archived
 tags: [osqf, 2017, ilya_kipnis, asset_allocation, mean_variance_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Global Adaptive Asset Allocation, and the Possible End of Momentum

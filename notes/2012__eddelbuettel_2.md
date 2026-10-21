@@ -2,7 +2,7 @@
 type: Talk
 title: Wittier Webapps with RInside
 description: This talk presents RInside and Wt toolkit for deploying R/C++ applications as web apps with minimal effort.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Eddelbuettel
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__eddelbuettel_2.pdf"
 slug: 2012__eddelbuettel_2
 status: archived
 tags: [osqf, 2012, eddelbuettel]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Wittier Webapps with RInside

@@ -2,7 +2,7 @@
 type: Talk
 title: Quantifying the Risk and Price Impact of Energy Policy Events on Natural Gas Markets Using R (with Soumya Kalra)
 description: Quantifying how FERC policy events impact natural gas prices using Henry Hub futures and R-based event study analysis
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Vincenzo Giordano
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__vincenzo_giordano.pdf"
 slug: 2015__vincenzo_giordano
 status: archived
 tags: [osqf, 2015, vincenzo_giordano, event_study_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Quantifying the Risk and Price Impact of Energy Policy Events on Natural Gas Markets Using R (with Soumya Kalra)

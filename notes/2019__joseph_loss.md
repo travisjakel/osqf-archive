@@ -2,7 +2,7 @@
 type: Talk
 title: Options Pricing in Levy Models
 description: Presentation on options pricing using discrete Levy models with focus on Normal Inverse Gaussian algorithms and inverse-transform methods
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Joseph Loss
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__joseph_loss.pptx"
 slug: 2019__joseph_loss
 status: archived
 tags: [osqf, 2019, joseph_loss, options_pricing]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Options Pricing in Levy Models

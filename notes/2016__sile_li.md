@@ -2,7 +2,7 @@
 type: Talk
 title: Constructing US Employment Google Search Index by Applying Principal Component Analysis
 description: This talk demonstrates how Principal Component Analysis is applied to construct a US employment Google search index using alternative data.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Sile Li
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__sile_li.pdf"
 slug: 2016__sile_li
 status: archived
 tags: [osqf, 2016, sile_li, principal_component_analysis, principal_component_analysis_pca]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Constructing US Employment Google Search Index by Applying Principal Component Analysis

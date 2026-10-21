@@ -2,7 +2,7 @@
 type: Talk
 title: Deep Learning Alpha
 description: "The talk explores using deep learning to generate tradable factors for alpha generation in U.S. equities, combining neural networks with traditional factor models like Fama-French."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Guanhao Feng
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__guanhao_feng.pdf"
 slug: 2018__guanhao_feng
 status: archived
 tags: [osqf, 2018, guanhao_feng, factor_investing]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Deep Learning Alpha

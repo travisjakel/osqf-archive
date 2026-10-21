@@ -2,7 +2,7 @@
 type: Talk
 title: Tax Aware Backtest Framework
 description: "A backtest framework that accounts for US tax rules including capital gains, wash-sale rules, and dividend taxation in taxable accounts."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Michael Kapler
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__michael_kapler.pdf"
 slug: 2016__michael_kapler
 status: archived
 tags: [osqf, 2016, michael_kapler]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Tax Aware Backtest Framework

@@ -2,7 +2,7 @@
 type: Talk
 title: Analysing Large-Scale Financial Data Sets in R
 description: "The talk discusses challenges and solutions for handling large-scale financial data in R, focusing on memory and performance issues."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2010
 date: ~
 speaker: Smith
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2010/2010__smith.pdf"
 slug: 2010__smith
 status: archived
 tags: [osqf, 2010, smith]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Analysing Large-Scale Financial Data Sets in R

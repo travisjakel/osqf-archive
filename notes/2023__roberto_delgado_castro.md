@@ -2,7 +2,7 @@
 type: Talk
 title: Pivot Tables in R for Financial Analysis
 description: "Automation of financial supervision tools for public trusts using R's pivot tables and conditional logic"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Roberto Delgado Castro
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__roberto_delgado_castro.pptx"
 slug: 2023__roberto_delgado_castro
 status: archived
 tags: [osqf, 2023, roberto_delgado_castro]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Pivot Tables in R for Financial Analysis

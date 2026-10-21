@@ -2,7 +2,7 @@
 type: Talk
 title: "The Hard, Transition, and the Calm Times"
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Emmanuel Senyo Fianu
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__emmanuel_senyo_fianu.NA"
 slug: 2025__emmanuel_senyo_fianu
 status: no_file
 tags: [osqf, 2025, emmanuel_senyo_fianu]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Hard, Transition, and the Calm Times

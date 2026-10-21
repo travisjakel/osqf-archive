@@ -2,7 +2,7 @@
 type: Talk
 title: gpusvcalibrationFast Stochastic Volatility Model Calibration using GPUs
 description: "The gpusvcalibration R package accelerates stochastic volatility model calibration using GPUs, achieving up to 760x performance improvements by offloading computations to the GPU."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Matthew Dixon
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__matthew_dixon.pdf"
 slug: 2014__matthew_dixon
 status: archived
 tags: [osqf, 2014, matthew_dixon, stochastic_volatility_modeling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # gpusvcalibrationFast Stochastic Volatility Model Calibration using GPUs

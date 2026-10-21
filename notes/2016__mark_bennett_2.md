@@ -2,7 +2,7 @@
 type: Talk
 title: Implementation of Value Strategies using R
 description: "Implementation of value investment strategies using R and PostgreSQL, including Greenblatt's and O'Schaughnessy's approaches."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Mark Bennett
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__mark_bennett_2.pdf"
 slug: 2016__mark_bennett_2
 status: archived
 tags: [osqf, 2016, mark_bennett]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Implementation of Value Strategies using R

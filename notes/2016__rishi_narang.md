@@ -2,7 +2,7 @@
 type: Talk
 title: Rage Against the Machine Learning
 description: "Critique of machine learning applications in investing, emphasizing challenges and misconceptions"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Rishi Narang
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__rishi_narang.pptx"
 slug: 2016__rishi_narang
 status: archived
 tags: [osqf, 2016, rishi_narang, machine_learning_finance]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Rage Against the Machine Learning

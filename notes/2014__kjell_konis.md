@@ -2,7 +2,7 @@
 type: Talk
 title: The FlexBayes Package
 description: The FlexBayes Package is an R package implementing Bayesian hierarchical models via C++ MCMC for computational finance and risk management
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Kjell Konis
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__kjell_konis.pdf"
 slug: 2014__kjell_konis
 status: archived
 tags: [osqf, 2014, kjell_konis, bayesian_statistics]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The FlexBayes Package

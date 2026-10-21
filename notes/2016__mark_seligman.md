@@ -2,7 +2,7 @@
 type: Talk
 title: Controlling for Monotonicity in Random Forest Regressors
 description: "This talk presents a method to enforce monotonicity constraints in random forest regressors, ensuring predictions align with domain knowledge."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Mark Seligman
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__mark_seligman.pdf"
 slug: 2016__mark_seligman
 status: archived
 tags: [osqf, 2016, mark_seligman, random_forests]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Controlling for Monotonicity in Random Forest Regressors

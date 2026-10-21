@@ -2,7 +2,7 @@
 type: Talk
 title: Jeffrey Ryan
 description: Leveraging R with xts and quantmod for quantitative trading
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2009
 date: ~
 speaker: xts/quantmod
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2009/2009__xts_and_quantmod.pdf"
 slug: 2009__xts_and_quantmod
 status: archived
 tags: [osqf, 2009, xts_and_quantmod]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Jeffrey Ryan

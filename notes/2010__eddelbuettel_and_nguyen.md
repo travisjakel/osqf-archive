@@ -2,7 +2,7 @@
 type: Talk
 title: RQuantLibInterfacing QuantLib from R
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2010
 date: ~
 speaker: Eddelbuettel/Nguyen
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2010__eddelbuettel_and_nguyen
 status: no_file
 tags: [osqf, 2010, eddelbuettel_and_nguyen]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # RQuantLibInterfacing QuantLib from R

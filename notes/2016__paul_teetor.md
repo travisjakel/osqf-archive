@@ -2,7 +2,7 @@
 type: Talk
 title: "Are You Trading Mean Reversion or Oscillation?"
 description: "The talk argues that markets oscillate rather than mean-revert, highlighting the limitations of the ADF test in identifying tradable opportunities."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Paul Teetor
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__paul_teetor.pdf"
 slug: 2016__paul_teetor
 status: archived
 tags: [osqf, 2016, paul_teetor]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Are You Trading Mean Reversion or Oscillation?

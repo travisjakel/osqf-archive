@@ -2,7 +2,7 @@
 type: Talk
 title: "Distributed Data Structures in R for General, Large-scale Computing"
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Michael Kane
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__michael_kane.NA"
 slug: 2014__michael_kane
 status: no_file
 tags: [osqf, 2014, michael_kane]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Distributed Data Structures in R for General, Large-scale Computing

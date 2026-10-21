@@ -22,7 +22,7 @@ suppressPackageStartupMessages({
     db        = "./embeddings/notes.duckdb",
     notes     = "./notes",
     tags      = "./embeddings/talk_tags.fst",
-    query_src = "./embeddings/query.R",
+    query_src = "./R/query.R",
     query_fn  = "osqf_query"
   )
 )

@@ -2,7 +2,7 @@
 type: Talk
 title: "Follow the Leader - the application of time-lag series analysis to discover leaders in S&P 500"
 description: "Using time-lag correlation analysis to identify leading stocks in the S&P 500 through graph-based PageRank scoring"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Michael Kapler
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__michael_kapler.pdf"
 slug: 2015__michael_kapler
 status: archived
 tags: [osqf, 2015, michael_kapler]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Follow the Leader - the application of time-lag series analysis to discover leaders in S&P 500

@@ -2,7 +2,7 @@
 type: Talk
 title: OneTick and R for Market Data Time Series Analysis
 description: Integration of OneTick and R for real-time market data analysis and backtesting
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Belianina
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__belianina.pdf"
 slug: 2012__belianina
 status: archived
 tags: [osqf, 2012, belianina]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # OneTick and R for Market Data Time Series Analysis

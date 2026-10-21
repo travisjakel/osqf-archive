@@ -2,7 +2,7 @@
 type: Talk
 title: Portfolio Returns to Biotech Investment
 description: Analysis of SaaS financial metrics and growth patterns based on OpenView benchmarks
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Grant Cavanaugh
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__grant_cavanaugh.pdf"
 slug: 2024__grant_cavanaugh
 status: archived
 tags: [osqf, 2024, grant_cavanaugh]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Portfolio Returns to Biotech Investment

@@ -2,7 +2,7 @@
 type: Talk
 title: SyberiaA development framework for R
 description: Syberia is a framework for organizing complex R projects through modular engines and resource-based architecture.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Robert Krzyzanowski
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__robert_krzyzanowski.pdf"
 slug: 2017__robert_krzyzanowski
 status: archived
 tags: [osqf, 2017, robert_krzyzanowski]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # SyberiaA development framework for R

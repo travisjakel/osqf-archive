@@ -2,7 +2,7 @@
 type: Talk
 title: A Short Introduction to Real-Time Portfolio/Market Monitoring with R
 description: "This talk introduces real-time portfolio and market monitoring techniques using R, focusing on signal detection and package development."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Weylandt
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__weylandt.pdf"
 slug: 2012__weylandt
 status: archived
 tags: [osqf, 2012, weylandt]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # A Short Introduction to Real-Time Portfolio/Market Monitoring with R

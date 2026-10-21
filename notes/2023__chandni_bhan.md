@@ -2,7 +2,7 @@
 type: Talk
 title: Early Warning Indicators
 description: Early Warning Indicators (EWI) for predicting equity and credit selloffs using cross-asset signals and machine learning models
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Chandni Bhan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__chandni_bhan.pdf"
 slug: 2023__chandni_bhan
 status: archived
 tags: [osqf, 2023, chandni_bhan]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Early Warning Indicators

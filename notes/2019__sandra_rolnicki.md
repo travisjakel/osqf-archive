@@ -2,7 +2,7 @@
 type: Talk
 title: "Banking on Sentiment: How Natural Language Processing Selected a Portfolio of Bank Stocks that Outperformed a Bank Stock Index by 15%"
 description: "Using NLP on bank annual reports to construct a portfolio that outperformed a bank stock index by 15%."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Sandra Rolnicki
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__sandra_rolnicki.pdf"
 slug: 2019__sandra_rolnicki
 status: archived
 tags: [osqf, 2019, sandra_rolnicki]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Banking on Sentiment: How Natural Language Processing Selected a Portfolio of Bank Stocks that Outperformed a Bank Stock Index by 15%

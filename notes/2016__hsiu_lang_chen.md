@@ -2,7 +2,7 @@
 type: Talk
 title: "Do Mutual Funds Exploit Information from Option Prices for Equity Investment?"
 description: "The study examines whether mutual funds use options price information to gain an edge in equity investments, finding evidence of exploitation in fund holdings."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Hsiu-lang Chen
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__hsiu_lang_chen.pptx"
 slug: 2016__hsiu_lang_chen
 status: archived
 tags: [osqf, 2016, hsiu_lang_chen, options_pricing]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Do Mutual Funds Exploit Information from Option Prices for Equity Investment?

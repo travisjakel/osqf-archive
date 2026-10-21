@@ -2,7 +2,7 @@
 type: Talk
 title: Liquidity provision in a high-frequency environment
 description: Analyzes liquidity provision dynamics between algorithmic traders and non-AT in Indian equity markets using NSE order data.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Chirag Anand
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__chirag_anand.pdf"
 slug: 2016__chirag_anand
 status: archived
 tags: [osqf, 2016, chirag_anand, high_frequency_trading]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Liquidity provision in a high-frequency environment

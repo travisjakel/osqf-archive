@@ -2,7 +2,7 @@
 type: Talk
 title: Simple R for Trading Systems
 description: Kent Hoxsey discusses using R for building trading systems with a focus on simplicity and practical workflow
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Kent Hoxsey
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__kent_hoxsey.pdf"
 slug: 2024__kent_hoxsey
 status: archived
 tags: [osqf, 2024, kent_hoxsey, backtesting]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Simple R for Trading Systems

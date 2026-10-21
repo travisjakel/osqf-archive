@@ -2,7 +2,7 @@
 type: Talk
 title: Efficient Portfolio Optimization Under Large Skewness and Fat Tails
 description: The IBrokers2 package enables real-time trading strategies via Interactive Brokers API with customizable eWrapper objects and trade wrappers.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Jerzy Pawlowski
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__jerzy_pawlowski.pdf"
 slug: 2019__jerzy_pawlowski
 status: archived
 tags: [osqf, 2019, jerzy_pawlowski]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Efficient Portfolio Optimization Under Large Skewness and Fat Tails

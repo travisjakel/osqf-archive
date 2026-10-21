@@ -2,7 +2,7 @@
 type: Talk
 title: Estimating Global Bank Network Connectedness
 description: Measuring global bank network connectedness using variance decomposition and network analysis of equity return volatilities
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Frank Diebold
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__frank_diebold.pdf"
 slug: 2016__frank_diebold
 status: archived
 tags: [osqf, 2016, frank_diebold, variance_decomposition]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Estimating Global Bank Network Connectedness

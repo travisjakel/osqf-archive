@@ -2,7 +2,7 @@
 type: Talk
 title: The R package cccpSolving Cone Constrained Convex Programs
 description: Introduction of the R package cccp for solving cone constrained convex programs with a focus on implementation details and dependencies.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Bernhard Pfaff
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__bernhard_pfaff.pdf"
 slug: 2014__bernhard_pfaff
 status: archived
 tags: [osqf, 2014, bernhard_pfaff, convex_optimization, s4_classes_methods]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The R package cccpSolving Cone Constrained Convex Programs

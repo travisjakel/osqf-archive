@@ -2,7 +2,7 @@
 type: Talk
 title: R and Repast Simphony
 description: Repast Simphony integrates R for agent-based modeling and simulation with flexible development and analysis tools
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2010
 date: ~
 speaker: North
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2010/2010__north.pdf"
 slug: 2010__north
 status: archived
 tags: [osqf, 2010, north, agent_based_modeling, agent_based_modeling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # R and Repast Simphony

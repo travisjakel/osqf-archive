@@ -2,7 +2,7 @@
 type: Talk
 title: AI Pattern Recognition and Deep Learning for Trading
 description: "The talk introduces AI-driven pattern detection for algorithmic trading, covering technical analysis patterns, LSTM networks, and AI trading platforms."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Helena Ristov
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__helena_ristov.pdf"
 slug: 2025__helena_ristov
 status: archived
 tags: [osqf, 2025, helena_ristov, long_short_term_memory_lstm_networks]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # AI Pattern Recognition and Deep Learning for Trading

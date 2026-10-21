@@ -2,7 +2,7 @@
 type: Talk
 title: Portfolio Selection with Multiple Criteria Objectives
 description: "The talk discusses portfolio optimization using multi-criteria methods like NSGA-II and weighted-sum approaches, applied to multi-asset portfolios with objectives on return, risk, and diversification."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Bernhard Pfaff
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__bernhard_pfaff.pdf"
 slug: 2016__bernhard_pfaff
 status: archived
 tags: [osqf, 2016, bernhard_pfaff, portfolio_selection]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Portfolio Selection with Multiple Criteria Objectives

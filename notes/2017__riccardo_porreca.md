@@ -2,7 +2,7 @@
 type: Talk
 title: "Efficient, Consistent and Flexible Credit Default Simulation"
 description: "Efficient, consistent, and flexible credit default simulation using TRNG and RcppParallel for integrated market and default risk modeling"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Riccardo Porreca
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__riccardo_porreca.pdf"
 slug: 2017__riccardo_porreca
 status: archived
 tags: [osqf, 2017, riccardo_porreca, monte_carlo_simulation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Efficient, Consistent and Flexible Credit Default Simulation

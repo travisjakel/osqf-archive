@@ -2,7 +2,7 @@
 type: Talk
 title: Flexible Asset Allocation With Stepwise Correlation Rank
 description: "Flexible Asset Allocation uses stepwise correlation ranking to improve portfolio performance by considering momentum, volatility, and correlation."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Ilya Kipnis
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__ilya_kipnis.pptm"
 slug: 2015__ilya_kipnis
 status: archived
 tags: [osqf, 2015, ilya_kipnis, asset_allocation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Flexible Asset Allocation With Stepwise Correlation Rank

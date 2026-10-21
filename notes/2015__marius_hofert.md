@@ -2,7 +2,7 @@
 type: Talk
 title: Parallel and other simulations in R made easyAn end-to-end study
 description: "This talk presents an end-to-end framework for conducting parallel and other simulations in R, focusing on risk management applications like Value at Risk (VaR) computation using copula models."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Marius Hofert
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__marius_hofert.pdf"
 slug: 2015__marius_hofert
 status: archived
 tags: [osqf, 2015, marius_hofert, parallel_computing_r]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Parallel and other simulations in R made easyAn end-to-end study

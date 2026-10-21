@@ -1,11 +1,12 @@
 ---
 type: Speaker
 title: "Speaker: Stephen Rush"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 speaker: Stephen Rush
 speaker_slug: stephen_rush
 n_talks: 6
 tags: [osqf, speaker, stephen_rush]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speaker: Stephen Rush

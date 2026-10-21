@@ -2,7 +2,7 @@
 type: Talk
 title: The Impact of Computational Error on the Volatility Smile
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Thomas Hanson
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2013__thomas_hanson
 status: no_file
 tags: [osqf, 2013, thomas_hanson]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Impact of Computational Error on the Volatility Smile

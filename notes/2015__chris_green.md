@@ -2,7 +2,7 @@
 type: Talk
 title: Detecting Multivariate Financial Data Outliers using Calibrated Robust Mahalanobis Distances
 description: Detecting multivariate outliers in financial data using calibrated robust Mahalanobis distances to improve factor model reliability
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Chris Green
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__chris_green.pdf"
 slug: 2015__chris_green
 status: archived
 tags: [osqf, 2015, chris_green]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Detecting Multivariate Financial Data Outliers using Calibrated Robust Mahalanobis Distances

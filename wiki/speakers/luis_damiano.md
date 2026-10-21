@@ -1,11 +1,12 @@
 ---
 type: Speaker
 title: "Speaker: Luis Damiano"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 speaker: Luis Damiano
 speaker_slug: luis_damiano
 n_talks: 3
 tags: [osqf, speaker, luis_damiano]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speaker: Luis Damiano

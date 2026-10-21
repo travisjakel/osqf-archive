@@ -2,7 +2,7 @@
 type: Talk
 title: Fast automatic indexing with data.table
 description: "data.table offers fast indexing and operations, outperforming dplyr in speed and efficiency for large datasets"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Matt Dowle
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__matt_dowle.pdf"
 slug: 2015__matt_dowle
 status: archived
 tags: [osqf, 2015, matt_dowle, fast_aggregation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Fast automatic indexing with data.table

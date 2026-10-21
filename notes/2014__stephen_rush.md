@@ -2,7 +2,7 @@
 type: Talk
 title: Twenty Years of VPIN
 description: "Analysis of VPIN (Volume Synchronized Probability of Informed Trading) over 20 years, covering models, econometrics, and applications to mergers/acquisitions."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Stephen Rush
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__stephen_rush.pdf"
 slug: 2014__stephen_rush
 status: archived
 tags: [osqf, 2014, stephen_rush, informed_trading]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Twenty Years of VPIN

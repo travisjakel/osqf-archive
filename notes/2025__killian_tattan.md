@@ -2,7 +2,7 @@
 type: Talk
 title: "Signal Quantiling & Signal Combination in the Cross-Section"
 description: Improving portfolio performance through signal quantiling and optimal combination of multiple signals using statistical techniques and Monte-Carlo simulations.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Killian Tattan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__killian_tattan.pptx"
 slug: 2025__killian_tattan
 status: archived
 tags: [osqf, 2025, killian_tattan]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Signal Quantiling & Signal Combination in the Cross-Section

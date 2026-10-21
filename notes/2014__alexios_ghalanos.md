@@ -2,7 +2,7 @@
 type: Talk
 title: "Twinkle, twinkle little STARSmooth Transition AR Models in R"
 description: The twinkle package implements Smooth Transition ARMAX models in R for econometric analysis of regime-switching time series.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Alexios Ghalanos
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__alexios_ghalanos.pdf"
 slug: 2014__alexios_ghalanos
 status: archived
 tags: [osqf, 2014, alexios_ghalanos]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Twinkle, twinkle little STARSmooth Transition AR Models in R

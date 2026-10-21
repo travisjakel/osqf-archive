@@ -2,7 +2,7 @@
 type: Talk
 title: Taming of Portfolio of Spreads
 description: This talk explains how to standardize historical volatility and use median drawdowns with exponential models to manage risk budgets in spread portfolios.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Paul Teetor
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__paul_teetor.pdf"
 slug: 2022__paul_teetor
 status: archived
 tags: [osqf, 2022, paul_teetor, risk_management]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Taming of Portfolio of Spreads

@@ -2,7 +2,7 @@
 type: Talk
 title: Dynamic k-Partite Stochastic Block Model
 description: Development of dynamic bi-partite stochastic block models for community detection in network data with time-varying structures
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Neil Hwang
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__neil_hwang.pptx"
 slug: 2018__neil_hwang
 status: archived
 tags: [osqf, 2018, neil_hwang]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Dynamic k-Partite Stochastic Block Model

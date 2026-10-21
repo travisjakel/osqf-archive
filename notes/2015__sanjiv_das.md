@@ -2,7 +2,7 @@
 type: Talk
 title: Efficient Rebalancing of Taxable Portfolios
 description: "Optimal rebalancing strategies for taxable portfolios considering U.S. tax rules, using Monte Carlo simulations to determine stock fraction intervals that maximize utility."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Sanjiv Das
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__sanjiv_das.pdf"
 slug: 2015__sanjiv_das
 status: archived
 tags: [osqf, 2015, sanjiv_das, monte_carlo_simulations]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Efficient Rebalancing of Taxable Portfolios

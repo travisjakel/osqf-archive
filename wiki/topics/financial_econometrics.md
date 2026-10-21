@@ -1,11 +1,12 @@
 ---
 type: Topic
 title: "Topic: financial econometrics"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 key: financial econometrics
 kind: topic
 n_talks: 6
 tags: [osqf, topic, financial_econometrics]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Topic: financial econometrics

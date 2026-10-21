@@ -2,7 +2,7 @@
 type: Talk
 title: Mean-variance Portfolio OptimizationDo Historical Correlations Help or Hinder Risk Control in a Crisis
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2010
 date: ~
 speaker: Plate
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2010/2010__plate.pdf"
 slug: 2010__plate
 status: archived
 tags: [osqf, 2010, plate]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Mean-variance Portfolio OptimizationDo Historical Correlations Help or Hinder Risk Control in a Crisis

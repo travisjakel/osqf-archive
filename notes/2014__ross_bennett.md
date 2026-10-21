@@ -2,7 +2,7 @@
 type: Talk
 title: Complex Portfolio Optimization with PortfolioAnalytics
 description: "PortfolioAnalytics is an R package for portfolio optimization with complex constraints and objectives, demonstrating random portfolios, solver support, and visualization tools."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Ross Bennett
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__ross_bennett.pdf"
 slug: 2014__ross_bennett
 status: archived
 tags: [osqf, 2014, ross_bennett, portfolio_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Complex Portfolio Optimization with PortfolioAnalytics

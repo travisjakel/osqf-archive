@@ -2,7 +2,7 @@
 type: Talk
 title: "Tidyagronomy: An R package to Quantify Growing Degree Units"
 description: "tidyagronomy is an R package that provides a scalable, tidyverse-based system to compute growing degree units (GDUs), stress degree units, and chilling units for thousands of locations efficiently."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: James Horine
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__james_horine.pdf"
 slug: 2025__james_horine
 status: archived
 tags: [osqf, 2025, james_horine]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Tidyagronomy: An R package to Quantify Growing Degree Units

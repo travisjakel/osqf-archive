@@ -2,7 +2,7 @@
 type: Talk
 title: Abnormal Tone and Abnormal ReturnsAn Event Study Analysis
 description: Analyzing abnormal tone using event study methods in the context of earnings announcements.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Keven Bluteau
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__keven_bluteau.pdf"
 slug: 2018__keven_bluteau
 status: archived
 tags: [osqf, 2018, keven_bluteau, event_study_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Abnormal Tone and Abnormal ReturnsAn Event Study Analysis

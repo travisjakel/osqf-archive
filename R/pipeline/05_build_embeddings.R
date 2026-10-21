@@ -13,6 +13,11 @@ suppressPackageStartupMessages({
   library(DBI)
 })
 
+# ONE embedding transport for the estate -- see R/embed_local.R. Same weights,
+# same 768 dims; the endpoint comes from LLM_LOCAL_BACKEND / LLM_EMBED_URL /
+# OLLAMA_URL rather than being hard-coded to Ollama's /api/embeddings.
+source("R/embed_local.R")   # embed_one/embed_texts: one transport, 768d
+
 source("R/pipeline/00_helpers.R")
 
 DB_PATH       <- file.path(WIKI_ROOT, "embeddings", "notes.duckdb")
@@ -81,19 +86,11 @@ chunk_by_h2 <- function(lines, body_start) {
   out
 }
 
+# NULL on failure is load-bearing: the caller SKIPS that chunk rather than
+# writing a hole into a FLOAT[768] column, so the contract is preserved exactly.
 ollama_embed <- function(text, model = EMBED_MODEL, timeout = 60) {
-  resp <- tryCatch(
-    httr2::request(OLLAMA_URL) |>
-      httr2::req_url_path("/api/embeddings") |>
-      httr2::req_body_json(list(model = model, prompt = text), auto_unbox = TRUE) |>
-      httr2::req_timeout(timeout) |>
-      httr2::req_perform(),
-    error = function(e) e
-  )
-  if (inherits(resp, "error")) return(NULL)
-  if (httr2::resp_status(resp) >= 400) return(NULL)
-  j <- httr2::resp_body_json(resp)
-  as.numeric(j$embedding)
+  tryCatch(embed_one(text, model = model, timeout = timeout),
+           error = function(e) NULL)
 }
 
 # ---- Walk notes/ ------------------------------------------------------------
@@ -103,10 +100,25 @@ if (length(md_files) == 0) {
   cat("No notes — run 04_render_pages.R first.\n"); quit(save = "no")
 }
 
-# Existing chunk hashes
+# Existing chunk hashes.
+#
+# FORCE RE-EMBED: OSQF_EMBED_FORCE=1 (or --force) ignores them and re-embeds
+# every chunk. The text-hash gate is right for incremental builds and WRONG
+# whenever the EMBEDDER changed underneath a store that the text did not:
+# nothing in a chunk's text records which model or which build produced its
+# vector, so a store can drift arbitrarily far from the embedder that answers
+# its queries and every run reports a clean "0 new, N skipped". Measured
+# 2026-09-09: osqf's stored vectors scored median cosine 0.856 (min 0.44) on
+# 200 chunks against the SAME nomic weights served today, while voss and devops
+# scored 0.99999. Deleting rows would also work but loses the row metadata; this
+# just re-embeds in place.
+FORCE <- nzchar(Sys.getenv("OSQF_EMBED_FORCE", "")) ||
+         "--force" %in% commandArgs(trailingOnly = TRUE)
 existing <- as.data.table(dbGetQuery(con, "SELECT chunk_id, text_hash FROM chunks"))
-existing_hash <- if (nrow(existing) > 0)
+existing_hash <- if (nrow(existing) > 0 && !FORCE)
   setNames(existing$text_hash, existing$chunk_id) else character()
+if (FORCE)
+  cat(sprintf("FORCE re-embed: ignoring %d stored text_hashes\n", nrow(existing)))
 
 n_new <- 0L; n_skip <- 0L; n_fail <- 0L
 batch_rows <- list()
@@ -114,10 +126,24 @@ batch_rows <- list()
 flush_batch <- function() {
   if (length(batch_rows) == 0) return(invisible())
   bdt <- rbindlist(batch_rows, fill = TRUE)
+  # DELETE-THEN-INSERT, not INSERT OR REPLACE. Measured 2026-09-09 on this very
+  # table: with a persisted HNSW index on `embedding`, INSERT OR REPLACE updates
+  # every ORDINARY column and SILENTLY LEAVES THE INDEXED VECTOR COLUMN AT ITS
+  # OLD VALUE. It returns 1 row affected, raises nothing, and creates no
+  # duplicate -- so the script prints "New embedded: 4111" while not one vector
+  # moved. That is why osqf's store scored median cosine 0.856 against its own
+  # embedder: not the text-hash gate alone, but that a re-embed could not write.
+  # The consequence is worse than staleness: an EDITED chunk gets new text, a
+  # new text_hash and new metadata while keeping the vector of the text it used
+  # to be, so retrieval scores the new words under the old meaning.
+  # DELETE first and the INSERT writes the vector correctly.
+  ids <- unique(bdt$chunk_id)
+  dbExecute(con, sprintf("DELETE FROM chunks WHERE chunk_id IN (%s)",
+                         paste(dbQuoteString(con, ids), collapse = ",")))
   for (i in seq_len(nrow(bdt))) {
     emb_str <- paste0("[", paste(sprintf("%.7g", bdt$embedding[[i]]), collapse = ","), "]")
     dbExecute(con, sprintf("
-      INSERT OR REPLACE INTO chunks
+      INSERT INTO chunks
       (chunk_id, slug, section, text, text_hash, year, speaker, speaker_slug,
        file_format, status, embedding)
       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, %s);", emb_str),

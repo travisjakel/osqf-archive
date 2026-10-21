@@ -2,7 +2,7 @@
 type: Talk
 title: R packagemcrpMultiple criteria risk contribution optimization
 description: "Presentation on the R package mcrp for optimizing portfolio risk contributions across multiple criteria including variance, skewness, and kurtosis."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Bernhard Pfaff
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__bernhard_pfaff.pdf"
 slug: 2017__bernhard_pfaff
 status: archived
 tags: [osqf, 2017, bernhard_pfaff, risk_parity]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # R packagemcrpMultiple criteria risk contribution optimization

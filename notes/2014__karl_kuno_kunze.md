@@ -2,7 +2,7 @@
 type: Talk
 title: "Package 'Intermediate and Long Memory Time Series' (ILMTS)"
 description: R package ILMTS for simulating/detecting intermediate/long memory time series processes
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Karl-Kuno Kunze
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__karl_kuno_kunze.pdf"
 slug: 2014__karl_kuno_kunze
 status: archived
 tags: [osqf, 2014, karl_kuno_kunze]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Package 'Intermediate and Long Memory Time Series' (ILMTS)

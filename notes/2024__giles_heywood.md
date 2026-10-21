@@ -2,7 +2,7 @@
 type: Talk
 title: Factor Drivers of the UK Residential Property Cycle
 description: "The talk explores systematic factors driving UK residential property price cycles, focusing on a propagating wave of unrewarded risk."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Giles Heywood
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__giles_heywood.pptx"
 slug: 2024__giles_heywood
 status: archived
 tags: [osqf, 2024, giles_heywood]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Factor Drivers of the UK Residential Property Cycle

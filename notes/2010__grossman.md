@@ -2,7 +2,7 @@
 type: Talk
 title: Running R over CloudsWhy There are So Many Choices and Why They Matter
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2010
 date: ~
 speaker: Grossman
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2010/2010__grossman.NA"
 slug: 2010__grossman
 status: no_file
 tags: [osqf, 2010, grossman]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Running R over CloudsWhy There are So Many Choices and Why They Matter

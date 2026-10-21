@@ -1,11 +1,12 @@
 ---
 type: Speaker
 title: "Speaker: Christian Silva"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 speaker: Christian Silva
 speaker_slug: christian_silva
 n_talks: 1
 tags: [osqf, speaker, christian_silva]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speaker: Christian Silva

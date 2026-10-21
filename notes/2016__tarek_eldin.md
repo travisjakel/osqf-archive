@@ -2,7 +2,7 @@
 type: Talk
 title: Random Pricing Errors and Systematic ReturnsThe Flaw in Fundamental Prices
 description: "Random pricing errors can explain systematic returns like size and value effects, with implications for market efficiency and pricing models."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Tarek Eldin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__tarek_eldin.pptx"
 slug: 2016__tarek_eldin
 status: archived
 tags: [osqf, 2016, tarek_eldin]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Random Pricing Errors and Systematic ReturnsThe Flaw in Fundamental Prices

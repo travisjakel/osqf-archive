@@ -2,7 +2,7 @@
 type: Talk
 title: Statistical Analysis of Financial Time Series and Option Pricing in R
 description: "Statistical Analysis of Financial Time Series and Option Pricing in R: Clustering, MLE, and Model Selection"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Iacus
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__iacus.pdf"
 slug: 2011__iacus
 status: archived
 tags: [osqf, 2011, iacus, financial_time_series_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Statistical Analysis of Financial Time Series and Option Pricing in R

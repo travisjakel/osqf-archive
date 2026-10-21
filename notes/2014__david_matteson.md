@@ -2,7 +2,7 @@
 type: Talk
 title: Identifying Recessions in Real-Time Using Time-Freq. Functional Models
 description: Time-frequency functional models for identifying and predicting economic recessions in real-time using NASDAQ data and macroeconomic indicators
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: David Matteson
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__david_matteson.pdf"
 slug: 2014__david_matteson
 status: archived
 tags: [osqf, 2014, david_matteson]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Identifying Recessions in Real-Time Using Time-Freq. Functional Models

@@ -2,7 +2,7 @@
 type: Talk
 title: GetHFDataAn R package for downloading and aggregating high frequency trading data from Bovespa
 description: The GetHFData R package facilitates downloading and aggregating high-frequency trading data from Bovespa.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Marcelo Perlin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__marcelo_perlin.pdf"
 slug: 2017__marcelo_perlin
 status: archived
 tags: [osqf, 2017, marcelo_perlin, high_frequency_trading_data]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # GetHFDataAn R package for downloading and aggregating high frequency trading data from Bovespa

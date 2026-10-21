@@ -2,7 +2,7 @@
 type: Talk
 title: Weather and Text Data for Investment Research
 description: Leveraging weather and news data to enhance predictive models in investment research through feature engineering and machine learning
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Kyle Balkissoon
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__kyle_balkissoon.pdf"
 slug: 2018__kyle_balkissoon
 status: archived
 tags: [osqf, 2018, kyle_balkissoon]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Weather and Text Data for Investment Research

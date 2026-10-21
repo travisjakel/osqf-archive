@@ -2,7 +2,7 @@
 type: Talk
 title: "Return Volatility, Market Microstructure Noise, and Institutional InvestorsEvidence from High Frequency Market"
 description: Examines the impact of institutional investors and mutual funds on stock return volatility and market microstructure noise using high-frequency data.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Yuting Tan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__yuting_tan.pdf"
 slug: 2017__yuting_tan
 status: archived
 tags: [osqf, 2017, yuting_tan]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Return Volatility, Market Microstructure Noise, and Institutional InvestorsEvidence from High Frequency Market

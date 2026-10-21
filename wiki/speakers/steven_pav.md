@@ -1,11 +1,12 @@
 ---
 type: Speaker
 title: "Speaker: Steven Pav"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 speaker: Steven Pav
 speaker_slug: steven_pav
 n_talks: 5
 tags: [osqf, speaker, steven_pav]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speaker: Steven Pav

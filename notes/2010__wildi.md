@@ -2,7 +2,7 @@
 type: Talk
 title: "Adapting the MDFA to `Financial Trading"
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2010
 date: ~
 speaker: Wildi
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2010/2010__wildi.ppt"
 slug: 2010__wildi
 status: extraction_failed
 tags: [osqf, 2010, wildi]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Adapting the MDFA to `Financial Trading

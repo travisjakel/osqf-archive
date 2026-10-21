@@ -2,7 +2,7 @@
 type: Talk
 title: ROIThe R Optimization Infrastructure Package
 description: "ROI is an R package providing a unified infrastructure for solving various optimization problems, including portfolio optimization and L1 regression."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Theussl
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__theussl.pdf"
 slug: 2012__theussl
 status: archived
 tags: [osqf, 2012, theussl, linear_programming_lp]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # ROIThe R Optimization Infrastructure Package

@@ -2,7 +2,7 @@
 type: Talk
 title: "Valuing Post-Revenue Biopharmaceutical Assets: Pfizer's Current Portfolio Case Study"
 description: "Valuing Post-Revenue Biopharmaceutical Assets: Pfizer's Current Portfolio Case Study"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Michael Kane
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__michael_kane.pdf"
 slug: 2024__michael_kane
 status: tiny_deck
 tags: [osqf, 2024, michael_kane]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Valuing Post-Revenue Biopharmaceutical Assets: Pfizer's Current Portfolio Case Study

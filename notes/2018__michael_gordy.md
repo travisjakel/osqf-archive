@@ -2,7 +2,7 @@
 type: Talk
 title: Spectral Backtests of Forecast Distributions with Application to Risk Management
 description: "The talk introduces spectral backtests for evaluating forecast distributions in risk management, using PIT values and customizable kernel functions."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Michael Gordy
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__michael_gordy.pdf"
 slug: 2018__michael_gordy
 status: archived
 tags: [osqf, 2018, michael_gordy, risk_management]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Spectral Backtests of Forecast Distributions with Application to Risk Management

@@ -2,7 +2,7 @@
 type: Talk
 title: "Values Aligned: ESG Screens and Investment Selection Skill"
 description: Analyzing how ESG screens affect investable universe properties and active management probabilities
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2023
 date: ~
 speaker: Kyle Balkissoon
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2023/2023__kyle_balkissoon.pdf"
 slug: 2023__kyle_balkissoon
 status: archived
 tags: [osqf, 2023, kyle_balkissoon]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Values Aligned: ESG Screens and Investment Selection Skill

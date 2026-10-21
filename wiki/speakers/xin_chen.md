@@ -1,11 +1,12 @@
 ---
 type: Speaker
 title: "Speaker: Xin Chen"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 speaker: Xin Chen
 speaker_slug: xin_chen
 n_talks: 2
 tags: [osqf, speaker, xin_chen]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Speaker: Xin Chen

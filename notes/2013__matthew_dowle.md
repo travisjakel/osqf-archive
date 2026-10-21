@@ -2,7 +2,7 @@
 type: Talk
 title: Advanced Tutorial on data.table
 description: "Advanced tutorial on R's data.table package, focusing on advanced features and best practices"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Matthew Dowle
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__matthew_dowle.pdf"
 slug: 2013__matthew_dowle
 status: archived
 tags: [osqf, 2013, matthew_dowle]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Advanced Tutorial on data.table

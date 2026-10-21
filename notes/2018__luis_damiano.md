@@ -2,7 +2,7 @@
 type: Talk
 title: Hierarchical Hidden Markov Models in High-Frequency Stock Markets
 description: Application of hierarchical Hidden Markov Models to identify and predict price trends in high-frequency stock markets using feature engineering and statistical modeling.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Luis Damiano
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__luis_damiano.pdf"
 slug: 2018__luis_damiano
 status: archived
 tags: [osqf, 2018, luis_damiano]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Hierarchical Hidden Markov Models in High-Frequency Stock Markets

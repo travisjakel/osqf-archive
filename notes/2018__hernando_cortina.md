@@ -2,7 +2,7 @@
 type: Talk
 title: The Out-of-Sample Alpha of Just Stocks
 description: The Out-of-Sample Alpha of Just Stocks demonstrates how companies with high ESG rankings generate higher returns and lower risk compared to low-ranked peers.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Hernando Cortina
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__hernando_cortina.pptx"
 slug: 2018__hernando_cortina
 status: archived
 tags: [osqf, 2018, hernando_cortina]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Out-of-Sample Alpha of Just Stocks

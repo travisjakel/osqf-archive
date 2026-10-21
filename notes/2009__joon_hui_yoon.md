@@ -2,7 +2,7 @@
 type: Talk
 title: "Event Study: Change-Point Model"
 description: Applying a Bayesian change-point model to detect structural breaks in event studies of financial markets
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2009
 date: ~
 speaker: Joon-Hui Yoon
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2009/2009__joon_hui_yoon.pdf"
 slug: 2009__joon_hui_yoon
 status: archived
 tags: [osqf, 2009, joon_hui_yoon, gibbs_sampling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Event Study: Change-Point Model

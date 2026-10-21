@@ -2,7 +2,7 @@
 type: Talk
 title: Package backpack for Fast Backtest Simulations of Trading Strategies
 description: "The talk presents the 'backpack' R package for fast backtest simulations of trading strategies using C++ via RcppArmadillo, with applications to portfolio optimization and rolling aggregations."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Jerzy Pawlowski
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__jerzy_pawlowski.pdf"
 slug: 2022__jerzy_pawlowski
 status: archived
 tags: [osqf, 2022, jerzy_pawlowski, portfolio_optimization]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Package backpack for Fast Backtest Simulations of Trading Strategies

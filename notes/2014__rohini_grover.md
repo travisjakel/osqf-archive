@@ -2,7 +2,7 @@
 type: Talk
 title: The Imprecision of Volatility Indexes
 description: Measuring imprecision in volatility indexes (VIX) using bootstrap methods and analyzing its implications for option pricing and risk management.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Rohini Grover
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__rohini_grover.pdf"
 slug: 2014__rohini_grover
 status: archived
 tags: [osqf, 2014, rohini_grover]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The Imprecision of Volatility Indexes

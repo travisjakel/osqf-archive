@@ -2,7 +2,7 @@
 type: Talk
 title: A Dynamic Bayesian Network Approach to Interbank Market
 description: "This talk presents a dynamic Bayesian network model for interbank overnight funding networks, combining economic factors with Bayesian estimation to predict counterparty choices and pricing."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Paul Laux
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__paul_laux.pdf"
 slug: 2024__paul_laux
 status: archived
 tags: [osqf, 2024, paul_laux]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # A Dynamic Bayesian Network Approach to Interbank Market

@@ -2,7 +2,7 @@
 type: Talk
 title: Covariance forecasting for portfolio optimisation
 description: "The talk discusses methods for covariance forecasting to improve portfolio optimization, using PCA, APT, and Bayesian shrinkage techniques."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Giles Heywood
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2013/2013__giles_heywood.pdf"
 slug: 2013__giles_heywood
 status: archived
 tags: [osqf, 2013, giles_heywood, principal_components_analysis_pca]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Covariance forecasting for portfolio optimisation

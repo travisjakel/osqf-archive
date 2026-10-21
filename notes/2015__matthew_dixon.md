@@ -2,7 +2,7 @@
 type: Talk
 title: Risk Decomposition for Fund Managers
 description: Presentation on Delta-Gamma and Component VaR methods for decomposing risk in multi-manager funds
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Matthew Dixon
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__matthew_dixon.pdf"
 slug: 2015__matthew_dixon
 status: archived
 tags: [osqf, 2015, matthew_dixon, risk_decomposition]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Risk Decomposition for Fund Managers

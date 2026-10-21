@@ -2,7 +2,7 @@
 type: Talk
 title: Q-Gaussian Probability of Defaults Model
 description: "Application of Q-Gaussian distributions to model corporate default probabilities, improving upon traditional Merton models"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Thomas Zakrzewski
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__thomas_zakrzewski.pdf"
 slug: 2018__thomas_zakrzewski
 status: archived
 tags: [osqf, 2018, thomas_zakrzewski, credit_risk_modeling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Q-Gaussian Probability of Defaults Model

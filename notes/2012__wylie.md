@@ -2,7 +2,7 @@
 type: Talk
 title: Insanely Cool Stuff from OpenGamma+R
 description: "OpenGamma's platform integrates with R for scenario analysis, stress testing, and risk management across trading and analytics applications."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Wylie
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__wylie.pptx"
 slug: 2012__wylie
 status: archived
 tags: [osqf, 2012, wylie, risk_management, scenario_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Insanely Cool Stuff from OpenGamma+R

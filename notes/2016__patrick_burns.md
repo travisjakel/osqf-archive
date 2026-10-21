@@ -2,7 +2,7 @@
 type: Talk
 title: Some Linguistics of Quantitative Finance
 description: "Patrick Burns explores linguistic concepts in quantitative finance, focusing on the Sapir-Whorf hypothesis, risk parity, and agent-based modeling in R."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Patrick Burns
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__patrick_burns.pdf"
 slug: 2016__patrick_burns
 status: archived
 tags: [osqf, 2016, patrick_burns, agent_based_modeling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Some Linguistics of Quantitative Finance

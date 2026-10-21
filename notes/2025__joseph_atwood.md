@@ -2,7 +2,7 @@
 type: Talk
 title: Simulating Multivariate Variables Using Non-Parametric Smoothed Historical Data Procedures
 description: Simulating multivariate variables using non-parametric smoothed historical data procedures to assess portfolio risk and generate potential future VaR/cVaR levels.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Joseph Atwood
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__joseph_atwood.pdf"
 slug: 2025__joseph_atwood
 status: archived
 tags: [osqf, 2025, joseph_atwood, risk_management]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Simulating Multivariate Variables Using Non-Parametric Smoothed Historical Data Procedures

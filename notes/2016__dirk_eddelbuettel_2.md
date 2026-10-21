@@ -2,7 +2,7 @@
 type: Talk
 title: Rblapi RevisitedOne Year Later
 description: "Rblpapi package evolution over one year including CRAN integration, Windows support, and expanded Bloomberg API features"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Dirk Eddelbuettel
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__dirk_eddelbuettel_2.pdf"
 slug: 2016__dirk_eddelbuettel_2
 status: archived
 tags: [osqf, 2016, dirk_eddelbuettel, software_development]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Rblapi RevisitedOne Year Later

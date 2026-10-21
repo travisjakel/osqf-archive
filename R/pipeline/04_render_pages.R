@@ -11,6 +11,13 @@ suppressPackageStartupMessages({
 source("R/pipeline/00_helpers.R")
 
 RUN_DATE <- as.character(Sys.Date())
+
+# OKF SPEC 5.1 provenance. `generated: { by, at }` names the process that
+# produced the page and when -- true by construction for a rendered corpus.
+# The instant is ISO-8601 UTC with an explicit offset because SPEC 5.5
+# compares absolute instants; the bare RUN_DATE above is not comparable.
+OKF_GENERATED_BY <- "process:osqf_wiki/scripts/04_render_pages.R"
+OKF_GENERATED_AT <- format(Sys.time(), "%Y-%m-%dT%H:%M:%SZ", tz = "UTC")
 RUN_TS   <- paste0(RUN_DATE, "T00:00:00Z")  # OKF ISO-8601 timestamp
 
 # ---- Helpers ----------------------------------------------------------------
@@ -22,7 +29,12 @@ yaml_scalar <- function(v) {
   }
   s <- as.character(v[1])
   if (grepl('[:#"\'\\[\\]\\{\\},&*?|<>=!%@`]', s, perl = TRUE) || grepl("^[\\s-]", s, perl = TRUE)) {
-    s <- gsub('"', '\\\\"', s)
+    # A backslash inside a double-quoted YAML scalar is an escape introducer:
+    # `\U` demands eight hex digits, so a Windows path ends the parse.
+    # Escape the backslash FIRST -- after the quote-escaping it would be
+    # indistinguishable from the one that escaping just introduced.
+    s <- gsub('\\', '\\\\', s, fixed = TRUE)
+    s <- gsub('"', '\\"', s, fixed = TRUE)
     return(sprintf('"%s"', s))
   }
   s
@@ -42,6 +54,11 @@ frontmatter <- function(...) {
       lines <- c(lines, sprintf("%s: %s", k, yaml_scalar(v)))
     }
   }
+  # A call site that supplies its own `generated` wins; otherwise every page
+  # this renderer writes carries the provenance of the run that wrote it.
+  if (!("generated" %in% names(kvs)))
+    lines <- c(lines, sprintf("generated: { by: %s, at: %s }",
+                              OKF_GENERATED_BY, OKF_GENERATED_AT))
   paste0("---\n", paste(lines, collapse = "\n"), "\n---\n")
 }
 

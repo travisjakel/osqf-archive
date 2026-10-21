@@ -2,7 +2,7 @@
 type: Talk
 title: RackA Web Server Interface for R
 description: "Rook is an R package enabling web application development with Rhttpd, reference classes, and server compatibility."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Horner
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__horner.pdf"
 slug: 2011__horner
 status: archived
 tags: [osqf, 2011, horner]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # RackA Web Server Interface for R

@@ -2,7 +2,7 @@
 type: Talk
 title: "Extending Open Finance: A Shared Symbology"
 description: Addressing fragmentation in financial symbology by introducing QKID as a shared identifier system for open finance
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Jeffrey Ryan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__jeffrey_ryan.pdf"
 slug: 2024__jeffrey_ryan
 status: archived
 tags: [osqf, 2024, jeffrey_ryan]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Extending Open Finance: A Shared Symbology

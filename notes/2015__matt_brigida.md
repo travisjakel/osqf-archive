@@ -2,7 +2,7 @@
 type: Talk
 title: Markov Regime-Switching (and some State Space) Models in Energy Markets
 description: "Application of Markov regime-switching models to analyze structural breaks in energy price relationships, with focus on natural gas and crude oil cointegration."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2015
 date: ~
 speaker: Matt Brigida
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2015/2015__matt_brigida.pdf"
 slug: 2015__matt_brigida
 status: archived
 tags: [osqf, 2015, matt_brigida, energy_markets]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Markov Regime-Switching (and some State Space) Models in Energy Markets

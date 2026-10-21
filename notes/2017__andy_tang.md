@@ -2,7 +2,7 @@
 type: Talk
 title: How much structure is best
 description: "The talk explores covariance matrix estimation techniques, comparing fully unstructured methods (sample, shrinkage, EWMA) with conditionally structured approaches (region/sector effects) and their impact on forecast accuracy."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Andy Tang
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__andy_tang.pptx"
 slug: 2017__andy_tang
 status: archived
 tags: [osqf, 2017, andy_tang, covariance_matrix_estimation]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # How much structure is best

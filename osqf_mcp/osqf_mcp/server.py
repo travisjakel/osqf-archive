@@ -40,6 +40,29 @@ OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434").rstrip("/")
 EMBED_MODEL = os.environ.get("OSQF_EMBED_MODEL", "nomic-embed-text:latest")
 
 
+def _embed_endpoint() -> tuple[str, str]:
+    """(url, shape) for the local embedder. shape is 'openai' | 'ollama_batch' |
+    'ollama_single'. llama-swap serves the OpenAI shape on :11435 and does NOT
+    serve Ollama's /api/embeddings, so the path is resolved, never hard-coded.
+    Order: LLM_EMBED_URL, then LLM_LOCAL_BACKEND=llamaswap, then OLLAMA_URL."""
+    u = os.environ.get("LLM_EMBED_URL", "")
+    if not u:
+        if os.environ.get("LLM_LOCAL_BACKEND", "ollama").strip().lower() == "llamaswap":
+            root = os.environ.get("LLAMASWAP_URL",
+                                  "http://127.0.0.1:11435/v1/chat/completions").rstrip("/")
+            if root.endswith("/v1/chat/completions"):
+                root = root[: -len("/v1/chat/completions")]
+            u = root + "/v1/embeddings"
+        else:
+            u = OLLAMA_URL.rstrip("/") + "/api/embeddings"
+    p = u.rstrip("/")
+    if p.endswith("/v1/embeddings"):
+        return u, "openai"
+    if p.endswith("/api/embeddings"):
+        return u, "ollama_single"
+    return u, "ollama_batch"
+
+
 def _find_db() -> str:
     env = os.environ.get("OSQF_DB")
     if env:
@@ -98,12 +121,20 @@ def _slugify(v: str) -> str:
 
 def _embed(text: str) -> list[float] | None:
     try:
+        url, shape = _embed_endpoint()
+        body = ({"model": EMBED_MODEL, "prompt": text} if shape == "ollama_single"
+                else {"model": EMBED_MODEL, "input": [text]})
         req = urllib.request.Request(
-            f"{OLLAMA_URL}/api/embeddings",
-            data=json.dumps({"model": EMBED_MODEL, "prompt": text}).encode(),
+            url, data=json.dumps(body).encode(),
             headers={"Content-Type": "application/json"})
         with urllib.request.urlopen(req, timeout=30) as r:
-            emb = json.loads(r.read()).get("embedding")
+            j = json.loads(r.read())
+        if shape == "ollama_single":
+            emb = j.get("embedding")
+        elif shape == "openai":
+            emb = (j.get("data") or [{}])[0].get("embedding")
+        else:
+            emb = (j.get("embeddings") or [None])[0]
         return emb if emb else None
     except Exception:
         return None

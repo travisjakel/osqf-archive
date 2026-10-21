@@ -2,7 +2,7 @@
 type: Talk
 title: Adverse Selection and Broker Execution
 description: Analysis of broker execution patterns reveals insights into market microstructure and adverse selection dynamics
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Stephen Rush
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__stephen_rush.pdf"
 slug: 2017__stephen_rush
 status: archived
 tags: [osqf, 2017, stephen_rush, adverse_selection, regression_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Adverse Selection and Broker Execution

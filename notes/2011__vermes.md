@@ -2,7 +2,7 @@
 type: Talk
 title: Stochastic Volatility Models Massively Parallel in R
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Vermes
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2011__vermes
 status: no_file
 tags: [osqf, 2011, vermes]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Stochastic Volatility Models Massively Parallel in R

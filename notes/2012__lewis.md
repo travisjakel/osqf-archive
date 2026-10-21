@@ -2,7 +2,7 @@
 type: Talk
 title: A Cointegration-Inspired Method for Large Scale Data
 description: Using SVD for numerically stable cointegration analysis and large-scale data mining
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Lewis
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__lewis.pdf"
 slug: 2012__lewis
 status: archived
 tags: [osqf, 2012, lewis, cointegration]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # A Cointegration-Inspired Method for Large Scale Data

@@ -2,7 +2,7 @@
 type: Talk
 title: Complex Portfolio Optimization with Generalized Business Objectives
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2010
 date: ~
 speaker: Carl/Peterson/Boudt
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2010__carl_and_peterson_and_boudt
 status: no_file
 tags: [osqf, 2010, carl_and_peterson_and_boudt]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Complex Portfolio Optimization with Generalized Business Objectives

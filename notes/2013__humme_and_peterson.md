@@ -2,7 +2,7 @@
 type: Talk
 title: Using quantstrat to evaluate intraday trading strategies
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2013
 date: ~
 speaker: Humme/Peterson
@@ -15,6 +15,7 @@ file_local: ~
 slug: 2013__humme_and_peterson
 status: no_file
 tags: [osqf, 2013, humme_and_peterson]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Using quantstrat to evaluate intraday trading strategies

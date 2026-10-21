@@ -2,7 +2,7 @@
 type: Talk
 title: Some Performance Improvements for the R Engine
 description: "This talk discusses performance improvements in R, focusing on byte code compilation, reducing value duplication, large vector support, parallelization, and profiling tools."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Luke Tierney
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__luke_tierney.pdf"
 slug: 2014__luke_tierney
 status: archived
 tags: [osqf, 2014, luke_tierney]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Some Performance Improvements for the R Engine

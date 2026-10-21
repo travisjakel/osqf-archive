@@ -2,7 +2,7 @@
 type: Talk
 title: Stress Testing your way to Better Portfolio Management
 description: Stress Testing your way to Better Portfolio Management
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Steven Greiner
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__steven_greiner.pptx"
 slug: 2014__steven_greiner
 status: archived
 tags: [osqf, 2014, steven_greiner]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Stress Testing your way to Better Portfolio Management

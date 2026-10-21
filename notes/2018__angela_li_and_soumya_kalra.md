@@ -2,7 +2,7 @@
 type: Talk
 title: R-Ladies on Diversity
 description: "R-Ladies promotes gender diversity in R community through meetups, mentorship, and inclusive practices."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Angela Li and Soumya Kalra
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__angela_li_and_soumya_kalra.pptx"
 slug: 2018__angela_li_and_soumya_kalra
 status: archived
 tags: [osqf, 2018, angela_li_and_soumya_kalra]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # R-Ladies on Diversity

@@ -2,7 +2,7 @@
 type: Talk
 title: "Supplementing Covariance Matrices: An Application to Thematic Investing"
 description: Using investment themes as missing risk factors to enhance thematic portfolio risk models
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Ryan Brown
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__ryan_brown.pptx"
 slug: 2025__ryan_brown
 status: archived
 tags: [osqf, 2025, ryan_brown, thematic_investing, regression_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Supplementing Covariance Matrices: An Application to Thematic Investing

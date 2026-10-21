@@ -2,7 +2,7 @@
 type: Talk
 title: Statistical CinderellaParallel Computation for the Rest of Us
 description: "This talk discusses the challenges and opportunities in making parallel computation accessible to non-experts in R, covering hardware, software tools, and practical barriers."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Norm Matloff
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__norm_matloff.pdf"
 slug: 2018__norm_matloff
 status: archived
 tags: [osqf, 2018, norm_matloff, parallel_computing]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Statistical CinderellaParallel Computation for the Rest of Us

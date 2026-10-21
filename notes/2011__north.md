@@ -2,7 +2,7 @@
 type: Talk
 title: Repast Simphony
 description: Repast Simphony is an open-source agent-based modeling platform with Java/C++ implementations and ReLogo integration for simulation.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: North
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__north.ppt"
 slug: 2011__north
 status: archived
 tags: [osqf, 2011, north, agent_based_modeling]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Repast Simphony

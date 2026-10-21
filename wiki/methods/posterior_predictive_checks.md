@@ -1,11 +1,12 @@
 ---
 type: Method
 title: "Method: posterior predictive checks"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 key: posterior predictive checks
 kind: method
 n_talks: 2
 tags: [osqf, method, posterior_predictive_checks]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Method: posterior predictive checks

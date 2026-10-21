@@ -2,7 +2,7 @@
 type: Talk
 title: Detecting Fraud at 1 Million Transactions per Second
 description: Operationalizing predictive models for real-time fraud detection at 1 million transactions per second using Microsoft R Server
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: David Smith
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__david_smith.pptx"
 slug: 2017__david_smith
 status: archived
 tags: [osqf, 2017, david_smith]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Detecting Fraud at 1 Million Transactions per Second

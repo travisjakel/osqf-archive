@@ -2,7 +2,7 @@
 type: Talk
 title: Multilinear Principal Component Analysis on Implied Volatility Surface
 description: Application of multilinear PCA to analyze implied volatility surfaces using tensor decomposition methods.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Yingyi Gu
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__yingyi_gu.pdf"
 slug: 2019__yingyi_gu
 status: archived
 tags: [osqf, 2019, yingyi_gu]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Multilinear Principal Component Analysis on Implied Volatility Surface

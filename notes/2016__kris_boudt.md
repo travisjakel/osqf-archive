@@ -2,7 +2,7 @@
 type: Talk
 title: Block rearranging elements within matrix columns to minimize the variability of the row sums
 description: Solving the partitioning problem by rearranging matrix columns to minimize row sum variability
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Kris Boudt
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__kris_boudt.pdf"
 slug: 2016__kris_boudt
 status: archived
 tags: [osqf, 2016, kris_boudt]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Block rearranging elements within matrix columns to minimize the variability of the row sums

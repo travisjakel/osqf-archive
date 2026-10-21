@@ -2,7 +2,7 @@
 type: Talk
 title: Market Microstructure
 description: "Tutorial on market microstructure, covering asymmetric information models and the Glosten-Milgrom framework."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2009
 date: ~
 speaker: Dale Rosenthal
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2009/2009__dale_rosenthal.pdf"
 slug: 2009__dale_rosenthal
 status: archived
 tags: [osqf, 2009, dale_rosenthal, market_microstructure]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Market Microstructure

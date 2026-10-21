@@ -2,7 +2,7 @@
 type: Talk
 title: "Bankruptcy court competition: Pro-debtor bias and Forum Shopping"
 description: Analysis of pro-debtor bias in bankruptcy courts and firm strategies of forum shopping
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Shilin Zhang
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__shilin_zhang.pptx"
 slug: 2022__shilin_zhang
 status: archived
 tags: [osqf, 2022, shilin_zhang]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Bankruptcy court competition: Pro-debtor bias and Forum Shopping

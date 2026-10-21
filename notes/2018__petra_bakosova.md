@@ -2,7 +2,7 @@
 type: Talk
 title: "Seasonal Effect, Trends and Pre-Announcement DriftsFrom Anomalies to Trades"
 description: "The talk revisits seasonal effects, announcement drifts, and momentum anomalies, proposing investment strategies that combine models like Sell-in-May (SIM), Turn of the Month (TOM), Federal Open Market Committee (FOMC), and State Dependent Momentum (SDM) using return-to-risk optimization."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Petra Bakosova
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__petra_bakosova.pdf"
 slug: 2018__petra_bakosova
 status: archived
 tags: [osqf, 2018, petra_bakosova]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Seasonal Effect, Trends and Pre-Announcement DriftsFrom Anomalies to Trades

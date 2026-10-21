@@ -2,7 +2,7 @@
 type: Talk
 title: Performance Estimation with the Sharpe Ratio
 description: "The talk explores the Sharpe Ratio's role in performance estimation, statistical inference, and portfolio optimization, linking it to classical statistics and providing tools for analysis."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Steven Pav
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__steven_pav.html"
 slug: 2022__steven_pav
 status: archived
 tags: [osqf, 2022, steven_pav, sharpe_ratio, t_statistic]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Performance Estimation with the Sharpe Ratio

@@ -2,7 +2,7 @@
 type: Talk
 title: Estimating Betas
 description: The talk discusses the limitations of beta in equity markets and presents faster methods for estimating betas with low volatility portfolios.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Ryan Brown
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__ryan_brown.pdf"
 slug: 2024__ryan_brown
 status: archived
 tags: [osqf, 2024, ryan_brown]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Estimating Betas

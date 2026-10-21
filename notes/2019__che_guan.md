@@ -2,7 +2,7 @@
 type: Talk
 title: "Cryptocurrency Volatility Models: Realized, Predicted and Implied Volatilities"
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Che Guan
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__che_guan.NA"
 slug: 2019__che_guan
 status: no_file
 tags: [osqf, 2019, che_guan]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Cryptocurrency Volatility Models: Realized, Predicted and Implied Volatilities

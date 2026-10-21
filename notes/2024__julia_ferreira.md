@@ -2,7 +2,7 @@
 type: Talk
 title: "Transmuting Unequally-Spaced Data: A MIDAS Touch to Forecast Real GDP Growth"
 description: Applying MIDAS regression to forecast real GDP growth in Brazil using mixed-frequency data
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2024
 date: ~
 speaker: Julia Ferreira
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2024/2024__julia_ferreira.pdf"
 slug: 2024__julia_ferreira
 status: archived
 tags: [osqf, 2024, julia_ferreira]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Transmuting Unequally-Spaced Data: A MIDAS Touch to Forecast Real GDP Growth

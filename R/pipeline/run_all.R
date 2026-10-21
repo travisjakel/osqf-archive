@@ -17,7 +17,7 @@ stages <- c(
   "04_render_pages.R",
   "05_build_embeddings.R"
 )
-SCRIPT_DIR <- "./scripts"
+SCRIPT_DIR <- "R/pipeline"
 
 t_total <- Sys.time()
 for (stg in stages) {

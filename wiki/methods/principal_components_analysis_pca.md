@@ -1,11 +1,12 @@
 ---
 type: Method
 title: "Method: principal components analysis pca"
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 key: principal components analysis pca
 kind: method
 n_talks: 2
 tags: [osqf, method, principal_components_analysis_pca]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Method: principal components analysis pca

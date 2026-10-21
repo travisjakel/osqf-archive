@@ -2,7 +2,7 @@
 type: Talk
 title: R-view on Prepayment and Interest rate risk in MBS
 description: "Analysis of interest rate and prepayment risks in MBS using R, focusing on modeling techniques and loan default prediction."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Smitha Shivakumar
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__smitha_shivakumar.pdf"
 slug: 2019__smitha_shivakumar
 status: archived
 tags: [osqf, 2019, smitha_shivakumar]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # R-view on Prepayment and Interest rate risk in MBS

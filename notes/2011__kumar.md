@@ -2,7 +2,7 @@
 type: Talk
 title: "Carry Trades - Don't Get Carried Away"
 description: "The talk reviews carry trade strategies in FX markets, their historical performance, and introduces a new strategy using macroeconomic data."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Kumar
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__kumar.pdf"
 slug: 2011__kumar
 status: archived
 tags: [osqf, 2011, kumar]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Carry Trades - Don't Get Carried Away

@@ -2,7 +2,7 @@
 type: Talk
 title: "The R Package rbtcImplementation of the Core Bitcoin's API"
 description: "The R package rbtc implements Bitcoin's API for blockchain analysis and data retrieval."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Bernhard Pfaff
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__bernhard_pfaff.pdf"
 slug: 2018__bernhard_pfaff
 status: archived
 tags: [osqf, 2018, bernhard_pfaff]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # The R Package rbtcImplementation of the Core Bitcoin's API

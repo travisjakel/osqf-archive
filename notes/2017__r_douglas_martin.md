@@ -2,7 +2,7 @@
 type: Talk
 title: Fundamental Factor Models in FactorAnalytics
 description: ~
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: R. Douglas Martin
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__r_douglas_martin.NA"
 slug: 2017__r_douglas_martin
 status: no_file
 tags: [osqf, 2017, r_douglas_martin]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Fundamental Factor Models in FactorAnalytics

@@ -2,7 +2,7 @@
 type: Talk
 title: Introduction to data.table
 description: data.table is an R package that reduces programming and compute time through efficient data manipulation and fast file reading.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2014
 date: ~
 speaker: Matt Dowle
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2014/2014__matt_dowle.pdf"
 slug: 2014__matt_dowle
 status: archived
 tags: [osqf, 2014, matt_dowle, data_manipulation_r]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Introduction to data.table

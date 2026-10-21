@@ -2,7 +2,7 @@
 type: Talk
 title: CppBugsNative MCMC for R
 description: "rcppbugs is an R package providing native MCMC sampling with C++ backend, offering faster alternatives to BUGS/JAGS for Bayesian modeling."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Armstrong
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__armstrong_2.pdf"
 slug: 2012__armstrong_2
 status: archived
 tags: [osqf, 2012, armstrong]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # CppBugsNative MCMC for R

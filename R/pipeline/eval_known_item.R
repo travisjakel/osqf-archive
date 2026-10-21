@@ -25,7 +25,7 @@ suppressWarnings(suppressPackageStartupMessages({
   library(data.table); library(duckdb); library(DBI)
 }))
 ROOT <- "."
-source(file.path(ROOT, "embeddings/query.R"))
+source(file.path(ROOT, "R/query.R"))
 
 Q <- fread(file.path(ROOT, "scripts/eval_known_item_queries.csv"), encoding = "UTF-8")
 K <- 60L   # deep enough that a miss is a real miss

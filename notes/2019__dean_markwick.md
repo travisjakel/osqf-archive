@@ -2,7 +2,7 @@
 type: Talk
 title: Hierarchical nonparametric Hawkes processes with applications to finance
 description: Application of hierarchical nonparametric Hawkes processes to predict FX trade patterns and model financial events like flash crashes and macroeconomic impacts
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Dean Markwick
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__dean_markwick.pdf"
 slug: 2019__dean_markwick
 status: archived
 tags: [osqf, 2019, dean_markwick, hawkes_processes]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Hierarchical nonparametric Hawkes processes with applications to finance

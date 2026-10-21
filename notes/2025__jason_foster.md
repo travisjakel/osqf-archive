@@ -2,7 +2,7 @@
 type: Talk
 title: "screen: Yahoo Finance Screener in R and Python"
 description: "yfscreen is an R and Python package that provides simple access to Yahoo Finance's screener functionality for querying financial data."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2025
 date: ~
 speaker: Jason Foster
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2025/2025__jason_foster.pdf"
 slug: 2025__jason_foster
 status: archived
 tags: [osqf, 2025, jason_foster, financial_data_retrieval]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # screen: Yahoo Finance Screener in R and Python

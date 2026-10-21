@@ -2,7 +2,7 @@
 type: Talk
 title: State Space Modeling for Mixed Frequency Time Series Applications
 description: Using state space models to handle mixed frequency time series data in econometric analysis
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: R. Andrew Butters
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__r_andrew_butters.pdf"
 slug: 2019__r_andrew_butters
 status: archived
 tags: [osqf, 2019, r_andrew_butters, state_space_models]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # State Space Modeling for Mixed Frequency Time Series Applications

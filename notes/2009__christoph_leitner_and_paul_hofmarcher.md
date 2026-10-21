@@ -2,7 +2,7 @@
 type: Talk
 title: Latent Variable Approach to Validate Credit Rating
 description: The talk presents a latent variable approach using R to validate credit rating systems by modeling PD as a latent variable and analyzing rater effects.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2009
 date: ~
 speaker: Christoph Leitner and Paul Hofmarcher
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2009/2009__christoph_leitner_and_paul_hofmarcher.pdf
 slug: 2009__christoph_leitner_and_paul_hofmarcher
 status: archived
 tags: [osqf, 2009, christoph_leitner_and_paul_hofmarcher]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Latent Variable Approach to Validate Credit Rating

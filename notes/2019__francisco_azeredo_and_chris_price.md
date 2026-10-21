@@ -2,7 +2,7 @@
 type: Talk
 title: A study of the time series behavior of securities lending fees
 description: Developing a forecasting engine for securities lending fees to enhance client profitability and efficiency
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2019
 date: ~
 speaker: Francisco Azeredo and Chris Price
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2019/2019__francisco_azeredo_and_chris_price.pdf"
 slug: 2019__francisco_azeredo_and_chris_price
 status: archived
 tags: [osqf, 2019, francisco_azeredo_and_chris_price]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # A study of the time series behavior of securities lending fees

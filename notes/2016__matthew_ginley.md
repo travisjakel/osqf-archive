@@ -2,7 +2,7 @@
 type: Talk
 title: Simulation of Leveraged ETF Volatility Using Nonparametric Density Estimation
 description: "This talk presents a method using nonparametric density estimation to simulate the volatility of leveraged ETFs, highlighting the impact of compounding and leverage."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Matthew Ginley
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__matthew_ginley.pdf"
 slug: 2016__matthew_ginley
 status: archived
 tags: [osqf, 2016, matthew_ginley]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Simulation of Leveraged ETF Volatility Using Nonparametric Density Estimation

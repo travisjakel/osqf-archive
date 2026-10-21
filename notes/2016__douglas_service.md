@@ -2,7 +2,7 @@
 type: Talk
 title: Quantitative Analysis of Dual Moving Average Indicators in Automated Trading Systems
 description: "The talk presents a continuous-time stochastic model to analyze the Luxor dual moving average trading strategy, deriving closed-form expected log returns."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2016
 date: ~
 speaker: Douglas Service
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2016/2016__douglas_service.pdf"
 slug: 2016__douglas_service
 status: archived
 tags: [osqf, 2016, douglas_service, stochastic_differential_equations_sdes]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Quantitative Analysis of Dual Moving Average Indicators in Automated Trading Systems

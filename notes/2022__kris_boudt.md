@@ -2,7 +2,7 @@
 type: Talk
 title: Estimation of Factors Using Higher-Order Multi-cumulants in Weak Factor Models
 description: Higher-order factor analysis improves factor estimation in weak factor models by leveraging multi-cumulants instead of covariance matrices.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2022
 date: ~
 speaker: Kris Boudt
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2022/2022__kris_boudt.pdf"
 slug: 2022__kris_boudt
 status: archived
 tags: [osqf, 2022, kris_boudt, factor_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Estimation of Factors Using Higher-Order Multi-cumulants in Weak Factor Models

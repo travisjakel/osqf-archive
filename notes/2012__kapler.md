@@ -2,7 +2,7 @@
 type: Talk
 title: Seasonality Analysis and Pattern Matching in R
 description: This talk demonstrates how to analyze financial seasonality patterns and identify historical price pattern matches using R.
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2012
 date: ~
 speaker: Kapler
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2012/2012__kapler.pdf"
 slug: 2012__kapler
 status: archived
 tags: [osqf, 2012, kapler, seasonality_analysis]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Seasonality Analysis and Pattern Matching in R

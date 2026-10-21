@@ -2,7 +2,7 @@
 type: Talk
 title: Operational Risk Stress TestingAn Empirical Comparison of Machine Learning Algorithms and Time Series Forecasting Methods
 description: Comparison of machine learning and time series models for operational risk stress testing using PCA and macroeconomic scenarios
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2017
 date: ~
 speaker: Matteo Crimella
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2017/2017__matteo_crimella.pdf"
 slug: 2017__matteo_crimella
 status: archived
 tags: [osqf, 2017, matteo_crimella, operational_risk]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # Operational Risk Stress TestingAn Empirical Comparison of Machine Learning Algorithms and Time Series Forecasting Methods

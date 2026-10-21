@@ -2,7 +2,7 @@
 type: Talk
 title: AI In Finance
 description: "Artificial Intelligence is transforming finance through advancements in machine learning and deep learning, but faces unique challenges in investment management."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2018
 date: ~
 speaker: Li Deng
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2018/2018__li_deng.pptx"
 slug: 2018__li_deng
 status: archived
 tags: [osqf, 2018, li_deng]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # AI In Finance

@@ -2,7 +2,7 @@
 type: Talk
 title: R and proto
 description: "Exploration of prototype programming in R, comparing it with conventional object-oriented approaches and demonstrating practical applications."
-timestamp: "2026-07-08T00:00:00Z"
+timestamp: "2026-09-17T00:00:00Z"
 year: 2011
 date: ~
 speaker: Kates
@@ -15,6 +15,7 @@ file_local: "./_cache/files/2011/2011__kates.pptx"
 slug: 2011__kates
 status: archived
 tags: [osqf, 2011, kates]
+generated: { by: process:osqf_wiki/scripts/04_render_pages.R, at: 2026-09-17T21:58:16Z }
 ---
 
 # R and proto
