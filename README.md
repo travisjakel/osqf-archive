@@ -69,13 +69,27 @@ When to use which layer is the point of the paper — the short version is in
 
 ## Rebuild it yourself
 
-The pipeline is re-runnable from a clean clone (R ≥ 4.3 + a local Ollama):
+The pipeline is re-runnable from a clean clone (R ≥ 4.3 + a local model
+server serving `qwen3:14b` and `nomic-embed-text`), run from the repo root:
 
 ```r
-# smoke: one conference year end-to-end
-Sys.setenv(OSQF_YEARS = "2025")
+# smoke: one conference year end-to-end (MAX_NOTES caps the LLM stage)
+Sys.setenv(OSQF_YEARS = "2025", MAX_NOTES = "2")
 source("R/pipeline/run_all.R")
 ```
+
+Ollama on `localhost:11434` is the default (`OLLAMA_URL` moves it). For an
+OpenAI-compatible server instead (llama-swap, llama-server, vLLM, LM Studio),
+set `LLM_LOCAL_BACKEND=llamaswap` and `LLAMASWAP_URL` to its
+`/v1/chat/completions` URL; embeddings then go to the same server's
+`/v1/embeddings` (or set `LLM_EMBED_URL` directly). The two clients are
+`R/pipeline/llm_ollama.R` and `R/embed_local.R`.
+
+A rebuild renders that year's pages in `notes/` from **your** extractions, so
+with `MAX_NOTES` set, the talks you did not extract come back as short stubs
+in place of the shipped notes; `git checkout -- notes` restores them. Rollup
+pages land in `years/` and `speakers/` at the repo root (the shipped copies
+live under `wiki/`).
 
 The pixel/OCR layers additionally need a CUDA GPU and the Python services
 under `python/pixel/` (each script documents its venv and serving mode).

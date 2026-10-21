@@ -108,6 +108,7 @@ for (i in which(papers$has_pdf)) {
            error = function(e) NULL)
 }
 
+dir.create(dirname(DB_PATH), recursive = TRUE, showWarnings = FALSE)  # absent in a fresh clone
 con <- dbConnect(duckdb::duckdb(), DB_PATH)
 on.exit(dbDisconnect(con, shutdown = TRUE), add = TRUE)
 dbExecute(con, "INSTALL vss; LOAD vss;")

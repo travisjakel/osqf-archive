@@ -30,6 +30,9 @@ cat("== 05_build_embeddings.R ==\n")
 cat(sprintf("Embed model: %s (dim=%d)\n", EMBED_MODEL, EMBED_DIM))
 cat(sprintf("DB path    : %s\n", DB_PATH))
 
+# A fresh clone has no embeddings/ (the db is not tracked), and duckdb will not
+# create a missing parent directory.
+dir.create(dirname(DB_PATH), recursive = TRUE, showWarnings = FALSE)
 con <- dbConnect(duckdb::duckdb(), DB_PATH)
 on.exit(dbDisconnect(con, shutdown = TRUE), add = TRUE)
 dbExecute(con, "INSTALL vss; LOAD vss;")
