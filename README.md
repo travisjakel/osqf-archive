@@ -9,6 +9,9 @@ Companion artifact to the paper *"Text, OCR, or Pixels? A Retrieval Decision
 Matrix for Quant-Finance Documents, Built on Eighteen Years of the osQF
 Archive"* (osQF 2026 submission — `docs/`).
 
+Built and maintained by **Travis S. Jakel**. An independent, unofficial
+project: not affiliated with or endorsed by the osQF conference.
+
 ## Chat with the archive in five minutes
 
 No models, no GPU, no server needed:
@@ -78,9 +81,22 @@ under `python/pixel/` (each script documents its venv and serving mode).
 Model weights are **not** in this repo — scripts pull from their upstream
 repos (see `NOTICE.md` for licenses).
 
+## How to cite
+
+Use GitHub's **"Cite this repository"** button, which reads
+[`CITATION.cff`](CITATION.cff). When you rely on what a talk says, cite the
+talk and its speaker as well: every note carries the talk's own URL.
+
 ## Provenance, licensing, takedown
 
 Talk decks are indexed from their **publicly posted** conference URLs; original
 PDFs are **not redistributed** — every note links back to the source file.
-Code is MIT; derived notes are CC-BY-4.0 with speaker attribution. Details and
-takedown process: [`NOTICE.md`](NOTICE.md).
+
+- **Code**: Apache License 2.0 ([`LICENSE`](LICENSE)) from v0.2. v0.1 was
+  released under MIT.
+- **Derived notes and index**: CC BY 4.0 ([`LICENSE-DATA`](LICENSE-DATA)),
+  covering the maintainer's own contribution only. Speakers' quotes and slides
+  stay with their authors.
+- **Redistributing or reusing either** means carrying the attribution in
+  [`NOTICE.md`](NOTICE.md), which also has the exact credit line and the
+  takedown process.

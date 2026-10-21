@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: >-
+  If you use osqf-archive (code, derived notes or index), please cite it as
+  below. Credit for each talk belongs to its speaker; cite the talk itself
+  when you rely on what it says.
+type: software
+title: "osqf-archive: a searchable archive of osQF / R-in-finance conference talks, 2009-2026"
+abstract: >-
+  Derived notes, embeddings, an entity graph and an MCP server over eighteen
+  years of publicly posted osQF / R-in-finance conference talks, built end to
+  end with local open-weight models. An independent, unofficial project: not
+  affiliated with or endorsed by the osQF conference.
+authors:
+  - family-names: Jakel
+    given-names: Travis S.
+version: "0.2"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+repository-code: "https://github.com/travisjakel/osqf-archive"
+keywords:
+  - retrieval-augmented generation
+  - quantitative finance
+  - OCR
+  - model context protocol
+  - R
+references:
+  - type: unpublished
+    title: "Text, OCR, or Pixels? A Retrieval Decision Matrix for Quant-Finance Documents, Built on Eighteen Years of the osQF Archive"
+    authors:
+      - family-names: Jakel
+        given-names: Travis S.
+    year: 2026
+    url: "https://github.com/travisjakel/osqf-archive/blob/main/docs/paper.pdf"

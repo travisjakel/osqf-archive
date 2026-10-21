@@ -93,5 +93,10 @@ they present most recently?"* — the client should chain `find_experts` →
 
 Derived notes and embeddings come from publicly posted conference decks at
 osqf.org; **original PDFs are not redistributed** — every talk carries its
-`file_url` back to the source. Code MIT; derived notes CC-BY-4.0 with speaker
-attribution. Takedown requests: open a GitHub issue.
+`file_url` back to the source. Code is Apache-2.0 (v0.1 was MIT). Derived notes
+are CC BY 4.0 for the maintainer's contribution only; speakers' quotes and
+slides stay with their authors. The credit line and the full terms are in the
+repo's `NOTICE.md`. Takedown requests: open a GitHub issue.
+
+osqf-archive is built by Travis S. Jakel. It is an independent, unofficial
+project, not affiliated with or endorsed by the osQF conference.

@@ -151,14 +151,18 @@ counts <- list(
                             error = function(e) 0L),
   n_tags = nrow(tags), n_related = nrow(related), n_experts = nrow(experts))
 about <- data.table(
-  k = c("product", "version", "built", "coverage", names(counts), "provenance", "license"),
+  k = c("product", "version", "built", "coverage", names(counts), "provenance", "license",
+        "author"),
   v = c("osqf-archive MCP database",
-            "v0.1",
+            "v0.2",
             format(Sys.Date()),
             "18 years of osQF / R-in-finance conference talks (2009-2026)",
             as.character(unlist(counts)),
             "Derived notes + embeddings from publicly posted conference decks; original PDFs are NOT redistributed - use file_url links.",
-            "MIT (code); derived notes CC-BY-4.0 with speaker attribution"))
+            paste("Apache-2.0 (code; v0.1 was MIT); derived notes CC BY 4.0 for the",
+                  "maintainer's contribution only - speakers' quotes and slides stay with",
+                  "their authors. See NOTICE.md."),
+            "Travis S. Jakel"))
 setnames(about, c("k", "v"), c("key", "value"))
 dbWriteTable(con, "about_info", about, overwrite = TRUE)
 

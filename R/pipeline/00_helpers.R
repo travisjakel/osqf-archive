@@ -96,7 +96,7 @@ normalize_topic <- function(x) {
 # idempotent GETs on HTML pages — file downloads stream straight to disk).
 polite_client <- function(url) {
   req <- httr2::request(url) |>
-    httr2::req_user_agent("osqf-wiki/0.1 (research; +https://github.com/anthropic-ai)") |>
+    httr2::req_user_agent("osqf-wiki/0.2 (research; +https://github.com/travisjakel/osqf-archive)") |>
     httr2::req_throttle(rate = 1 / 1.2, realm = "osqf.org") |>
     httr2::req_retry(max_tries = 4,
                      backoff = function(i) min(2 ^ i, 30),

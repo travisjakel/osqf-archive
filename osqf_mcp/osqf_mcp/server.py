@@ -125,10 +125,26 @@ def _talk_filters(year, speaker, topic):
     return (" AND " + " AND ".join(where)) if where else "", params
 
 
+# Authorship and terms come from the code, not the database: a notes.duckdb
+# downloaded under v0.1 still says "MIT", and about() must not repeat that.
+ABOUT_TERMS = {
+    "author": "Travis S. Jakel",
+    "license": ("Code Apache-2.0 (v0.1 was MIT); derived notes CC BY 4.0 for the "
+                "maintainer's contribution only. Speakers' quotes and slides stay "
+                "with their authors. Terms: NOTICE.md in the repo."),
+    "citation": ("Jakel, T. S. (2026). osqf-archive: a searchable archive of osQF / "
+                 "R-in-finance conference talks, 2009-2026. "
+                 "https://github.com/travisjakel/osqf-archive"),
+    "affiliation": ("Independent and unofficial: not affiliated with or endorsed by "
+                    "the osQF conference."),
+}
+
+
 @mcp.tool()
 def about() -> dict:
-    """What this archive is, what it contains, and how to use the tools."""
+    """What this archive is, who built it, how to cite it, and how to use the tools."""
     info = {r["key"]: r["value"] for r in _rows(_ro, "SELECT key, value FROM about_info")}
+    info.update(ABOUT_TERMS)
     info["tools"] = {
         "search_talks": "semantic (or BM25-fallback) search over talk content",
         "get_talk": "full derived note + metadata + related talks for one slug",

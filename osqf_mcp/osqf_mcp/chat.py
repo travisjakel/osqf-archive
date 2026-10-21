@@ -405,7 +405,8 @@ def _handoff_zip(history, token: str) -> bytes:
               "- MCP tools: search_talks, get_talk, browse, related_talks, "
               "find_experts, run_select (read-only SQL), about.\n\n"
               "## Offline / self-hosted\n\n"
-              "- Repo (MIT): https://github.com/travisjakel/osqf-archive — "
+              "- Repo (Apache-2.0 code, CC BY 4.0 notes; by Travis S. Jakel): "
+              "https://github.com/travisjakel/osqf-archive — "
               "release assets include the full notes.duckdb index; stdio MCP mode "
               "needs no models (BM25 fallback).\n"
               "- This bundle is OKF (Open Knowledge Format): point any OKF consumer "
@@ -543,8 +544,9 @@ async def page_img(request):
     f = PAGES_DIR / slug / f"{int(page)}.jpg"
     if not f.is_file():
         return JSONResponse({"error": "not found"}, status_code=404)
+    # private: the image sits behind the token, so no shared cache may keep it
     return FileResponse(f, media_type="image/jpeg",
-                        headers={"Cache-Control": "public, max-age=86400"})
+                        headers={"Cache-Control": "private, max-age=86400"})
 
 
 async def health(request):
@@ -593,6 +595,8 @@ body.demo{font-size:20px}
 <header><h1>osqf-archive</h1>
 <p>Chat with 18 years of osQF / R-in-finance talks (2009–2025). Answers cite real talks.
 Code + data: <a href="https://github.com/travisjakel/osqf-archive" style="color:var(--acc)">github.com/travisjakel/osqf-archive</a></p>
+<p>Built by Travis S. Jakel. Unofficial: not affiliated with or endorsed by the osQF conference.
+<a href="https://github.com/travisjakel/osqf-archive/blob/main/CITATION.cff" style="color:var(--acc)">How to cite</a></p>
 <div id="ex">
 <span class="exlabel">Try one:</span>
 <span class="ex" role="button" tabindex="0">Who are the recurring experts on portfolio optimization?</span>
